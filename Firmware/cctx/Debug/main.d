@@ -18,7 +18,9 @@ main.o: ../main.cpp ../kl_lib/kl_lib_L15x.h ../os/hal/stm32l1xx.h \
  ../os/hal/stm32l1xx.h ../os/hal/stm32_isr.h ../os/hal/stm32_dma.h \
  ../os/hal/stm32_rcc.h ../os/hal/io_channel.h ../os/hal/io_block.h \
  ../kl_lib/clocking_L1xx.h ../kl_lib/clocking_L1xx.h ../kl_lib/cmd_uart.h \
- ../kl_lib/kl_sprintf.h ../kl_lib/kl_lib_L15x.h
+ ../kl_lib/kl_sprintf.h ../kl_lib/kl_lib_L15x.h ../Radio/rPkt.h \
+ ../Radio/cc1101.h ../Radio/cc1101defins.h ../Radio/cc1101_rf_settings.h \
+ ../inc/cc_gpio.h ../Radio/rPkt.h
 
 ../kl_lib/kl_lib_L15x.h:
 
@@ -119,3 +121,15 @@ main.o: ../main.cpp ../kl_lib/kl_lib_L15x.h ../os/hal/stm32l1xx.h \
 ../kl_lib/kl_sprintf.h:
 
 ../kl_lib/kl_lib_L15x.h:
+
+../Radio/rPkt.h:
+
+../Radio/cc1101.h:
+
+../Radio/cc1101defins.h:
+
+../Radio/cc1101_rf_settings.h:
+
+../inc/cc_gpio.h:
+
+../Radio/rPkt.h:

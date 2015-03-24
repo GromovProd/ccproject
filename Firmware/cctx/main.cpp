@@ -12,28 +12,25 @@
 #include "clocking_L1xx.h"
 #include "cmd_uart.h"
 
-//static WORKING_AREA(waLedThread, 256);
-//__attribute__ ((__noreturn__))
-//static void LedThread(void *arg) {
-//    chRegSetThreadName("LedThd");
-//    while(true) {
-//        PinSet(GPIOB, 7);
-//        chThdSleepMilliseconds(207);
-//        PinClear(GPIOB, 7);
-//        chThdSleepMilliseconds(99);
-//    }
-//}
+#include "Radio/rPkt.h"
+#include "Radio/cc1101.h"
 
+#define DBG_PINS
 
-//Timer_t Tmr;
+#ifdef DBG_PINS
+#define DBG_GPIO1   GPIOA
+#define DBG_PIN1    15
+#define DBG1_SET()  PinSet(DBG_GPIO1, DBG_PIN1)
+#define DBG1_CLR()  PinClear(DBG_GPIO1, DBG_PIN1)
+#endif
 
-//#define MAX_TMR 10000
+rPkt_t PktTx;
 
 int main(void) {
     // ==== Init Vcore & clock system ====
-   /* SetupVCore(vcore1V5);
+    SetupVCore(vcore1V5);
     Clk.EnableHSI();
-    Clk.SwitchToHSI();*/
+    Clk.SwitchToHSI();
     Clk.UpdateFreqValues();
 
     // ==== Init OS ====
@@ -42,18 +39,27 @@ int main(void) {
 
     // ==== Init Hard & Soft ====
     PinSetupOut(GPIOB, 1, omPushPull, pudNone);
-    PinSetupOut(GPIOB, 0, omPushPull, pudNone);
 
-    Uart.Init(9600);
+    //Uart.Init(115200);
+    CC.Init();
+    CC.SetTxPower(CC_PwrPlus5dBm);
+    CC.SetChannel(CHANNEL_ZERO);
+
+    PktTx.Value = 8;
+    PktTx.RSSI = 1;
     // ==== Main cycle ====
     while(true) {
-        chThdSleepMilliseconds(999);
+        //PinSet(GPIOB, 1);
+        CC.Recalibrate(); // Recalibrate manually every cycle, as auto recalibration disabled
+        // Transmit
+        DBG1_SET();
+        CC.TransmitSync(&PktTx);
+        DBG1_CLR();
+        chThdSleepMilliseconds(20);
+        //PinClear(GPIOB, 1);
+        //chThdSleepMilliseconds(100);
 
-        Uart.Printf("Hello STM32L151!\n");
     } // while true
 
 }
-
-
-
 

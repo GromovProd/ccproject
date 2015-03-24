@@ -33,4 +33,6 @@ os/hal \
 os/hal/ARMCMx \
 . \
 kl_lib \
+inc \
+Radio \
 

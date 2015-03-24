@@ -12,28 +12,17 @@
 #include "clocking_L1xx.h"
 #include "cmd_uart.h"
 
-//static WORKING_AREA(waLedThread, 256);
-//__attribute__ ((__noreturn__))
-//static void LedThread(void *arg) {
-//    chRegSetThreadName("LedThd");
-//    while(true) {
-//        PinSet(GPIOB, 7);
-//        chThdSleepMilliseconds(207);
-//        PinClear(GPIOB, 7);
-//        chThdSleepMilliseconds(99);
-//    }
-//}
+#include "Radio/rPkt.h"
+#include "Radio/cc1101.h"
 
+rPkt_t PktRx;
 
-//Timer_t Tmr;
-
-//#define MAX_TMR 10000
-
+bool isON = false;
 int main(void) {
     // ==== Init Vcore & clock system ====
-   /* SetupVCore(vcore1V5);
+    SetupVCore(vcore1V5);
     Clk.EnableHSI();
-    Clk.SwitchToHSI();*/
+    Clk.SwitchToHSI();
     Clk.UpdateFreqValues();
 
     // ==== Init OS ====
@@ -44,16 +33,29 @@ int main(void) {
     PinSetupOut(GPIOB, 1, omPushPull, pudNone);
     PinSetupOut(GPIOB, 0, omPushPull, pudNone);
 
-    Uart.Init(9600);
+    Uart.Init(115200);
+
+    CC.Init();
+    CC.SetChannel(CHANNEL_ZERO);
     // ==== Main cycle ====
     while(true) {
-        chThdSleepMilliseconds(999);
 
-        Uart.Printf("Hello STM32L151!\n");
+        CC.Recalibrate();
+
+        if(CC.ReceiveSync(30, &PktRx) == OK) {
+            PinSet(GPIOB, 1);
+            chThdSleepMilliseconds(2000);
+            PinClear(GPIOB, 1);
+            chThdSleepMilliseconds(2000);
+        }
+        if(isON) {
+            PinSet(GPIOB, 0);
+        }
+        else {
+            PinClear(GPIOB, 0);
+        }
+        isON = isON? false : true;
+
     } // while true
 
 }
-
-
-
-

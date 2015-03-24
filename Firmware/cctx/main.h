@@ -12,9 +12,6 @@ class App_t {
 private:
 
 public:
-    Thread *PThd;
-    bool LightIsOn;
-    int32_t Lt = 100;
     // Inner use
     void ITask();
 };

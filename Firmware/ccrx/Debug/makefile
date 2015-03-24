@@ -12,6 +12,7 @@ RM := rm -rf
 -include os/hal/ARMCMx/subdir.mk
 -include os/hal/subdir.mk
 -include kl_lib/subdir.mk
+-include Radio/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -46,47 +47,47 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_FLASH += \
-TemplateL151.hex \
+ccRx.hex \
 
 SECONDARY_LIST += \
-TemplateL151.lst \
+ccRx.lst \
 
 SECONDARY_SIZE += \
-TemplateL151.siz \
+ccRx.siz \
 
 
 # All Target
-all: TemplateL151.elf secondary-outputs
+all: ccRx.elf secondary-outputs
 
 # Tool invocations
-TemplateL151.elf: $(OBJS) $(USER_OBJS)
+ccRx.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m3 -mthumb -Os -ffunction-sections -fdata-sections -Wall  -g -T ../STM32L152xB.ld -nostartfiles -Xlinker --gc-sections -Wl,-Map,"TemplateL151.map" -o "TemplateL151.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m3 -mthumb -Os -ffunction-sections -fdata-sections -Wall  -g -T ../STM32L152xB.ld -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ccRx.map" -o "ccRx.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-TemplateL151.hex: TemplateL151.elf
+ccRx.hex: ccRx.elf
 	@echo 'Invoking: Cross ARM GNU Create Flash Image'
-	arm-none-eabi-objcopy -O ihex "TemplateL151.elf"  "TemplateL151.hex"
+	arm-none-eabi-objcopy -O ihex "ccRx.elf"  "ccRx.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-TemplateL151.lst: TemplateL151.elf
+ccRx.lst: ccRx.elf
 	@echo 'Invoking: Cross ARM GNU Create Listing'
-	arm-none-eabi-objdump --source --all-headers --demangle --line-numbers --wide "TemplateL151.elf" > "TemplateL151.lst"
+	arm-none-eabi-objdump --source --all-headers --demangle --line-numbers --wide "ccRx.elf" > "ccRx.lst"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-TemplateL151.siz: TemplateL151.elf
+ccRx.siz: ccRx.elf
 	@echo 'Invoking: Cross ARM GNU Print Size'
-	arm-none-eabi-size --format=berkeley "TemplateL151.elf"
+	arm-none-eabi-size --format=berkeley "ccRx.elf"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS) TemplateL151.elf
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS) ccRx.elf
 	-@echo ' '
 
 secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_LIST) $(SECONDARY_SIZE)

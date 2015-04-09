@@ -30,6 +30,7 @@ private:
     Spi_t ISpi;
     // Pins
     PinIrq_t IGdo0;
+    PinIrq_t IGdo2; //new
     void CsHi() { PinSet(CC_GPIO, CC_CS); }
     void CsLo() { PinClear(CC_GPIO, CC_CS); }
     bool GDO0IsHi() { return PinIsSet(CC_GPIO, CC_GDO0); }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="Assembly Source File">
+
+</language>
+<language name="C Source File">
+<includepath>../Common/os</includepath>
+<includepath>../Common/os/kernel/include</includepath>
+<includepath>../Common/os/hal/include</includepath>
+<includepath>../Common/os/hal/platforms/STM32L1xx</includepath>
+<includepath>../Common/os/ports/common/ARMCMx/CMSIS/include</includepath>
+<includepath>../Common/os/ports/GCC/ARMCMx</includepath>
+<includepath>../Common/os/ports/GCC/ARMCMx/STM32L1xx</includepath>
+<includepath>../Common/os/ports/common/ARMCMx</includepath>
+<includepath>../Common/os/hal/platforms/STM32</includepath>
+
+</language>
+<language name="C++ Source File">
+<includepath>inc</includepath>
+<includepath>../Radio</includepath>
+<includepath>../Common</includepath>
+<includepath>../Common/os</includepath>
+<includepath>../Common/os/kernel/include</includepath>
+<includepath>../Common/kl_lib</includepath>
+<includepath>../Common/os/hal/include</includepath>
+<includepath>../Common/os/hal/platforms/STM32L1xx</includepath>
+<includepath>../Common/os/ports/common/ARMCMx/CMSIS/include</includepath>
+<includepath>../Common/os/ports/GCC/ARMCMx</includepath>
+<includepath>../Common/os/ports/GCC/ARMCMx/STM32L1xx</includepath>
+<includepath>../Common/os/ports/common/ARMCMx</includepath>
+<includepath>../Common/os/hal/platforms/STM32</includepath>
+
+</language>
+<language name="Object File">
+
+</language>
+</section>
+</cdtprojectproperties>

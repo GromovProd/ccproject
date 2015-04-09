@@ -7,9 +7,9 @@ start address 0x08000841
 
 Program Header:
     LOAD off    0x00008000 vaddr 0x08000000 paddr 0x08000000 align 2**15
-         filesz 0x00001920 memsz 0x00001920 flags rwx
-    LOAD off    0x00010800 vaddr 0x20000800 paddr 0x08001920 align 2**15
-         filesz 0x00000000 memsz 0x00000830 flags rw-
+         filesz 0x00001940 memsz 0x00001940 flags rwx
+    LOAD off    0x00010800 vaddr 0x20000800 paddr 0x08001940 align 2**15
+         filesz 0x00000000 memsz 0x00000840 flags rw-
     LOAD off    0x00010000 vaddr 0x20000000 paddr 0x20000000 align 2**15
          filesz 0x00000000 memsz 0x00000800 flags rw-
 private flags = 5000002: [Version5 EABI] [has entry point]
@@ -18,19 +18,19 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn  Flags
   0 startup       000000f4  08000000  08000000  00008000  2**4  CONTENTS, ALLOC, LOAD, DATA
   1 constructors  00000004  080000f4  080000f4  000080f4  2**2  CONTENTS, ALLOC, LOAD, DATA
-  2 .text         00001820  08000100  08000100  00008100  2**4  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .text         00001840  08000100  08000100  00008100  2**4  CONTENTS, ALLOC, LOAD, READONLY, CODE
   3 .stacks       00000800  20000000  20000000  00010000  2**0  ALLOC
-  4 .bss          00000830  20000800  08001920  00010800  2**3  ALLOC
-  5 .debug_info   0000e1a5  00000000  00000000  00009920  2**0  CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00002c8a  00000000  00000000  00017ac5  2**0  CONTENTS, READONLY, DEBUGGING
-  7 .debug_loc    0000359e  00000000  00000000  0001a74f  2**0  CONTENTS, READONLY, DEBUGGING
-  8 .debug_aranges 000005d0  00000000  00000000  0001dced  2**0  CONTENTS, READONLY, DEBUGGING
-  9 .debug_ranges 00000b50  00000000  00000000  0001e2bd  2**0  CONTENTS, READONLY, DEBUGGING
- 10 .debug_line   00002846  00000000  00000000  0001ee0d  2**0  CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    0000321b  00000000  00000000  00021653  2**0  CONTENTS, READONLY, DEBUGGING
- 12 .comment      00000070  00000000  00000000  0002486e  2**0  CONTENTS, READONLY
- 13 .ARM.attributes 00000033  00000000  00000000  000248de  2**0  CONTENTS, READONLY
- 14 .debug_frame  00000d38  00000000  00000000  00024914  2**2  CONTENTS, READONLY, DEBUGGING
+  4 .bss          00000840  20000800  08001940  00010800  2**3  ALLOC
+  5 .debug_info   0000e1bd  00000000  00000000  00009940  2**0  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00002c8a  00000000  00000000  00017afd  2**0  CONTENTS, READONLY, DEBUGGING
+  7 .debug_loc    0000359e  00000000  00000000  0001a787  2**0  CONTENTS, READONLY, DEBUGGING
+  8 .debug_aranges 000005d0  00000000  00000000  0001dd25  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 00000b50  00000000  00000000  0001e2f5  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line   00002846  00000000  00000000  0001ee45  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00003221  00000000  00000000  0002168b  2**0  CONTENTS, READONLY, DEBUGGING
+ 12 .comment      00000070  00000000  00000000  000248ac  2**0  CONTENTS, READONLY
+ 13 .ARM.attributes 00000033  00000000  00000000  0002491c  2**0  CONTENTS, READONLY
+ 14 .debug_frame  00000d38  00000000  00000000  00024950  2**2  CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
 080000f4 l    d  constructors	00000000 constructors
@@ -74,14 +74,14 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 memset.c
 00000000 l    df *ABS*	00000000 chregistry.c
 00000000 l    df *ABS*	00000000 
-20001030 l       .bss	00000000 __heap_base__
-08001920 l       .text	00000000 _etext
+20001040 l       .bss	00000000 __heap_base__
+08001940 l       .text	00000000 _etext
 20004000 l       *ABS*	00000000 __heap_end__
 00004000 l       *ABS*	00000000 __ram_size__
 00000000 l       startup	00000000 _text
 20000000 l       startup	00000000 __ram_start__
 20004000 l       *ABS*	00000000 __ram_end__
-20001030 l       .bss	00000000 _end
+20001040 l       .bss	00000000 _end
 00000400 l       *ABS*	00000000 __main_stack_size__
 00000400 l       *ABS*	00000000 __process_stack_size__
 08000c20  w    F .text	00000002 Vector58
@@ -100,7 +100,7 @@ SYMBOL TABLE:
 08000c20  w    F .text	00000002 VectorDC
 08000000 g     O startup	000000f4 _vectors
 080010e0 g     F .text	00000068 cc1101_t::ReadFIFO(rPkt_t*)
-20000f61 g     O .bss	00000002 PktRx
+20000f6d g     O .bss	00000002 PktRx
 08000320 g     F .text	00000020 chSchGoSleepS
 08000df0 g     F .text	0000003c CmdUart_t::ISendViaDMA()
 08000550 g     F .text	00000048 chThdCreateI
@@ -128,12 +128,12 @@ SYMBOL TABLE:
 08000720 g     F .text	00000034 _port_init
 08000910 g     F .text	00000064 hal_lld_init
 08000600 g     F .text	00000030 chThdExitS
-08001610 g     F .text	00000040 cc1101_t::IGdo0IrqHandler()
+08001630 g     F .text	00000040 cc1101_t::IGdo0IrqHandler()
 08000c20  w    F .text	00000002 PendSVVector
-08001240 g     F .text	0000016e cc1101_t::RfConfig()
+08001250 g     F .text	0000016e cc1101_t::RfConfig()
 08000660 g     F .text	0000004c chVTSetI
-08001650 g     F .text	00000014 Vector64
-20001030 g       .bss	00000000 _bss_end
+08001670 g     F .text	00000014 Vector64
+20001040 g       .bss	00000000 _bss_end
 08000830  w    F .text	00000002 _default_exit
 08000fb0 g     F .text	00000054 CmdUart_t::IRQDmaTxHandler()
 08000c20  w    F .text	00000002 VectorCC
@@ -145,7 +145,7 @@ SYMBOL TABLE:
 08000430 g     F .text	00000014 chSchDoReschedule
 08000470 g     F .text	00000058 chSysInit
 080005d0 g     F .text	00000028 chThdSleep
-08001870 g     O .text	00000054 _stm32_dma_streams
+08001890 g     O .text	00000054 _stm32_dma_streams
 08000b20 g     F .text	0000002c Vector84
 080007d0 g     F .text	0000001a SysTickVector
 20000874 g     O .bss	000006d0 Uart
@@ -153,15 +153,15 @@ SYMBOL TABLE:
 08000d80 g     F .text	0000002c Clk_t::SwitchToHSI()
 08000c20  w    F .text	00000002 VectorD0
 08000c60 g     F .text	00000114 Clk_t::UpdateFreqValues()
-080013b0 g     F .text	00000248 cc1101_t::Init()
+080013c0 g     F .text	0000024c cc1101_t::Init()
 08000c20  w    F .text	00000002 VectorE4
 08000c20  w    F .text	00000002 VectorC0
-20000f60 g     O .bss	00000001 isON
+20000f6c g     O .bss	00000001 isON
 080007f0 g     F .text	00000010 _port_switch
 08000700 g     F .text	00000012 SVCallVector
 08000820  w    F .text	00000002 __late_init
 08001040 g     F .text	0000002c chDbgPanic
-20001020 g     O .bss	00000010 vtlist
+20001030 g     O .bss	00000010 vtlist
 08001150 g     F .text	00000030 cc1101_t::WriteRegister(unsigned char, unsigned char)
 08000c20  w    F .text	00000002 HardFaultVector
 08000760 g     F .text	00000068 _port_irq_epilogue
@@ -169,24 +169,24 @@ SYMBOL TABLE:
 08000c20  w    F .text	00000002 VectorF0
 20000868 g     O .bss	0000000c Clk
 08001080  w    F .text	00000010 Spi_t::ReadWriteByte(unsigned char)
-08001920 g       .text	00000000 _textdata
+08001940 g       .text	00000000 _textdata
 08000c20  w    F .text	00000002 VectorE0
 08000c20  w    F .text	00000002 MemManageVector
 080000f8 g       constructors	00000000 __fini_array_start
-20000f44 g     O .bss	0000001c CC
-08001670 g     F .text	00000094 memset
+20000f44 g     O .bss	00000028 CC
+08001690 g     F .text	00000094 memset
 08000130 g     F .text	00000144 main
 08000a00 g     F .text	00000028 Vector6C
-20000f64 g     O .bss	0000001c rlist
+20000f70 g     O .bss	0000001c rlist
 08000c20  w    F .text	00000002 VectorA0
-080011e0 g     F .text	0000005c cc1101_t::ReceiveSync(unsigned long, rPkt_t*)
+080011f0 g     F .text	0000005c cc1101_t::ReceiveSync(unsigned long, rPkt_t*)
 080000f8 g       constructors	00000000 __init_array_end
 08000c20  w    F .text	00000002 VectorC4
 08000ac0 g     F .text	0000002c Vector7C
 08000450 g     F .text	00000014 _idle_thread
 08000c20  w    F .text	00000002 VectorB0
-08001740 g     O .text	00000016 ch_debug
-080011c0 g     F .text	0000001e cc1101_t::SetChannel(unsigned char)
+08001760 g     O .text	00000016 ch_debug
+080011d0 g     F .text	0000001e cc1101_t::SetChannel(unsigned char)
 08000c20  w    F .text	00000002 Vector90
 08000800 g     F .text	00000010 _port_thread_start
 08000c20  w    F .text	00000002 Vector60
@@ -199,7 +199,7 @@ SYMBOL TABLE:
 08000a30 g     F .text	00000028 Vector70
 08000c20  w    F .text	00000002 VectorD4
 080009d0 g     F .text	00000026 nvicSetSystemHandlerPriority
-20000f80 g     O .bss	000000a0 _idle_thread_wa
+20000f90 g     O .bss	000000a0 _idle_thread_wa
 20000800 g       .bss	00000000 _data
 08001010 g     F .text	0000000c CmdUartTxIrq
 08000c20  w    F .text	00000002 Vector4C
@@ -214,12 +214,12 @@ SYMBOL TABLE:
 08000c20 g     F .text	00000002 _unhandled_exception
 08000c20  w    F .text	00000002 Vector88
 20000400 g       .stacks	00000000 __main_thread_stack_base__
-08001600 g     F .text	00000010 cc1101_t::IHandleAsync()
+08001610 g     F .text	00000014 cc1101_t::IHandleAsync()
 080000f4 g       constructors	00000000 __init_array_start
 08000520 g     F .text	00000024 _thread_init
 08000c20  w    F .text	00000002 Vector50
 08000b90 g     F .text	00000088 dmaStreamAllocate
-080011b0  w    F .text	00000010 cc1101_t::EnterIdle()
+080011b0  w    F .text	00000012 cc1101_t::EnterIdle()
 20000000 g       .stacks	00000000 __main_stack_base__
 08000c20  w    F .text	00000002 Vector44
 08000c20  w    F .text	00000002 Vector28
@@ -455,14 +455,14 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:38
 
     CC.Init();
  80001ec:	481d      	ldr	r0, [pc, #116]	; (8000264 <main+0x134>)
- 80001ee:	f001 f8df 	bl	80013b0 <cc1101_t::Init()>
+ 80001ee:	f001 f8e7 	bl	80013c0 <cc1101_t::Init()>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:39
     CC.SetChannel(CHANNEL_ZERO);
  80001f2:	481c      	ldr	r0, [pc, #112]	; (8000264 <main+0x134>)
  80001f4:	2100      	movs	r1, #0
- 80001f6:	f000 ffe3 	bl	80011c0 <cc1101_t::SetChannel(unsigned char)>
+ 80001f6:	f000 ffeb 	bl	80011d0 <cc1101_t::SetChannel(unsigned char)>
 _ZN8cc1101_t11RecalibrateEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:67
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:68
     void TransmitAsync(rPkt_t *pPkt);
     void ReceiveAsync();
     void EnterIdle()  { WriteStrobe(CC_SIDLE); State = ccIdle; }
@@ -472,7 +472,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:67
  80001fa:	4d1a      	ldr	r5, [pc, #104]	; (8000264 <main+0x134>)
  80001fc:	782b      	ldrb	r3, [r5, #0]
 _ZN8cc1101_t9EnterIdleEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:64
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:65
     // State change
     void TransmitSync(rPkt_t *pPkt);
     uint8_t ReceiveSync(uint32_t Timeout_ms, rPkt_t *pPkt);
@@ -481,13 +481,13 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:64
     void EnterIdle()  { WriteStrobe(CC_SIDLE); State = ccIdle; }
  80001fe:	4628      	mov	r0, r5
 _ZN8cc1101_t11RecalibrateEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:67
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:68
     void Sleep() { WriteStrobe(CC_SPWD); State = ccSleeping; }
     void Recalibrate() {
         while(IState != CC_STB_IDLE) EnterIdle();
- 8000200:	b12b      	cbz	r3, 800020e <main+0xde>
+ 8000200:	b133      	cbz	r3, 8000210 <main+0xe0>
 _ZN8cc1101_t9EnterIdleEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:64
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:65
     // State change
     void TransmitSync(rPkt_t *pPkt);
     uint8_t ReceiveSync(uint32_t Timeout_ms, rPkt_t *pPkt);
@@ -497,16 +497,16 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:64
  8000202:	2136      	movs	r1, #54	; 0x36
  8000204:	f000 ffbc 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
  8000208:	2300      	movs	r3, #0
- 800020a:	762b      	strb	r3, [r5, #24]
- 800020c:	e7f5      	b.n	80001fa <main+0xca>
+ 800020a:	f885 3024 	strb.w	r3, [r5, #36]	; 0x24
+ 800020e:	e7f4      	b.n	80001fa <main+0xca>
 _ZN8cc1101_t11RecalibrateEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:68
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:69
     void Sleep() { WriteStrobe(CC_SPWD); State = ccSleeping; }
     void Recalibrate() {
         while(IState != CC_STB_IDLE) EnterIdle();
         WriteStrobe(CC_SCAL);
- 800020e:	2133      	movs	r1, #51	; 0x33
- 8000210:	f000 ffb6 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
+ 8000210:	2133      	movs	r1, #51	; 0x33
+ 8000212:	f000 ffb5 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
 PinIsSet():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:179
 // Set/clear
@@ -515,18 +515,18 @@ static inline void PinClear  (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber
 static inline void PinToggle (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->ODR  ^= (uint16_t)(1<<APinNumber); }
 // Check state
 static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { return (PGpioPort->IDR & (uint32_t)(1<<APinNumber)); }
- 8000214:	4b14      	ldr	r3, [pc, #80]	; (8000268 <main+0x138>)
- 8000216:	8a1b      	ldrh	r3, [r3, #16]
+ 8000216:	4b14      	ldr	r3, [pc, #80]	; (8000268 <main+0x138>)
+ 8000218:	8a1b      	ldrh	r3, [r3, #16]
 _ZN8cc1101_t8BusyWaitEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:37
-    PinIrq_t IGdo0;
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:38
+    PinIrq_t IGdo2; //new
     void CsHi() { PinSet(CC_GPIO, CC_CS); }
     void CsLo() { PinClear(CC_GPIO, CC_CS); }
     bool GDO0IsHi() { return PinIsSet(CC_GPIO, CC_GDO0); }
     bool GDO2IsHi() { return PinIsSet(CC_GPIO, CC_GDO2); }
     void BusyWait() { while(PinIsSet(CC_GPIO, CC_MISO)); }
- 8000218:	065b      	lsls	r3, r3, #25
- 800021a:	d4fb      	bmi.n	8000214 <main+0xe4>
+ 800021a:	065b      	lsls	r3, r3, #25
+ 800021c:	d4fb      	bmi.n	8000216 <main+0xe6>
 main():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:45
     // ==== Main cycle ====
@@ -535,11 +535,11 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:45
         CC.Recalibrate();
 
         if(CC.ReceiveSync(30, &PktRx) == OK) {
- 800021c:	4811      	ldr	r0, [pc, #68]	; (8000264 <main+0x134>)
- 800021e:	211e      	movs	r1, #30
- 8000220:	4a12      	ldr	r2, [pc, #72]	; (800026c <main+0x13c>)
- 8000222:	f000 ffdd 	bl	80011e0 <cc1101_t::ReceiveSync(unsigned long, rPkt_t*)>
- 8000226:	b950      	cbnz	r0, 800023e <main+0x10e>
+ 800021e:	4811      	ldr	r0, [pc, #68]	; (8000264 <main+0x134>)
+ 8000220:	211e      	movs	r1, #30
+ 8000222:	4a12      	ldr	r2, [pc, #72]	; (800026c <main+0x13c>)
+ 8000224:	f000 ffe4 	bl	80011f0 <cc1101_t::ReceiveSync(unsigned long, rPkt_t*)>
+ 8000228:	b950      	cbnz	r0, 8000240 <main+0x110>
 PinSet():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:175
     AF0=0, AF1=1, AF2=2, AF3=3, AF4=4, AF5=5, AF6=6, AF7=7,
@@ -548,35 +548,35 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:1
 
 // Set/clear
 static inline void PinSet    (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->BSRRL = (uint16_t)(1<<APinNumber); }
- 8000228:	2502      	movs	r5, #2
+ 800022a:	2502      	movs	r5, #2
 main():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:47
             PinSet(GPIOB, 1);
             chThdSleepMilliseconds(2000);
- 800022a:	f44f 60fa 	mov.w	r0, #2000	; 0x7d0
+ 800022c:	f44f 60fa 	mov.w	r0, #2000	; 0x7d0
 PinSet():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:175
- 800022e:	8325      	strh	r5, [r4, #24]
+ 8000230:	8325      	strh	r5, [r4, #24]
 main():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:47
- 8000230:	f000 f9ce 	bl	80005d0 <chThdSleep>
+ 8000232:	f000 f9cd 	bl	80005d0 <chThdSleep>
 PinClear():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:176
 static inline void PinClear  (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->BSRRH = (uint16_t)(1<<APinNumber); }
- 8000234:	8365      	strh	r5, [r4, #26]
+ 8000236:	8365      	strh	r5, [r4, #26]
 main():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:49
             PinClear(GPIOB, 1);
             chThdSleepMilliseconds(2000);
- 8000236:	f44f 60fa 	mov.w	r0, #2000	; 0x7d0
- 800023a:	f000 f9c9 	bl	80005d0 <chThdSleep>
+ 8000238:	f44f 60fa 	mov.w	r0, #2000	; 0x7d0
+ 800023c:	f000 f9c8 	bl	80005d0 <chThdSleep>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:51
         }
         if(isON) {
- 800023e:	4a0c      	ldr	r2, [pc, #48]	; (8000270 <main+0x140>)
- 8000240:	2301      	movs	r3, #1
- 8000242:	7811      	ldrb	r1, [r2, #0]
- 8000244:	b111      	cbz	r1, 800024c <main+0x11c>
+ 8000240:	4a0b      	ldr	r2, [pc, #44]	; (8000270 <main+0x140>)
+ 8000242:	2301      	movs	r3, #1
+ 8000244:	7811      	ldrb	r1, [r2, #0]
+ 8000246:	b111      	cbz	r1, 800024e <main+0x11e>
 PinSet():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:175
     AF0=0, AF1=1, AF2=2, AF3=3, AF4=4, AF5=5, AF6=6, AF7=7,
@@ -585,7 +585,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:1
 
 // Set/clear
 static inline void PinSet    (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->BSRRL = (uint16_t)(1<<APinNumber); }
- 8000246:	8323      	strh	r3, [r4, #24]
+ 8000248:	8323      	strh	r3, [r4, #24]
 main():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:57
             PinSet(GPIOB, 0);
@@ -594,15 +594,15 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:57
             PinClear(GPIOB, 0);
         }
         isON = isON? false : true;
- 8000248:	2300      	movs	r3, #0
- 800024a:	e000      	b.n	800024e <main+0x11e>
+ 800024a:	2300      	movs	r3, #0
+ 800024c:	e000      	b.n	8000250 <main+0x120>
 PinClear():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:176
 static inline void PinClear  (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->BSRRH = (uint16_t)(1<<APinNumber); }
- 800024c:	8363      	strh	r3, [r4, #26]
+ 800024e:	8363      	strh	r3, [r4, #26]
 main():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:57 (discriminator 3)
- 800024e:	7013      	strb	r3, [r2, #0]
+ 8000250:	7013      	strb	r3, [r2, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../main.cpp:21 (discriminator 3)
 #include "Radio/cc1101.h"
 
@@ -610,16 +610,15 @@ rPkt_t PktRx;
 
 bool isON = false;
 int main(void) {
- 8000250:	e7d3      	b.n	80001fa <main+0xca>
- 8000252:	bf00      	nop
+ 8000252:	e7d2      	b.n	80001fa <main+0xca>
  8000254:	20000868 	.word	0x20000868
  8000258:	40023800 	.word	0x40023800
  800025c:	40020400 	.word	0x40020400
  8000260:	20000874 	.word	0x20000874
  8000264:	20000f44 	.word	0x20000f44
  8000268:	40020000 	.word	0x40020000
- 800026c:	20000f61 	.word	0x20000f61
- 8000270:	20000f60 	.word	0x20000f60
+ 800026c:	20000f6d 	.word	0x20000f6d
+ 8000270:	20000f6c 	.word	0x20000f6c
 	...
 
 08000280 <_scheduler_init>:
@@ -653,7 +652,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chschd.c
  800028a:	615b      	str	r3, [r3, #20]
  800028c:	611b      	str	r3, [r3, #16]
  800028e:	4770      	bx	lr
- 8000290:	20000f64 	.word	0x20000f64
+ 8000290:	20000f70 	.word	0x20000f70
 	...
 
 080002a0 <chSchReadyI>:
@@ -761,8 +760,8 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chschd.c
   return tp;
 }
  80002ce:	bd10      	pop	{r4, pc}
- 80002d0:	08001760 	.word	0x08001760
- 80002d4:	20000f64 	.word	0x20000f64
+ 80002d0:	08001780 	.word	0x08001780
+ 80002d4:	20000f70 	.word	0x20000f70
 	...
 
 080002e0 <wakeup>:
@@ -892,7 +891,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chschd.c
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chschd.c:128
   chSysSwitch(currp, otp);
  8000338:	f000 ba5a 	b.w	80007f0 <_port_switch>
- 800033c:	20000f64 	.word	0x20000f64
+ 800033c:	20000f70 	.word	0x20000f70
 
 08000340 <chSchGoSleepTimeoutS>:
 chSchGoSleepTimeoutS():
@@ -960,7 +959,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chschd.c
  800036e:	6a18      	ldr	r0, [r3, #32]
  8000370:	b007      	add	sp, #28
  8000372:	bd30      	pop	{r4, r5, pc}
- 8000374:	20000f64 	.word	0x20000f64
+ 8000374:	20000f70 	.word	0x20000f70
  8000378:	080002e1 	.word	0x080002e1
 $d():
  800037c:	00000000 	.word	0x00000000
@@ -1072,7 +1071,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chschd.c
     chSysSwitch(ntp, otp);
  80003ae:	f000 ba1f 	b.w	80007f0 <_port_switch>
  80003b2:	bf00      	nop
- 80003b4:	20000f64 	.word	0x20000f64
+ 80003b4:	20000f70 	.word	0x20000f70
 	...
 
 080003c0 <chSchDoRescheduleBehind>:
@@ -1165,7 +1164,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chschd.c
   chSysSwitch(currp, otp);
  80003e6:	f000 ba03 	b.w	80007f0 <_port_switch>
  80003ea:	bf00      	nop
- 80003ec:	20000f64 	.word	0x20000f64
+ 80003ec:	20000f70 	.word	0x20000f70
 
 080003f0 <chSchDoRescheduleAhead>:
 chSchDoRescheduleAhead():
@@ -1290,7 +1289,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chschd.c
 
   chSysSwitch(currp, otp);
  8000420:	f000 b9e6 	b.w	80007f0 <_port_switch>
- 8000424:	20000f64 	.word	0x20000f64
+ 8000424:	20000f70 	.word	0x20000f70
 	...
 
 08000430 <chSchDoReschedule>:
@@ -1318,7 +1317,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chschd.c
        threads with equal priority and does not acquire a new time quantum.*/
     chSchDoRescheduleAhead();
  800043c:	f7ff bfd8 	b.w	80003f0 <chSchDoRescheduleAhead>
- 8000440:	20000f64 	.word	0x20000f64
+ 8000440:	20000f70 	.word	0x20000f70
 	...
 
 08000450 <_idle_thread>:
@@ -1336,8 +1335,8 @@ void _idle_thread(void *p) {
  8000456:	619a      	str	r2, [r3, #24]
  8000458:	e7fe      	b.n	8000458 <_idle_thread+0x8>
  800045a:	bf00      	nop
- 800045c:	20000f64 	.word	0x20000f64
- 8000460:	08001780 	.word	0x08001780
+ 800045c:	20000f70 	.word	0x20000f70
+ 8000460:	080017a0 	.word	0x080017a0
 	...
 
 08000470 <chSysInit>:
@@ -1434,10 +1433,10 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chsys.c:
  80004ae:	b003      	add	sp, #12
  80004b0:	f85d fb04 	ldr.w	pc, [sp], #4
  80004b4:	20000800 	.word	0x20000800
- 80004b8:	20000f64 	.word	0x20000f64
- 80004bc:	08001740 	.word	0x08001740
+ 80004b8:	20000f70 	.word	0x20000f70
+ 80004bc:	08001760 	.word	0x08001760
  80004c0:	08000451 	.word	0x08000451
- 80004c4:	20000f80 	.word	0x20000f80
+ 80004c4:	20000f90 	.word	0x20000f90
 	...
 
 080004d0 <chSysTimerHandlerI>:
@@ -1501,8 +1500,8 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chsys.c:
  8000510:	f383 8811 	msr	BASEPRI, r3
  8000514:	e7ee      	b.n	80004f4 <chSysTimerHandlerI+0x24>
  8000516:	bd38      	pop	{r3, r4, r5, pc}
- 8000518:	20000f64 	.word	0x20000f64
- 800051c:	20001020 	.word	0x20001020
+ 8000518:	20000f70 	.word	0x20000f70
+ 800051c:	20001030 	.word	0x20001030
 
 08000520 <_thread_init>:
 _thread_init():
@@ -1573,7 +1572,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chthread
   return tp;
 }
  800053e:	4770      	bx	lr
- 8000540:	20000f64 	.word	0x20000f64
+ 8000540:	20000f70 	.word	0x20000f70
 	...
 
 08000550 <chThdCreateI>:
@@ -1644,7 +1643,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chthread
   return _thread_init(tp, prio);
  800058a:	f7ff bfc9 	b.w	8000520 <_thread_init>
  800058e:	bf00      	nop
- 8000590:	08001790 	.word	0x08001790
+ 8000590:	080017b0 	.word	0x080017b0
  8000594:	08000801 	.word	0x08000801
 	...
 
@@ -1723,7 +1722,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chthread
  80005ec:	f383 8811 	msr	BASEPRI, r3
  80005f0:	bd10      	pop	{r4, pc}
  80005f2:	bf00      	nop
- 80005f4:	080017c8 	.word	0x080017c8
+ 80005f4:	080017e8 	.word	0x080017e8
 	...
 
 08000600 <chThdExitS>:
@@ -1791,8 +1790,8 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chthread
   chDbgAssert(FALSE, "chThdExitS(), #1", "zombies apocalypse");
  8000622:	4802      	ldr	r0, [pc, #8]	; (800062c <chThdExitS+0x2c>)
  8000624:	f000 bd0c 	b.w	8001040 <chDbgPanic>
- 8000628:	20000f64 	.word	0x20000f64
- 800062c:	080017d7 	.word	0x080017d7
+ 8000628:	20000f70 	.word	0x20000f70
+ 800062c:	080017f7 	.word	0x080017f7
 
 08000630 <chThdExit>:
 chThdExit():
@@ -1844,7 +1843,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chvt.c:5
  800064e:	60da      	str	r2, [r3, #12]
  8000650:	4770      	bx	lr
  8000652:	bf00      	nop
- 8000654:	20001020 	.word	0x20001020
+ 8000654:	20001030 	.word	0x20001030
 	...
 
 08000660 <chVTSetI>:
@@ -1949,8 +1948,8 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chvt.c:9
  800069e:	1b55      	subs	r5, r2, r5
  80006a0:	609d      	str	r5, [r3, #8]
  80006a2:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
- 80006a4:	080017f0 	.word	0x080017f0
- 80006a8:	20001020 	.word	0x20001020
+ 80006a4:	08001810 	.word	0x08001810
+ 80006a8:	20001030 	.word	0x20001030
 $d():
  80006ac:	00000000 	.word	0x00000000
 
@@ -2008,9 +2007,9 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/kernel/src/chvt.c:1
  80006de:	2300      	movs	r3, #0
  80006e0:	60e3      	str	r3, [r4, #12]
  80006e2:	bd10      	pop	{r4, pc}
- 80006e4:	080017fd 	.word	0x080017fd
- 80006e8:	0800180c 	.word	0x0800180c
- 80006ec:	20001020 	.word	0x20001020
+ 80006e4:	0800181d 	.word	0x0800181d
+ 80006e8:	0800182c 	.word	0x0800182c
+ 80006ec:	20001030 	.word	0x20001030
 
 080006f0 <_port_switch_from_isr>:
 _port_switch_from_isr():
@@ -2215,7 +2214,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/hal/ARMCMx/chcore_v
  80007b2:	f383 8811 	msr	BASEPRI, r3
  80007b6:	4770      	bx	lr
  80007b8:	e000ed00 	.word	0xe000ed00
- 80007bc:	20000f64 	.word	0x20000f64
+ 80007bc:	20000f70 	.word	0x20000f70
  80007c0:	080006f1 	.word	0x080006f1
  80007c4:	080006f4 	.word	0x080006f4
 	...
@@ -2510,9 +2509,9 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/hal/ARMCMx/crt0.c:3
  80008d8:	20000400 	.word	0x20000400
  80008dc:	20000800 	.word	0x20000800
  80008e0:	20000800 	.word	0x20000800
- 80008e4:	08001920 	.word	0x08001920
+ 80008e4:	08001940 	.word	0x08001940
  80008e8:	20000800 	.word	0x20000800
- 80008ec:	20001030 	.word	0x20001030
+ 80008ec:	20001040 	.word	0x20001040
  80008f0:	080000f4 	.word	0x080000f4
  80008f4:	080000f8 	.word	0x080000f8
  80008f8:	080000f8 	.word	0x080000f8
@@ -3251,7 +3250,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/hal/stm32_dma.c:252
  8000b74:	605a      	str	r2, [r3, #4]
  8000b76:	4770      	bx	lr
  8000b78:	20000860 	.word	0x20000860
- 8000b7c:	08001870 	.word	0x08001870
+ 8000b7c:	08001890 	.word	0x08001890
  8000b80:	20000828 	.word	0x20000828
  8000b84:	40026000 	.word	0x40026000
 	...
@@ -3389,7 +3388,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/hal/stm32_dma.c:307
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../os/hal/stm32_dma.c:308
 }
  8000c04:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
- 8000c08:	08001820 	.word	0x08001820
+ 8000c08:	08001840 	.word	0x08001840
  8000c0c:	20000860 	.word	0x20000860
  8000c10:	20000828 	.word	0x20000828
  8000c14:	40023800 	.word	0x40023800
@@ -3493,7 +3492,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/clocking_L1xx.c
     // Tables
     const uint32_t MSIClk[8] = {65536, 131072, 262144, 524188, 1048000, 2097000, 4194000};
  8000c6a:	a80a      	add	r0, sp, #40	; 0x28
- 8000c6c:	f000 fd00 	bl	8001670 <memset>
+ 8000c6c:	f000 fd10 	bl	8001690 <memset>
  8000c70:	f44f 3380 	mov.w	r3, #65536	; 0x10000
  8000c74:	930a      	str	r3, [sp, #40]	; 0x28
  8000c76:	f44f 3300 	mov.w	r3, #131072	; 0x20000
@@ -3742,7 +3741,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/clocking_L1xx.c
  8000d50:	b013      	add	sp, #76	; 0x4c
  8000d52:	bdf0      	pop	{r4, r5, r6, r7, pc}
  8000d54:	0007ff9c 	.word	0x0007ff9c
- 8000d58:	08001710 	.word	0x08001710
+ 8000d58:	08001730 	.word	0x08001730
  8000d5c:	000ffdc0 	.word	0x000ffdc0
  8000d60:	001fff68 	.word	0x001fff68
  8000d64:	003ffed0 	.word	0x003ffed0
@@ -3897,7 +3896,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/cmd_uart.cpp:52
  8000e22:	601a      	str	r2, [r3, #0]
  8000e24:	4770      	bx	lr
  8000e26:	bf00      	nop
- 8000e28:	08001870 	.word	0x08001870
+ 8000e28:	08001890 	.word	0x08001890
 $d():
  8000e2c:	00000000 	.word	0x00000000
 
@@ -4313,7 +4312,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/cmd_uart.cpp:12
  8000f90:	40013800 	.word	0x40013800
  8000f94:	08001011 	.word	0x08001011
  8000f98:	20000868 	.word	0x20000868
- 8000f9c:	08001894 	.word	0x08001894
+ 8000f9c:	080018b4 	.word	0x080018b4
  8000fa0:	40013804 	.word	0x40013804
 	...
 
@@ -4407,7 +4406,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/cmd_uart.cpp:13
     if(IFullSlotsCount == 0) IDmaIsIdle = true; // Nothing left to send
     else ISendViaDMA();
  8000ffc:	f7ff bef8 	b.w	8000df0 <CmdUart_t::ISendViaDMA()>
- 8001000:	08001870 	.word	0x08001870
+ 8001000:	08001890 	.word	0x08001890
 	...
 
 08001010 <CmdUartTxIrq>:
@@ -4495,9 +4494,9 @@ void chDbgPanic(const char *msg1) {
     Uart.PrintNow("\r");
  800105a:	4803      	ldr	r0, [pc, #12]	; (8001068 <chDbgPanic+0x28>)
  800105c:	f7ff bfe0 	b.w	8001020 <CmdUart_t::PrintNow(char const*) [clone .isra.12]>
- 8001060:	080018d0 	.word	0x080018d0
- 8001064:	20000f64 	.word	0x20000f64
- 8001068:	080018d3 	.word	0x080018d3
+ 8001060:	080018f0 	.word	0x080018f0
+ 8001064:	20000f70 	.word	0x20000f70
+ 8001068:	080018f3 	.word	0x080018f3
 $d():
  800106c:	00000000 	.word	0x00000000
 
@@ -4513,7 +4512,7 @@ static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) 
  8001070:	4b02      	ldr	r3, [pc, #8]	; (800107c <cc1101_t::BusyWait() [clone .isra.6]+0xc>)
  8001072:	8a1b      	ldrh	r3, [r3, #16]
 _ZN8cc1101_t8BusyWaitEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:37
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:38
  8001074:	065b      	lsls	r3, r3, #25
  8001076:	d4fb      	bmi.n	8001070 <cc1101_t::BusyWait() [clone .isra.6]>
  8001078:	4770      	bx	lr
@@ -4901,7 +4900,7 @@ $d():
 
 080011b0 <cc1101_t::EnterIdle()>:
 _ZN8cc1101_t9EnterIdleEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:64
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:65
     // State change
     void TransmitSync(rPkt_t *pPkt);
     uint8_t ReceiveSync(uint32_t Timeout_ms, rPkt_t *pPkt);
@@ -4913,10 +4912,11 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:64
  80011b4:	4604      	mov	r4, r0
  80011b6:	f7ff ffe3 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
  80011ba:	2300      	movs	r3, #0
- 80011bc:	7623      	strb	r3, [r4, #24]
- 80011be:	bd10      	pop	{r4, pc}
+ 80011bc:	f884 3024 	strb.w	r3, [r4, #36]	; 0x24
+ 80011c0:	bd10      	pop	{r4, pc}
+	...
 
-080011c0 <cc1101_t::SetChannel(unsigned char)>:
+080011d0 <cc1101_t::SetChannel(unsigned char)>:
 _ZN8cc1101_t10SetChannelEh():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:40
     IGdo0.Setup(CC_GPIO, CC_GDO0, ttFalling);
@@ -4925,24 +4925,24 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:40
 
 // ========================== TX, RX, freq and power ===========================
 void cc1101_t::SetChannel(uint8_t AChannel) {
- 80011c0:	b538      	push	{r3, r4, r5, lr}
- 80011c2:	4604      	mov	r4, r0
- 80011c4:	460d      	mov	r5, r1
+ 80011d0:	b538      	push	{r3, r4, r5, lr}
+ 80011d2:	4604      	mov	r4, r0
+ 80011d4:	460d      	mov	r5, r1
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:41 (discriminator 1)
     while(IState != CC_STB_IDLE) EnterIdle();   // CC must be in IDLE mode
- 80011c6:	7823      	ldrb	r3, [r4, #0]
- 80011c8:	4620      	mov	r0, r4
- 80011ca:	b113      	cbz	r3, 80011d2 <cc1101_t::SetChannel(unsigned char)+0x12>
+ 80011d6:	7823      	ldrb	r3, [r4, #0]
+ 80011d8:	4620      	mov	r0, r4
+ 80011da:	b113      	cbz	r3, 80011e2 <cc1101_t::SetChannel(unsigned char)+0x12>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:41 (discriminator 2)
- 80011cc:	f7ff fff0 	bl	80011b0 <cc1101_t::EnterIdle()>
- 80011d0:	e7f9      	b.n	80011c6 <cc1101_t::SetChannel(unsigned char)+0x6>
+ 80011dc:	f7ff ffe8 	bl	80011b0 <cc1101_t::EnterIdle()>
+ 80011e0:	e7f9      	b.n	80011d6 <cc1101_t::SetChannel(unsigned char)+0x6>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:42
     WriteRegister(CC_CHANNR, AChannel);         // Now set channel
- 80011d2:	462a      	mov	r2, r5
- 80011d4:	210a      	movs	r1, #10
+ 80011e2:	462a      	mov	r2, r5
+ 80011e4:	210a      	movs	r1, #10
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:43
 }
- 80011d6:	e8bd 4038 	ldmia.w	sp!, {r3, r4, r5, lr}
+ 80011e6:	e8bd 4038 	ldmia.w	sp!, {r3, r4, r5, lr}
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:42
 }
 
@@ -4950,10 +4950,10 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:42
 void cc1101_t::SetChannel(uint8_t AChannel) {
     while(IState != CC_STB_IDLE) EnterIdle();   // CC must be in IDLE mode
     WriteRegister(CC_CHANNR, AChannel);         // Now set channel
- 80011da:	f7ff bfb9 	b.w	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80011ea:	f7ff bfb1 	b.w	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 	...
 
-080011e0 <cc1101_t::ReceiveSync(unsigned long, rPkt_t*)>:
+080011f0 <cc1101_t::ReceiveSync(unsigned long, rPkt_t*)>:
 _ZN8cc1101_t11ReceiveSyncEmP6rPkt_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:79
 }
@@ -4962,72 +4962,72 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:79
  * Enter RX mode and wait reception for Timeout_ms.
  */
 uint8_t cc1101_t::ReceiveSync(uint32_t Timeout_ms, rPkt_t *pPkt) {
- 80011e0:	b570      	push	{r4, r5, r6, lr}
- 80011e2:	460d      	mov	r5, r1
+ 80011f0:	b570      	push	{r4, r5, r6, lr}
+ 80011f2:	460d      	mov	r5, r1
 _ZN8cc1101_t11FlushRxFIFOEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:53
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:54
     void CReset()      { WriteStrobe(CC_SRES); }
     void EnterTX()     { WriteStrobe(CC_STX);  }
     void FlushTxFIFO() { WriteStrobe(CC_SFTX); }
     void GetState()    { WriteStrobe(CC_SNOP); }
     void EnterRX()     { WriteStrobe(CC_SRX);  }
     void FlushRxFIFO() { WriteStrobe(CC_SFRX); }
- 80011e4:	213a      	movs	r1, #58	; 0x3a
+ 80011f4:	213a      	movs	r1, #58	; 0x3a
 _ZN8cc1101_t11ReceiveSyncEmP6rPkt_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:79
- 80011e6:	4604      	mov	r4, r0
- 80011e8:	4616      	mov	r6, r2
+ 80011f6:	4604      	mov	r4, r0
+ 80011f8:	4616      	mov	r6, r2
 _ZN8cc1101_t11FlushRxFIFOEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:53
- 80011ea:	f7ff ffc9 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:54
+ 80011fa:	f7ff ffc1 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
 _ZN8cc1101_t11ReceiveSyncEmP6rPkt_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:81
     FlushRxFIFO();
     chSysLock();
- 80011ee:	2320      	movs	r3, #32
- 80011f0:	f383 8811 	msr	BASEPRI, r3
+ 80011fe:	2320      	movs	r3, #32
+ 8001200:	f383 8811 	msr	BASEPRI, r3
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:82
     PWaitingThread = chThdSelf();
- 80011f4:	4b10      	ldr	r3, [pc, #64]	; (8001238 <cc1101_t::ReceiveSync(unsigned long, rPkt_t*)+0x58>)
+ 8001204:	4b10      	ldr	r3, [pc, #64]	; (8001248 <cc1101_t::ReceiveSync(unsigned long, rPkt_t*)+0x58>)
 _ZN8cc1101_t7EnterRXEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:52
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:53
     // Strobes
     void CReset()      { WriteStrobe(CC_SRES); }
     void EnterTX()     { WriteStrobe(CC_STX);  }
     void FlushTxFIFO() { WriteStrobe(CC_SFTX); }
     void GetState()    { WriteStrobe(CC_SNOP); }
     void EnterRX()     { WriteStrobe(CC_SRX);  }
- 80011f6:	2134      	movs	r1, #52	; 0x34
+ 8001206:	2134      	movs	r1, #52	; 0x34
 _ZN8cc1101_t11ReceiveSyncEmP6rPkt_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:82
- 80011f8:	6998      	ldr	r0, [r3, #24]
- 80011fa:	6060      	str	r0, [r4, #4]
+ 8001208:	6998      	ldr	r0, [r3, #24]
+ 800120a:	6060      	str	r0, [r4, #4]
 _ZN8cc1101_t7EnterRXEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:52
- 80011fc:	4620      	mov	r0, r4
- 80011fe:	f7ff ffbf 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:53
+ 800120c:	4620      	mov	r0, r4
+ 800120e:	f7ff ffb7 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
 _ZN8cc1101_t11ReceiveSyncEmP6rPkt_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:84
     EnterRX();      // After that, some time will be wasted to recalibrate if enabled
     msg_t Rslt = chSchGoSleepTimeoutS(THD_STATE_SUSPENDED, MS2ST(Timeout_ms));
- 8001202:	f44f 737a 	mov.w	r3, #1000	; 0x3e8
- 8001206:	435d      	muls	r5, r3
- 8001208:	f5a5 757a 	sub.w	r5, r5, #1000	; 0x3e8
- 800120c:	fbb5 f1f3 	udiv	r1, r5, r3
- 8001210:	3101      	adds	r1, #1
- 8001212:	2002      	movs	r0, #2
- 8001214:	f7ff f894 	bl	8000340 <chSchGoSleepTimeoutS>
+ 8001212:	f44f 737a 	mov.w	r3, #1000	; 0x3e8
+ 8001216:	435d      	muls	r5, r3
+ 8001218:	f5a5 757a 	sub.w	r5, r5, #1000	; 0x3e8
+ 800121c:	fbb5 f1f3 	udiv	r1, r5, r3
+ 8001220:	3101      	adds	r1, #1
+ 8001222:	2002      	movs	r0, #2
+ 8001224:	f7ff f88c 	bl	8000340 <chSchGoSleepTimeoutS>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:85
     chSysUnlock();  // Will be here when IRQ will fire, or timeout occur - with appropriate message
- 8001218:	2300      	movs	r3, #0
- 800121a:	f383 8811 	msr	BASEPRI, r3
+ 8001228:	2300      	movs	r3, #0
+ 800122a:	f383 8811 	msr	BASEPRI, r3
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:87
 
     if(Rslt == RDY_TIMEOUT) {   // Nothing received, timeout occured
- 800121e:	3001      	adds	r0, #1
+ 800122e:	3001      	adds	r0, #1
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:88
         EnterIdle();            // Get out of RX mode
- 8001220:	4620      	mov	r0, r4
+ 8001230:	4620      	mov	r0, r4
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:87
     PWaitingThread = chThdSelf();
     EnterRX();      // After that, some time will be wasted to recalibrate if enabled
@@ -5035,17 +5035,17 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:87
     chSysUnlock();  // Will be here when IRQ will fire, or timeout occur - with appropriate message
 
     if(Rslt == RDY_TIMEOUT) {   // Nothing received, timeout occured
- 8001222:	d004      	beq.n	800122e <cc1101_t::ReceiveSync(unsigned long, rPkt_t*)+0x4e>
+ 8001232:	d004      	beq.n	800123e <cc1101_t::ReceiveSync(unsigned long, rPkt_t*)+0x4e>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:92
         EnterIdle();            // Get out of RX mode
         return TIMEOUT;
     }
     // IRQ occured: something received, or CRC error
     else return ReadFIFO(pPkt);
- 8001224:	4631      	mov	r1, r6
+ 8001234:	4631      	mov	r1, r6
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:93
 }
- 8001226:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+ 8001236:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:92
     if(Rslt == RDY_TIMEOUT) {   // Nothing received, timeout occured
         EnterIdle();            // Get out of RX mode
@@ -5053,7 +5053,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:92
     }
     // IRQ occured: something received, or CRC error
     else return ReadFIFO(pPkt);
- 800122a:	f7ff bf59 	b.w	80010e0 <cc1101_t::ReadFIFO(rPkt_t*)>
+ 800123a:	f7ff bf51 	b.w	80010e0 <cc1101_t::ReadFIFO(rPkt_t*)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:88
     EnterRX();      // After that, some time will be wasted to recalibrate if enabled
     msg_t Rslt = chSchGoSleepTimeoutS(THD_STATE_SUSPENDED, MS2ST(Timeout_ms));
@@ -5061,21 +5061,21 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:88
 
     if(Rslt == RDY_TIMEOUT) {   // Nothing received, timeout occured
         EnterIdle();            // Get out of RX mode
- 800122e:	f7ff ffbf 	bl	80011b0 <cc1101_t::EnterIdle()>
+ 800123e:	f7ff ffb7 	bl	80011b0 <cc1101_t::EnterIdle()>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:93
         return TIMEOUT;
     }
     // IRQ occured: something received, or CRC error
     else return ReadFIFO(pPkt);
 }
- 8001232:	2002      	movs	r0, #2
- 8001234:	bd70      	pop	{r4, r5, r6, pc}
- 8001236:	bf00      	nop
- 8001238:	20000f64 	.word	0x20000f64
+ 8001242:	2002      	movs	r0, #2
+ 8001244:	bd70      	pop	{r4, r5, r6, pc}
+ 8001246:	bf00      	nop
+ 8001248:	20000f70 	.word	0x20000f70
 $d():
- 800123c:	00000000 	.word	0x00000000
+ 800124c:	00000000 	.word	0x00000000
 
-08001240 <cc1101_t::RfConfig()>:
+08001250 <cc1101_t::RfConfig()>:
 _ZN8cc1101_t8RfConfigEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:176
     CsHi();    // End transmission
@@ -5084,10 +5084,10 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:176
 
 // ==== Used to setup CC with needed values ====
 void cc1101_t::RfConfig() {
- 8001240:	b510      	push	{r4, lr}
+ 8001250:	b510      	push	{r4, lr}
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:177
     WriteRegister(CC_FSCTRL1,  CC_FSCTRL1_VALUE);    // Frequency synthesizer control.
- 8001242:	210b      	movs	r1, #11
+ 8001252:	210b      	movs	r1, #11
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:176
     CsHi();    // End transmission
     //Uart.Printf("\r");
@@ -5095,225 +5095,225 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:176
 
 // ==== Used to setup CC with needed values ====
 void cc1101_t::RfConfig() {
- 8001244:	4604      	mov	r4, r0
+ 8001254:	4604      	mov	r4, r0
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:177
     WriteRegister(CC_FSCTRL1,  CC_FSCTRL1_VALUE);    // Frequency synthesizer control.
- 8001246:	220c      	movs	r2, #12
- 8001248:	f7ff ff82 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001256:	220c      	movs	r2, #12
+ 8001258:	f7ff ff7a 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:178
     WriteRegister(CC_FSCTRL0,  CC_FSCTRL0_VALUE);    // Frequency synthesizer control.
- 800124c:	4620      	mov	r0, r4
- 800124e:	210c      	movs	r1, #12
- 8001250:	2200      	movs	r2, #0
- 8001252:	f7ff ff7d 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 800125c:	4620      	mov	r0, r4
+ 800125e:	210c      	movs	r1, #12
+ 8001260:	2200      	movs	r2, #0
+ 8001262:	f7ff ff75 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:179
     WriteRegister(CC_FREQ2,    CC_FREQ2_VALUE);      // Frequency control word, high byte.
- 8001256:	4620      	mov	r0, r4
- 8001258:	210d      	movs	r1, #13
- 800125a:	2220      	movs	r2, #32
- 800125c:	f7ff ff78 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001266:	4620      	mov	r0, r4
+ 8001268:	210d      	movs	r1, #13
+ 800126a:	2220      	movs	r2, #32
+ 800126c:	f7ff ff70 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:180
     WriteRegister(CC_FREQ1,    CC_FREQ1_VALUE);      // Frequency control word, middle byte.
- 8001260:	4620      	mov	r0, r4
- 8001262:	210e      	movs	r1, #14
- 8001264:	2225      	movs	r2, #37	; 0x25
- 8001266:	f7ff ff73 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001270:	4620      	mov	r0, r4
+ 8001272:	210e      	movs	r1, #14
+ 8001274:	2225      	movs	r2, #37	; 0x25
+ 8001276:	f7ff ff6b 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:181
     WriteRegister(CC_FREQ0,    CC_FREQ0_VALUE);      // Frequency control word, low byte.
- 800126a:	4620      	mov	r0, r4
- 800126c:	210f      	movs	r1, #15
- 800126e:	22ed      	movs	r2, #237	; 0xed
- 8001270:	f7ff ff6e 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 800127a:	4620      	mov	r0, r4
+ 800127c:	210f      	movs	r1, #15
+ 800127e:	22ed      	movs	r2, #237	; 0xed
+ 8001280:	f7ff ff66 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:182
     WriteRegister(CC_MDMCFG4,  CC_MDMCFG4_VALUE);    // Modem configuration.
- 8001274:	4620      	mov	r0, r4
- 8001276:	2110      	movs	r1, #16
- 8001278:	222d      	movs	r2, #45	; 0x2d
- 800127a:	f7ff ff69 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001284:	4620      	mov	r0, r4
+ 8001286:	2110      	movs	r1, #16
+ 8001288:	222d      	movs	r2, #45	; 0x2d
+ 800128a:	f7ff ff61 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:183
     WriteRegister(CC_MDMCFG3,  CC_MDMCFG3_VALUE);    // Modem configuration.
- 800127e:	4620      	mov	r0, r4
- 8001280:	2111      	movs	r1, #17
- 8001282:	222f      	movs	r2, #47	; 0x2f
- 8001284:	f7ff ff64 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 800128e:	4620      	mov	r0, r4
+ 8001290:	2111      	movs	r1, #17
+ 8001292:	222f      	movs	r2, #47	; 0x2f
+ 8001294:	f7ff ff5c 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:184
     WriteRegister(CC_MDMCFG2,  CC_MDMCFG2_VALUE);    // Modem configuration.
- 8001288:	4620      	mov	r0, r4
- 800128a:	2112      	movs	r1, #18
- 800128c:	2213      	movs	r2, #19
- 800128e:	f7ff ff5f 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001298:	4620      	mov	r0, r4
+ 800129a:	2112      	movs	r1, #18
+ 800129c:	2213      	movs	r2, #19
+ 800129e:	f7ff ff57 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:185
     WriteRegister(CC_MDMCFG1,  CC_MDMCFG1_VALUE);    // Modem configuration.
- 8001292:	4620      	mov	r0, r4
- 8001294:	2113      	movs	r1, #19
- 8001296:	2222      	movs	r2, #34	; 0x22
- 8001298:	f7ff ff5a 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012a2:	4620      	mov	r0, r4
+ 80012a4:	2113      	movs	r1, #19
+ 80012a6:	2222      	movs	r2, #34	; 0x22
+ 80012a8:	f7ff ff52 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:186
     WriteRegister(CC_MDMCFG0,  CC_MDMCFG0_VALUE);    // Modem configuration.
- 800129c:	4620      	mov	r0, r4
- 800129e:	2114      	movs	r1, #20
- 80012a0:	22e5      	movs	r2, #229	; 0xe5
- 80012a2:	f7ff ff55 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012ac:	4620      	mov	r0, r4
+ 80012ae:	2114      	movs	r1, #20
+ 80012b0:	22e5      	movs	r2, #229	; 0xe5
+ 80012b2:	f7ff ff4d 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:187
     WriteRegister(CC_CHANNR,   CC_CHANNR_VALUE);     // Channel number.
- 80012a6:	4620      	mov	r0, r4
- 80012a8:	210a      	movs	r1, #10
- 80012aa:	2200      	movs	r2, #0
- 80012ac:	f7ff ff50 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012b6:	4620      	mov	r0, r4
+ 80012b8:	210a      	movs	r1, #10
+ 80012ba:	2200      	movs	r2, #0
+ 80012bc:	f7ff ff48 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:188
     WriteRegister(CC_DEVIATN,  CC_DEVIATN_VALUE);    // Modem deviation setting (when FSK modulation is enabled).
- 80012b0:	4620      	mov	r0, r4
- 80012b2:	2115      	movs	r1, #21
- 80012b4:	2262      	movs	r2, #98	; 0x62
- 80012b6:	f7ff ff4b 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012c0:	4620      	mov	r0, r4
+ 80012c2:	2115      	movs	r1, #21
+ 80012c4:	2262      	movs	r2, #98	; 0x62
+ 80012c6:	f7ff ff43 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:189
     WriteRegister(CC_FREND1,   CC_FREND1_VALUE);     // Front end RX configuration.
- 80012ba:	4620      	mov	r0, r4
- 80012bc:	2121      	movs	r1, #33	; 0x21
- 80012be:	22b6      	movs	r2, #182	; 0xb6
- 80012c0:	f7ff ff46 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012ca:	4620      	mov	r0, r4
+ 80012cc:	2121      	movs	r1, #33	; 0x21
+ 80012ce:	22b6      	movs	r2, #182	; 0xb6
+ 80012d0:	f7ff ff3e 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:190
     WriteRegister(CC_FREND0,   CC_FREND0_VALUE);     // Front end RX configuration.
- 80012c4:	4620      	mov	r0, r4
- 80012c6:	2122      	movs	r1, #34	; 0x22
- 80012c8:	2210      	movs	r2, #16
- 80012ca:	f7ff ff41 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012d4:	4620      	mov	r0, r4
+ 80012d6:	2122      	movs	r1, #34	; 0x22
+ 80012d8:	2210      	movs	r2, #16
+ 80012da:	f7ff ff39 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:191
     WriteRegister(CC_MCSM0,    CC_MCSM0_VALUE);      // Main Radio Control State Machine configuration.
- 80012ce:	4620      	mov	r0, r4
- 80012d0:	2118      	movs	r1, #24
- 80012d2:	2208      	movs	r2, #8
- 80012d4:	f7ff ff3c 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012de:	4620      	mov	r0, r4
+ 80012e0:	2118      	movs	r1, #24
+ 80012e2:	2208      	movs	r2, #8
+ 80012e4:	f7ff ff34 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:192
     WriteRegister(CC_FOCCFG,   CC_FOCCFG_VALUE);     // Frequency Offset Compensation Configuration.
- 80012d8:	4620      	mov	r0, r4
- 80012da:	2119      	movs	r1, #25
- 80012dc:	221d      	movs	r2, #29
- 80012de:	f7ff ff37 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012e8:	4620      	mov	r0, r4
+ 80012ea:	2119      	movs	r1, #25
+ 80012ec:	221d      	movs	r2, #29
+ 80012ee:	f7ff ff2f 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:193
     WriteRegister(CC_BSCFG,    CC_BSCFG_VALUE);      // Bit synchronization Configuration.
- 80012e2:	4620      	mov	r0, r4
- 80012e4:	211a      	movs	r1, #26
- 80012e6:	221c      	movs	r2, #28
- 80012e8:	f7ff ff32 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012f2:	4620      	mov	r0, r4
+ 80012f4:	211a      	movs	r1, #26
+ 80012f6:	221c      	movs	r2, #28
+ 80012f8:	f7ff ff2a 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:194
     WriteRegister(CC_AGCCTRL2, CC_AGCCTRL2_VALUE);   // AGC control.
- 80012ec:	4620      	mov	r0, r4
- 80012ee:	211b      	movs	r1, #27
- 80012f0:	22c7      	movs	r2, #199	; 0xc7
- 80012f2:	f7ff ff2d 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80012fc:	4620      	mov	r0, r4
+ 80012fe:	211b      	movs	r1, #27
+ 8001300:	22c7      	movs	r2, #199	; 0xc7
+ 8001302:	f7ff ff25 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:195
     WriteRegister(CC_AGCCTRL1, CC_AGCCTRL1_VALUE);   // AGC control.
- 80012f6:	4620      	mov	r0, r4
- 80012f8:	211c      	movs	r1, #28
- 80012fa:	2200      	movs	r2, #0
- 80012fc:	f7ff ff28 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001306:	4620      	mov	r0, r4
+ 8001308:	211c      	movs	r1, #28
+ 800130a:	2200      	movs	r2, #0
+ 800130c:	f7ff ff20 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:196
     WriteRegister(CC_AGCCTRL0, CC_AGCCTRL0_VALUE);   // AGC control.
- 8001300:	4620      	mov	r0, r4
- 8001302:	211d      	movs	r1, #29
- 8001304:	22b0      	movs	r2, #176	; 0xb0
- 8001306:	f7ff ff23 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001310:	4620      	mov	r0, r4
+ 8001312:	211d      	movs	r1, #29
+ 8001314:	22b0      	movs	r2, #176	; 0xb0
+ 8001316:	f7ff ff1b 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:197
     WriteRegister(CC_FSCAL3,   CC_FSCAL3_VALUE);     // Frequency synthesizer calibration.
- 800130a:	4620      	mov	r0, r4
- 800130c:	2123      	movs	r1, #35	; 0x23
- 800130e:	22ea      	movs	r2, #234	; 0xea
- 8001310:	f7ff ff1e 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 800131a:	4620      	mov	r0, r4
+ 800131c:	2123      	movs	r1, #35	; 0x23
+ 800131e:	22ea      	movs	r2, #234	; 0xea
+ 8001320:	f7ff ff16 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:198
     WriteRegister(CC_FSCAL2,   CC_FSCAL2_VALUE);     // Frequency synthesizer calibration.
- 8001314:	4620      	mov	r0, r4
- 8001316:	2124      	movs	r1, #36	; 0x24
- 8001318:	222a      	movs	r2, #42	; 0x2a
- 800131a:	f7ff ff19 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001324:	4620      	mov	r0, r4
+ 8001326:	2124      	movs	r1, #36	; 0x24
+ 8001328:	222a      	movs	r2, #42	; 0x2a
+ 800132a:	f7ff ff11 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:199
     WriteRegister(CC_FSCAL1,   CC_FSCAL1_VALUE);     // Frequency synthesizer calibration.
- 800131e:	4620      	mov	r0, r4
- 8001320:	2125      	movs	r1, #37	; 0x25
- 8001322:	2200      	movs	r2, #0
- 8001324:	f7ff ff14 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 800132e:	4620      	mov	r0, r4
+ 8001330:	2125      	movs	r1, #37	; 0x25
+ 8001332:	2200      	movs	r2, #0
+ 8001334:	f7ff ff0c 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:200
     WriteRegister(CC_FSCAL0,   CC_FSCAL0_VALUE);     // Frequency synthesizer calibration.
- 8001328:	4620      	mov	r0, r4
- 800132a:	2126      	movs	r1, #38	; 0x26
- 800132c:	221f      	movs	r2, #31
- 800132e:	f7ff ff0f 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001338:	4620      	mov	r0, r4
+ 800133a:	2126      	movs	r1, #38	; 0x26
+ 800133c:	221f      	movs	r2, #31
+ 800133e:	f7ff ff07 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:201
     WriteRegister(CC_TEST2,    CC_TEST2_VALUE);      // Various test settings.
- 8001332:	4620      	mov	r0, r4
- 8001334:	212c      	movs	r1, #44	; 0x2c
- 8001336:	2288      	movs	r2, #136	; 0x88
- 8001338:	f7ff ff0a 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001342:	4620      	mov	r0, r4
+ 8001344:	212c      	movs	r1, #44	; 0x2c
+ 8001346:	2288      	movs	r2, #136	; 0x88
+ 8001348:	f7ff ff02 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:202
     WriteRegister(CC_TEST1,    CC_TEST1_VALUE);      // Various test settings.
- 800133c:	4620      	mov	r0, r4
- 800133e:	212d      	movs	r1, #45	; 0x2d
- 8001340:	2231      	movs	r2, #49	; 0x31
- 8001342:	f7ff ff05 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 800134c:	4620      	mov	r0, r4
+ 800134e:	212d      	movs	r1, #45	; 0x2d
+ 8001350:	2231      	movs	r2, #49	; 0x31
+ 8001352:	f7ff fefd 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:203
     WriteRegister(CC_TEST0,    CC_TEST0_VALUE);      // Various test settings.
- 8001346:	4620      	mov	r0, r4
- 8001348:	212e      	movs	r1, #46	; 0x2e
- 800134a:	2209      	movs	r2, #9
- 800134c:	f7ff ff00 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001356:	4620      	mov	r0, r4
+ 8001358:	212e      	movs	r1, #46	; 0x2e
+ 800135a:	2209      	movs	r2, #9
+ 800135c:	f7ff fef8 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:204
     WriteRegister(CC_FIFOTHR,  CC_FIFOTHR_VALUE);    // fifo threshold
- 8001350:	4620      	mov	r0, r4
- 8001352:	2103      	movs	r1, #3
- 8001354:	2207      	movs	r2, #7
- 8001356:	f7ff fefb 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001360:	4620      	mov	r0, r4
+ 8001362:	2103      	movs	r1, #3
+ 8001364:	2207      	movs	r2, #7
+ 8001366:	f7ff fef3 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:205
     WriteRegister(CC_IOCFG2,   CC_IOCFG2_VALUE);     // GDO2 output pin configuration.
- 800135a:	4620      	mov	r0, r4
- 800135c:	2100      	movs	r1, #0
- 800135e:	2207      	movs	r2, #7
- 8001360:	f7ff fef6 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 800136a:	4620      	mov	r0, r4
+ 800136c:	2100      	movs	r1, #0
+ 800136e:	2207      	movs	r2, #7
+ 8001370:	f7ff feee 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:206
     WriteRegister(CC_IOCFG0,   CC_IOCFG0_VALUE);     // GDO0 output pin configuration.
- 8001364:	4620      	mov	r0, r4
- 8001366:	2102      	movs	r1, #2
- 8001368:	2206      	movs	r2, #6
- 800136a:	f7ff fef1 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001374:	4620      	mov	r0, r4
+ 8001376:	2102      	movs	r1, #2
+ 8001378:	2206      	movs	r2, #6
+ 800137a:	f7ff fee9 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:207
     WriteRegister(CC_PKTCTRL1, CC_PKTCTRL1_VALUE);   // Packet automation control.
- 800136e:	4620      	mov	r0, r4
- 8001370:	2107      	movs	r1, #7
- 8001372:	220c      	movs	r2, #12
- 8001374:	f7ff feec 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 800137e:	4620      	mov	r0, r4
+ 8001380:	2107      	movs	r1, #7
+ 8001382:	220c      	movs	r2, #12
+ 8001384:	f7ff fee4 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:208
     WriteRegister(CC_PKTCTRL0, CC_PKTCTRL0_VALUE);   // Packet automation control.
- 8001378:	4620      	mov	r0, r4
- 800137a:	2108      	movs	r1, #8
- 800137c:	2244      	movs	r2, #68	; 0x44
- 800137e:	f7ff fee7 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001388:	4620      	mov	r0, r4
+ 800138a:	2108      	movs	r1, #8
+ 800138c:	2244      	movs	r2, #68	; 0x44
+ 800138e:	f7ff fedf 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:209
     WriteRegister(CC_PKTLEN,   RPKT_LEN);            // Packet length, dummy
- 8001382:	4620      	mov	r0, r4
- 8001384:	2106      	movs	r1, #6
- 8001386:	2201      	movs	r2, #1
- 8001388:	f7ff fee2 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 8001392:	4620      	mov	r0, r4
+ 8001394:	2106      	movs	r1, #6
+ 8001396:	2201      	movs	r2, #1
+ 8001398:	f7ff feda 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:211
 
     WriteRegister(CC_PATABLE, CC_Pwr0dBm);
- 800138c:	4620      	mov	r0, r4
- 800138e:	213e      	movs	r1, #62	; 0x3e
- 8001390:	2250      	movs	r2, #80	; 0x50
- 8001392:	f7ff fedd 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 800139c:	4620      	mov	r0, r4
+ 800139e:	213e      	movs	r1, #62	; 0x3e
+ 80013a0:	2250      	movs	r2, #80	; 0x50
+ 80013a2:	f7ff fed5 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:213
 
     WriteRegister(CC_MCSM2, CC_MCSM2_VALUE);
- 8001396:	4620      	mov	r0, r4
- 8001398:	2116      	movs	r1, #22
- 800139a:	2207      	movs	r2, #7
- 800139c:	f7ff fed8 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80013a6:	4620      	mov	r0, r4
+ 80013a8:	2116      	movs	r1, #22
+ 80013aa:	2207      	movs	r2, #7
+ 80013ac:	f7ff fed0 	bl	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:214
     WriteRegister(CC_MCSM1, CC_MCSM1_VALUE);
- 80013a0:	4620      	mov	r0, r4
- 80013a2:	2117      	movs	r1, #23
- 80013a4:	2200      	movs	r2, #0
+ 80013b0:	4620      	mov	r0, r4
+ 80013b2:	2117      	movs	r1, #23
+ 80013b4:	2200      	movs	r2, #0
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:215
 }
- 80013a6:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+ 80013b6:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:214
     WriteRegister(CC_PKTLEN,   RPKT_LEN);            // Packet length, dummy
 
@@ -5321,10 +5321,10 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:214
 
     WriteRegister(CC_MCSM2, CC_MCSM2_VALUE);
     WriteRegister(CC_MCSM1, CC_MCSM1_VALUE);
- 80013aa:	f7ff bed1 	b.w	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
+ 80013ba:	f7ff bec9 	b.w	8001150 <cc1101_t::WriteRegister(unsigned char, unsigned char)>
 	...
 
-080013b0 <cc1101_t::Init()>:
+080013c0 <cc1101_t::Init()>:
 _ZN8cc1101_t4InitEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:13
 #include "cc1101.h"
@@ -5333,7 +5333,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:13
 cc1101_t CC;
 
 void cc1101_t::Init() {
- 80013b0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80013c0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
 PinClockEnable():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:182
 static inline void PinToggle (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->ODR  ^= (uint16_t)(1<<APinNumber); }
@@ -5342,7 +5342,7 @@ static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) 
 // Setup
 static inline void PinClockEnable(GPIO_TypeDef *PGpioPort) {
     if     (PGpioPort == GPIOA) RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
- 80013b2:	4d8d      	ldr	r5, [pc, #564]	; (80015e8 <cc1101_t::Init()+0x238>)
+ 80013c2:	4d8e      	ldr	r5, [pc, #568]	; (80015fc <cc1101_t::Init()+0x23c>)
 PinSetupOut():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:198
         ) {
@@ -5351,7 +5351,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:1
     uint8_t Offset = APinNumber*2;
     // Setup mode
     PGpioPort->MODER &= ~(0b11 << Offset);  // clear previous bits
- 80013b4:	4c8d      	ldr	r4, [pc, #564]	; (80015ec <cc1101_t::Init()+0x23c>)
+ 80013c4:	4c8e      	ldr	r4, [pc, #568]	; (8001600 <cc1101_t::Init()+0x240>)
 PinClockEnable():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:182
 static inline void PinToggle (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->ODR  ^= (uint16_t)(1<<APinNumber); }
@@ -5360,7 +5360,7 @@ static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) 
 // Setup
 static inline void PinClockEnable(GPIO_TypeDef *PGpioPort) {
     if     (PGpioPort == GPIOA) RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
- 80013b6:	69eb      	ldr	r3, [r5, #28]
+ 80013c6:	69eb      	ldr	r3, [r5, #28]
 _ZN5Spi_t5SetupEP11SPI_TypeDef10BitOrder_t6CPOL_t6CPHA_t13SpiBaudrate_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:471
         PSpi->CR1 = SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR;
@@ -5369,7 +5369,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:4
         if(CPHA == cphaSecondEdge) PSpi->CR1 |= SPI_CR1_CPHA;   // CPHA
         PSpi->CR1 |= ((uint16_t)Baudrate) << 3;                 // Baudrate
         PSpi->CR2 = 0;
- 80013b8:	2700      	movs	r7, #0
+ 80013c8:	2700      	movs	r7, #0
 PinClockEnable():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:182
 static inline void PinToggle (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->ODR  ^= (uint16_t)(1<<APinNumber); }
@@ -5378,8 +5378,8 @@ static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) 
 // Setup
 static inline void PinClockEnable(GPIO_TypeDef *PGpioPort) {
     if     (PGpioPort == GPIOA) RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
- 80013ba:	f043 0301 	orr.w	r3, r3, #1
- 80013be:	61eb      	str	r3, [r5, #28]
+ 80013ca:	f043 0301 	orr.w	r3, r3, #1
+ 80013ce:	61eb      	str	r3, [r5, #28]
 PinSetupOut():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:198
         ) {
@@ -5388,64 +5388,64 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:1
     uint8_t Offset = APinNumber*2;
     // Setup mode
     PGpioPort->MODER &= ~(0b11 << Offset);  // clear previous bits
- 80013c0:	6823      	ldr	r3, [r4, #0]
+ 80013d0:	6823      	ldr	r3, [r4, #0]
 _ZN8cc1101_t4InitEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:13
- 80013c2:	4606      	mov	r6, r0
+ 80013d2:	4606      	mov	r6, r0
 PinSetupOut():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:198
- 80013c4:	f423 7340 	bic.w	r3, r3, #768	; 0x300
- 80013c8:	6023      	str	r3, [r4, #0]
+ 80013d4:	f423 7340 	bic.w	r3, r3, #768	; 0x300
+ 80013d8:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:199
     PGpioPort->MODER |=   0b01 << Offset;   // Set new bits
- 80013ca:	6823      	ldr	r3, [r4, #0]
+ 80013da:	6823      	ldr	r3, [r4, #0]
 _ZN8cc1101_t6CResetEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:48
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:49
     void WriteRegister (const uint8_t Addr, const uint8_t AData);
     uint8_t ReadRegister (const uint8_t Addr);
     void WriteStrobe(uint8_t AStrobe);
     void WriteTX(uint8_t* Ptr, uint8_t Length);
     // Strobes
     void CReset()      { WriteStrobe(CC_SRES); }
- 80013cc:	2130      	movs	r1, #48	; 0x30
+ 80013dc:	2130      	movs	r1, #48	; 0x30
 PinSetupOut():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:199
- 80013ce:	f443 7380 	orr.w	r3, r3, #256	; 0x100
- 80013d2:	6023      	str	r3, [r4, #0]
+ 80013de:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+ 80013e2:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:201
     // Setup output type
     PGpioPort->OTYPER &= ~(1<<APinNumber);
- 80013d4:	88a3      	ldrh	r3, [r4, #4]
- 80013d6:	f023 0310 	bic.w	r3, r3, #16
- 80013da:	041b      	lsls	r3, r3, #16
- 80013dc:	0c1b      	lsrs	r3, r3, #16
- 80013de:	80a3      	strh	r3, [r4, #4]
+ 80013e4:	88a3      	ldrh	r3, [r4, #4]
+ 80013e6:	f023 0310 	bic.w	r3, r3, #16
+ 80013ea:	041b      	lsls	r3, r3, #16
+ 80013ec:	0c1b      	lsrs	r3, r3, #16
+ 80013ee:	80a3      	strh	r3, [r4, #4]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:202
     PGpioPort->OTYPER |= (uint32_t)PinOutMode << APinNumber;
- 80013e0:	88a3      	ldrh	r3, [r4, #4]
- 80013e2:	b29b      	uxth	r3, r3
- 80013e4:	80a3      	strh	r3, [r4, #4]
+ 80013f0:	88a3      	ldrh	r3, [r4, #4]
+ 80013f2:	b29b      	uxth	r3, r3
+ 80013f4:	80a3      	strh	r3, [r4, #4]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:204
     // Setup Pull-Up or Pull-Down
     PGpioPort->PUPDR &= ~(0b11 << Offset); // clear previous bits
- 80013e6:	68e3      	ldr	r3, [r4, #12]
- 80013e8:	f423 7340 	bic.w	r3, r3, #768	; 0x300
- 80013ec:	60e3      	str	r3, [r4, #12]
+ 80013f6:	68e3      	ldr	r3, [r4, #12]
+ 80013f8:	f423 7340 	bic.w	r3, r3, #768	; 0x300
+ 80013fc:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:205
     PGpioPort->PUPDR |= (uint32_t)APullUpDown << Offset;
- 80013ee:	68e3      	ldr	r3, [r4, #12]
- 80013f0:	60e3      	str	r3, [r4, #12]
+ 80013fe:	68e3      	ldr	r3, [r4, #12]
+ 8001400:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:207
     // Setup speed
     PGpioPort->OSPEEDR &= ~(0b11 << Offset); // clear previous bits
- 80013f2:	68a3      	ldr	r3, [r4, #8]
- 80013f4:	f423 7340 	bic.w	r3, r3, #768	; 0x300
- 80013f8:	60a3      	str	r3, [r4, #8]
+ 8001402:	68a3      	ldr	r3, [r4, #8]
+ 8001404:	f423 7340 	bic.w	r3, r3, #768	; 0x300
+ 8001408:	60a3      	str	r3, [r4, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:208
     PGpioPort->OSPEEDR |= (uint32_t)ASpeed << Offset;
- 80013fa:	68a3      	ldr	r3, [r4, #8]
- 80013fc:	f443 7340 	orr.w	r3, r3, #768	; 0x300
- 8001400:	60a3      	str	r3, [r4, #8]
+ 800140a:	68a3      	ldr	r3, [r4, #8]
+ 800140c:	f443 7340 	orr.w	r3, r3, #768	; 0x300
+ 8001410:	60a3      	str	r3, [r4, #8]
 PinClockEnable():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:182
 static inline void PinToggle (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->ODR  ^= (uint16_t)(1<<APinNumber); }
@@ -5454,9 +5454,9 @@ static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) 
 // Setup
 static inline void PinClockEnable(GPIO_TypeDef *PGpioPort) {
     if     (PGpioPort == GPIOA) RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
- 8001402:	69eb      	ldr	r3, [r5, #28]
- 8001404:	f043 0301 	orr.w	r3, r3, #1
- 8001408:	61eb      	str	r3, [r5, #28]
+ 8001412:	69eb      	ldr	r3, [r5, #28]
+ 8001414:	f043 0301 	orr.w	r3, r3, #1
+ 8001418:	61eb      	str	r3, [r5, #28]
 PinSetupAlterFunc():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:244
         const PinSpeed_t ASpeed = ps10MHz) {
@@ -5465,61 +5465,61 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:2
     uint32_t Offset = APinNumber*2;
     // Setup mode
     PGpioPort->MODER &= ~(0b11 << Offset);  // clear previous bits
- 800140a:	6823      	ldr	r3, [r4, #0]
- 800140c:	f423 6340 	bic.w	r3, r3, #3072	; 0xc00
- 8001410:	6023      	str	r3, [r4, #0]
+ 800141a:	6823      	ldr	r3, [r4, #0]
+ 800141c:	f423 6340 	bic.w	r3, r3, #3072	; 0xc00
+ 8001420:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:245
     PGpioPort->MODER |= 0b10 << Offset;     // Set new bits
- 8001412:	6823      	ldr	r3, [r4, #0]
- 8001414:	f443 6300 	orr.w	r3, r3, #2048	; 0x800
- 8001418:	6023      	str	r3, [r4, #0]
+ 8001422:	6823      	ldr	r3, [r4, #0]
+ 8001424:	f443 6300 	orr.w	r3, r3, #2048	; 0x800
+ 8001428:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:247
     // Setup output type
     PGpioPort->OTYPER &= ~(1<<APinNumber);
- 800141a:	88a3      	ldrh	r3, [r4, #4]
- 800141c:	f023 0320 	bic.w	r3, r3, #32
- 8001420:	041b      	lsls	r3, r3, #16
- 8001422:	0c1b      	lsrs	r3, r3, #16
- 8001424:	80a3      	strh	r3, [r4, #4]
+ 800142a:	88a3      	ldrh	r3, [r4, #4]
+ 800142c:	f023 0320 	bic.w	r3, r3, #32
+ 8001430:	041b      	lsls	r3, r3, #16
+ 8001432:	0c1b      	lsrs	r3, r3, #16
+ 8001434:	80a3      	strh	r3, [r4, #4]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:248
     PGpioPort->OTYPER |= (uint32_t)PinOutMode << APinNumber;
- 8001426:	88a3      	ldrh	r3, [r4, #4]
- 8001428:	b29b      	uxth	r3, r3
- 800142a:	80a3      	strh	r3, [r4, #4]
+ 8001436:	88a3      	ldrh	r3, [r4, #4]
+ 8001438:	b29b      	uxth	r3, r3
+ 800143a:	80a3      	strh	r3, [r4, #4]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:250
     // Setup Pull-Up or Pull-Down
     PGpioPort->PUPDR &= ~(0b11 << Offset); // clear previous bits
- 800142c:	68e3      	ldr	r3, [r4, #12]
- 800142e:	f423 6340 	bic.w	r3, r3, #3072	; 0xc00
- 8001432:	60e3      	str	r3, [r4, #12]
+ 800143c:	68e3      	ldr	r3, [r4, #12]
+ 800143e:	f423 6340 	bic.w	r3, r3, #3072	; 0xc00
+ 8001442:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:251
     PGpioPort->PUPDR |= (uint32_t)APullUpDown << Offset;
- 8001434:	68e3      	ldr	r3, [r4, #12]
- 8001436:	60e3      	str	r3, [r4, #12]
+ 8001444:	68e3      	ldr	r3, [r4, #12]
+ 8001446:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:253
     // Setup speed
     PGpioPort->OSPEEDR &= ~(0b11 << Offset); // clear previous bits
- 8001438:	68a3      	ldr	r3, [r4, #8]
- 800143a:	f423 6340 	bic.w	r3, r3, #3072	; 0xc00
- 800143e:	60a3      	str	r3, [r4, #8]
+ 8001448:	68a3      	ldr	r3, [r4, #8]
+ 800144a:	f423 6340 	bic.w	r3, r3, #3072	; 0xc00
+ 800144e:	60a3      	str	r3, [r4, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:254
     PGpioPort->OSPEEDR |= (uint32_t)ASpeed << Offset;
- 8001440:	68a3      	ldr	r3, [r4, #8]
- 8001442:	f443 6300 	orr.w	r3, r3, #2048	; 0x800
- 8001446:	60a3      	str	r3, [r4, #8]
+ 8001450:	68a3      	ldr	r3, [r4, #8]
+ 8001452:	f443 6300 	orr.w	r3, r3, #2048	; 0x800
+ 8001456:	60a3      	str	r3, [r4, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:258
     // Setup Alternate Function
     uint32_t n = (APinNumber <= 7)? 0 : 1;      // 0 if 0...7, 1 if 8..15
     Offset = 4 * ((APinNumber <= 7)? APinNumber : APinNumber - 8);
     PGpioPort->AFR[n] &= ~(0b1111 << Offset);
- 8001448:	6a23      	ldr	r3, [r4, #32]
- 800144a:	f423 0370 	bic.w	r3, r3, #15728640	; 0xf00000
- 800144e:	6223      	str	r3, [r4, #32]
+ 8001458:	6a23      	ldr	r3, [r4, #32]
+ 800145a:	f423 0370 	bic.w	r3, r3, #15728640	; 0xf00000
+ 800145e:	6223      	str	r3, [r4, #32]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:259
     PGpioPort->AFR[n] |= (uint32_t)AAlterFunc << Offset;
- 8001450:	6a23      	ldr	r3, [r4, #32]
- 8001452:	f443 03a0 	orr.w	r3, r3, #5242880	; 0x500000
- 8001456:	6223      	str	r3, [r4, #32]
+ 8001460:	6a23      	ldr	r3, [r4, #32]
+ 8001462:	f443 03a0 	orr.w	r3, r3, #5242880	; 0x500000
+ 8001466:	6223      	str	r3, [r4, #32]
 PinClockEnable():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:182
 static inline void PinToggle (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->ODR  ^= (uint16_t)(1<<APinNumber); }
@@ -5528,9 +5528,9 @@ static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) 
 // Setup
 static inline void PinClockEnable(GPIO_TypeDef *PGpioPort) {
     if     (PGpioPort == GPIOA) RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
- 8001458:	69eb      	ldr	r3, [r5, #28]
- 800145a:	f043 0301 	orr.w	r3, r3, #1
- 800145e:	61eb      	str	r3, [r5, #28]
+ 8001468:	69eb      	ldr	r3, [r5, #28]
+ 800146a:	f043 0301 	orr.w	r3, r3, #1
+ 800146e:	61eb      	str	r3, [r5, #28]
 PinSetupAlterFunc():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:244
         const PinSpeed_t ASpeed = ps10MHz) {
@@ -5539,61 +5539,61 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:2
     uint32_t Offset = APinNumber*2;
     // Setup mode
     PGpioPort->MODER &= ~(0b11 << Offset);  // clear previous bits
- 8001460:	6823      	ldr	r3, [r4, #0]
- 8001462:	f423 5340 	bic.w	r3, r3, #12288	; 0x3000
- 8001466:	6023      	str	r3, [r4, #0]
+ 8001470:	6823      	ldr	r3, [r4, #0]
+ 8001472:	f423 5340 	bic.w	r3, r3, #12288	; 0x3000
+ 8001476:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:245
     PGpioPort->MODER |= 0b10 << Offset;     // Set new bits
- 8001468:	6823      	ldr	r3, [r4, #0]
- 800146a:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
- 800146e:	6023      	str	r3, [r4, #0]
+ 8001478:	6823      	ldr	r3, [r4, #0]
+ 800147a:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
+ 800147e:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:247
     // Setup output type
     PGpioPort->OTYPER &= ~(1<<APinNumber);
- 8001470:	88a3      	ldrh	r3, [r4, #4]
- 8001472:	f023 0340 	bic.w	r3, r3, #64	; 0x40
- 8001476:	041b      	lsls	r3, r3, #16
- 8001478:	0c1b      	lsrs	r3, r3, #16
- 800147a:	80a3      	strh	r3, [r4, #4]
+ 8001480:	88a3      	ldrh	r3, [r4, #4]
+ 8001482:	f023 0340 	bic.w	r3, r3, #64	; 0x40
+ 8001486:	041b      	lsls	r3, r3, #16
+ 8001488:	0c1b      	lsrs	r3, r3, #16
+ 800148a:	80a3      	strh	r3, [r4, #4]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:248
     PGpioPort->OTYPER |= (uint32_t)PinOutMode << APinNumber;
- 800147c:	88a3      	ldrh	r3, [r4, #4]
- 800147e:	b29b      	uxth	r3, r3
- 8001480:	80a3      	strh	r3, [r4, #4]
+ 800148c:	88a3      	ldrh	r3, [r4, #4]
+ 800148e:	b29b      	uxth	r3, r3
+ 8001490:	80a3      	strh	r3, [r4, #4]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:250
     // Setup Pull-Up or Pull-Down
     PGpioPort->PUPDR &= ~(0b11 << Offset); // clear previous bits
- 8001482:	68e3      	ldr	r3, [r4, #12]
- 8001484:	f423 5340 	bic.w	r3, r3, #12288	; 0x3000
- 8001488:	60e3      	str	r3, [r4, #12]
+ 8001492:	68e3      	ldr	r3, [r4, #12]
+ 8001494:	f423 5340 	bic.w	r3, r3, #12288	; 0x3000
+ 8001498:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:251
     PGpioPort->PUPDR |= (uint32_t)APullUpDown << Offset;
- 800148a:	68e3      	ldr	r3, [r4, #12]
- 800148c:	60e3      	str	r3, [r4, #12]
+ 800149a:	68e3      	ldr	r3, [r4, #12]
+ 800149c:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:253
     // Setup speed
     PGpioPort->OSPEEDR &= ~(0b11 << Offset); // clear previous bits
- 800148e:	68a3      	ldr	r3, [r4, #8]
- 8001490:	f423 5340 	bic.w	r3, r3, #12288	; 0x3000
- 8001494:	60a3      	str	r3, [r4, #8]
+ 800149e:	68a3      	ldr	r3, [r4, #8]
+ 80014a0:	f423 5340 	bic.w	r3, r3, #12288	; 0x3000
+ 80014a4:	60a3      	str	r3, [r4, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:254
     PGpioPort->OSPEEDR |= (uint32_t)ASpeed << Offset;
- 8001496:	68a3      	ldr	r3, [r4, #8]
- 8001498:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
- 800149c:	60a3      	str	r3, [r4, #8]
+ 80014a6:	68a3      	ldr	r3, [r4, #8]
+ 80014a8:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
+ 80014ac:	60a3      	str	r3, [r4, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:258
     // Setup Alternate Function
     uint32_t n = (APinNumber <= 7)? 0 : 1;      // 0 if 0...7, 1 if 8..15
     Offset = 4 * ((APinNumber <= 7)? APinNumber : APinNumber - 8);
     PGpioPort->AFR[n] &= ~(0b1111 << Offset);
- 800149e:	6a23      	ldr	r3, [r4, #32]
- 80014a0:	f023 6370 	bic.w	r3, r3, #251658240	; 0xf000000
- 80014a4:	6223      	str	r3, [r4, #32]
+ 80014ae:	6a23      	ldr	r3, [r4, #32]
+ 80014b0:	f023 6370 	bic.w	r3, r3, #251658240	; 0xf000000
+ 80014b4:	6223      	str	r3, [r4, #32]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:259
     PGpioPort->AFR[n] |= (uint32_t)AAlterFunc << Offset;
- 80014a6:	6a23      	ldr	r3, [r4, #32]
- 80014a8:	f043 63a0 	orr.w	r3, r3, #83886080	; 0x5000000
- 80014ac:	6223      	str	r3, [r4, #32]
+ 80014b6:	6a23      	ldr	r3, [r4, #32]
+ 80014b8:	f043 63a0 	orr.w	r3, r3, #83886080	; 0x5000000
+ 80014bc:	6223      	str	r3, [r4, #32]
 PinClockEnable():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:182
 static inline void PinToggle (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->ODR  ^= (uint16_t)(1<<APinNumber); }
@@ -5602,9 +5602,9 @@ static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) 
 // Setup
 static inline void PinClockEnable(GPIO_TypeDef *PGpioPort) {
     if     (PGpioPort == GPIOA) RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
- 80014ae:	69eb      	ldr	r3, [r5, #28]
- 80014b0:	f043 0301 	orr.w	r3, r3, #1
- 80014b4:	61eb      	str	r3, [r5, #28]
+ 80014be:	69eb      	ldr	r3, [r5, #28]
+ 80014c0:	f043 0301 	orr.w	r3, r3, #1
+ 80014c4:	61eb      	str	r3, [r5, #28]
 PinSetupAlterFunc():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:244
         const PinSpeed_t ASpeed = ps10MHz) {
@@ -5613,61 +5613,61 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:2
     uint32_t Offset = APinNumber*2;
     // Setup mode
     PGpioPort->MODER &= ~(0b11 << Offset);  // clear previous bits
- 80014b6:	6823      	ldr	r3, [r4, #0]
- 80014b8:	f423 4340 	bic.w	r3, r3, #49152	; 0xc000
- 80014bc:	6023      	str	r3, [r4, #0]
+ 80014c6:	6823      	ldr	r3, [r4, #0]
+ 80014c8:	f423 4340 	bic.w	r3, r3, #49152	; 0xc000
+ 80014cc:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:245
     PGpioPort->MODER |= 0b10 << Offset;     // Set new bits
- 80014be:	6823      	ldr	r3, [r4, #0]
- 80014c0:	f443 4300 	orr.w	r3, r3, #32768	; 0x8000
- 80014c4:	6023      	str	r3, [r4, #0]
+ 80014ce:	6823      	ldr	r3, [r4, #0]
+ 80014d0:	f443 4300 	orr.w	r3, r3, #32768	; 0x8000
+ 80014d4:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:247
     // Setup output type
     PGpioPort->OTYPER &= ~(1<<APinNumber);
- 80014c6:	88a3      	ldrh	r3, [r4, #4]
- 80014c8:	f023 0380 	bic.w	r3, r3, #128	; 0x80
- 80014cc:	041b      	lsls	r3, r3, #16
- 80014ce:	0c1b      	lsrs	r3, r3, #16
- 80014d0:	80a3      	strh	r3, [r4, #4]
+ 80014d6:	88a3      	ldrh	r3, [r4, #4]
+ 80014d8:	f023 0380 	bic.w	r3, r3, #128	; 0x80
+ 80014dc:	041b      	lsls	r3, r3, #16
+ 80014de:	0c1b      	lsrs	r3, r3, #16
+ 80014e0:	80a3      	strh	r3, [r4, #4]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:248
     PGpioPort->OTYPER |= (uint32_t)PinOutMode << APinNumber;
- 80014d2:	88a3      	ldrh	r3, [r4, #4]
- 80014d4:	b29b      	uxth	r3, r3
- 80014d6:	80a3      	strh	r3, [r4, #4]
+ 80014e2:	88a3      	ldrh	r3, [r4, #4]
+ 80014e4:	b29b      	uxth	r3, r3
+ 80014e6:	80a3      	strh	r3, [r4, #4]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:250
     // Setup Pull-Up or Pull-Down
     PGpioPort->PUPDR &= ~(0b11 << Offset); // clear previous bits
- 80014d8:	68e3      	ldr	r3, [r4, #12]
- 80014da:	f423 4340 	bic.w	r3, r3, #49152	; 0xc000
- 80014de:	60e3      	str	r3, [r4, #12]
+ 80014e8:	68e3      	ldr	r3, [r4, #12]
+ 80014ea:	f423 4340 	bic.w	r3, r3, #49152	; 0xc000
+ 80014ee:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:251
     PGpioPort->PUPDR |= (uint32_t)APullUpDown << Offset;
- 80014e0:	68e3      	ldr	r3, [r4, #12]
- 80014e2:	60e3      	str	r3, [r4, #12]
+ 80014f0:	68e3      	ldr	r3, [r4, #12]
+ 80014f2:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:253
     // Setup speed
     PGpioPort->OSPEEDR &= ~(0b11 << Offset); // clear previous bits
- 80014e4:	68a3      	ldr	r3, [r4, #8]
- 80014e6:	f423 4340 	bic.w	r3, r3, #49152	; 0xc000
- 80014ea:	60a3      	str	r3, [r4, #8]
+ 80014f4:	68a3      	ldr	r3, [r4, #8]
+ 80014f6:	f423 4340 	bic.w	r3, r3, #49152	; 0xc000
+ 80014fa:	60a3      	str	r3, [r4, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:254
     PGpioPort->OSPEEDR |= (uint32_t)ASpeed << Offset;
- 80014ec:	68a3      	ldr	r3, [r4, #8]
- 80014ee:	f443 4300 	orr.w	r3, r3, #32768	; 0x8000
- 80014f2:	60a3      	str	r3, [r4, #8]
+ 80014fc:	68a3      	ldr	r3, [r4, #8]
+ 80014fe:	f443 4300 	orr.w	r3, r3, #32768	; 0x8000
+ 8001502:	60a3      	str	r3, [r4, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:258
     // Setup Alternate Function
     uint32_t n = (APinNumber <= 7)? 0 : 1;      // 0 if 0...7, 1 if 8..15
     Offset = 4 * ((APinNumber <= 7)? APinNumber : APinNumber - 8);
     PGpioPort->AFR[n] &= ~(0b1111 << Offset);
- 80014f4:	6a23      	ldr	r3, [r4, #32]
- 80014f6:	f023 4370 	bic.w	r3, r3, #4026531840	; 0xf0000000
- 80014fa:	6223      	str	r3, [r4, #32]
+ 8001504:	6a23      	ldr	r3, [r4, #32]
+ 8001506:	f023 4370 	bic.w	r3, r3, #4026531840	; 0xf0000000
+ 800150a:	6223      	str	r3, [r4, #32]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:259
     PGpioPort->AFR[n] |= (uint32_t)AAlterFunc << Offset;
- 80014fc:	6a23      	ldr	r3, [r4, #32]
- 80014fe:	f043 43a0 	orr.w	r3, r3, #1342177280	; 0x50000000
- 8001502:	6223      	str	r3, [r4, #32]
+ 800150c:	6a23      	ldr	r3, [r4, #32]
+ 800150e:	f043 43a0 	orr.w	r3, r3, #1342177280	; 0x50000000
+ 8001512:	6223      	str	r3, [r4, #32]
 PinClockEnable():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:182
 static inline void PinToggle (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->ODR  ^= (uint16_t)(1<<APinNumber); }
@@ -5676,9 +5676,9 @@ static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) 
 // Setup
 static inline void PinClockEnable(GPIO_TypeDef *PGpioPort) {
     if     (PGpioPort == GPIOA) RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
- 8001504:	69eb      	ldr	r3, [r5, #28]
- 8001506:	f043 0301 	orr.w	r3, r3, #1
- 800150a:	61eb      	str	r3, [r5, #28]
+ 8001514:	69eb      	ldr	r3, [r5, #28]
+ 8001516:	f043 0301 	orr.w	r3, r3, #1
+ 800151a:	61eb      	str	r3, [r5, #28]
 PinSetupIn():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:219
         const PinPullUpDown_t APullUpDown
@@ -5687,19 +5687,19 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:2
     PinClockEnable(PGpioPort);
     // Setup mode
     PGpioPort->MODER &= ~(0b11 << (APinNumber*2)); // clear previous bits
- 800150c:	6823      	ldr	r3, [r4, #0]
- 800150e:	f023 03c0 	bic.w	r3, r3, #192	; 0xc0
- 8001512:	6023      	str	r3, [r4, #0]
+ 800151c:	6823      	ldr	r3, [r4, #0]
+ 800151e:	f023 03c0 	bic.w	r3, r3, #192	; 0xc0
+ 8001522:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:221
     // Setup Pull-Up or Pull-Down
     PGpioPort->PUPDR &= ~(0b11 << (APinNumber*2)); // clear previous bits
- 8001514:	68e3      	ldr	r3, [r4, #12]
- 8001516:	f023 03c0 	bic.w	r3, r3, #192	; 0xc0
- 800151a:	60e3      	str	r3, [r4, #12]
+ 8001524:	68e3      	ldr	r3, [r4, #12]
+ 8001526:	f023 03c0 	bic.w	r3, r3, #192	; 0xc0
+ 800152a:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:222
     PGpioPort->PUPDR |= (uint32_t)APullUpDown << (APinNumber*2);
- 800151c:	68e3      	ldr	r3, [r4, #12]
- 800151e:	60e3      	str	r3, [r4, #12]
+ 800152c:	68e3      	ldr	r3, [r4, #12]
+ 800152e:	60e3      	str	r3, [r4, #12]
 PinClockEnable():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:182
 static inline void PinToggle (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->ODR  ^= (uint16_t)(1<<APinNumber); }
@@ -5708,9 +5708,9 @@ static inline bool PinIsSet(GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) 
 // Setup
 static inline void PinClockEnable(GPIO_TypeDef *PGpioPort) {
     if     (PGpioPort == GPIOA) RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
- 8001520:	69eb      	ldr	r3, [r5, #28]
- 8001522:	f043 0301 	orr.w	r3, r3, #1
- 8001526:	61eb      	str	r3, [r5, #28]
+ 8001530:	69eb      	ldr	r3, [r5, #28]
+ 8001532:	f043 0301 	orr.w	r3, r3, #1
+ 8001536:	61eb      	str	r3, [r5, #28]
 PinSetupIn():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:219
         const PinPullUpDown_t APullUpDown
@@ -5719,19 +5719,19 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:2
     PinClockEnable(PGpioPort);
     // Setup mode
     PGpioPort->MODER &= ~(0b11 << (APinNumber*2)); // clear previous bits
- 8001528:	6823      	ldr	r3, [r4, #0]
- 800152a:	f023 0330 	bic.w	r3, r3, #48	; 0x30
- 800152e:	6023      	str	r3, [r4, #0]
+ 8001538:	6823      	ldr	r3, [r4, #0]
+ 800153a:	f023 0330 	bic.w	r3, r3, #48	; 0x30
+ 800153e:	6023      	str	r3, [r4, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:221
     // Setup Pull-Up or Pull-Down
     PGpioPort->PUPDR &= ~(0b11 << (APinNumber*2)); // clear previous bits
- 8001530:	68e3      	ldr	r3, [r4, #12]
- 8001532:	f023 0330 	bic.w	r3, r3, #48	; 0x30
- 8001536:	60e3      	str	r3, [r4, #12]
+ 8001540:	68e3      	ldr	r3, [r4, #12]
+ 8001542:	f023 0330 	bic.w	r3, r3, #48	; 0x30
+ 8001546:	60e3      	str	r3, [r4, #12]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:222
     PGpioPort->PUPDR |= (uint32_t)APullUpDown << (APinNumber*2);
- 8001538:	68e3      	ldr	r3, [r4, #12]
- 800153a:	60e3      	str	r3, [r4, #12]
+ 8001548:	68e3      	ldr	r3, [r4, #12]
+ 800154a:	60e3      	str	r3, [r4, #12]
 PinSet():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:175
     AF0=0, AF1=1, AF2=2, AF3=3, AF4=4, AF5=5, AF6=6, AF7=7,
@@ -5740,8 +5740,8 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:1
 
 // Set/clear
 static inline void PinSet    (GPIO_TypeDef *PGpioPort, const uint16_t APinNumber) { PGpioPort->BSRRL = (uint16_t)(1<<APinNumber); }
- 800153c:	2310      	movs	r3, #16
- 800153e:	8323      	strh	r3, [r4, #24]
+ 800154c:	2310      	movs	r3, #16
+ 800154e:	8323      	strh	r3, [r4, #24]
 _ZN5Spi_t5SetupEP11SPI_TypeDef10BitOrder_t6CPOL_t6CPHA_t13SpiBaudrate_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:461
 private:
@@ -5750,59 +5750,59 @@ public:
     void Setup(SPI_TypeDef *Spi, BitOrder_t BitOrder,
             CPOL_t CPOL, CPHA_t CPHA, SpiBaudrate_t Baudrate) {
         PSpi = Spi;
- 8001540:	4b2b      	ldr	r3, [pc, #172]	; (80015f0 <cc1101_t::Init()+0x240>)
- 8001542:	6083      	str	r3, [r0, #8]
+ 8001550:	4b2c      	ldr	r3, [pc, #176]	; (8001604 <cc1101_t::Init()+0x244>)
+ 8001552:	6083      	str	r3, [r0, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:463
         // Clocking
         if      (PSpi == SPI1) { rccEnableSPI1(FALSE); }
- 8001544:	6a2a      	ldr	r2, [r5, #32]
- 8001546:	f442 5280 	orr.w	r2, r2, #4096	; 0x1000
- 800154a:	622a      	str	r2, [r5, #32]
+ 8001554:	6a2a      	ldr	r2, [r5, #32]
+ 8001556:	f442 5280 	orr.w	r2, r2, #4096	; 0x1000
+ 800155a:	622a      	str	r2, [r5, #32]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:466
         else if (PSpi == SPI2) { rccEnableSPI2(FALSE); }
         // Mode: Master, NSS software controlled and is 1, 8bit, NoCRC, FullDuplex
         PSpi->CR1 = SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR;
- 800154c:	f44f 7241 	mov.w	r2, #772	; 0x304
- 8001550:	801a      	strh	r2, [r3, #0]
+ 800155c:	f44f 7241 	mov.w	r2, #772	; 0x304
+ 8001560:	801a      	strh	r2, [r3, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:470
         if(BitOrder == boLSB) PSpi->CR1 |= SPI_CR1_LSBFIRST;    // MSB/LSB
         if(CPOL == cpolIdleHigh) PSpi->CR1 |= SPI_CR1_CPOL;     // CPOL
         if(CPHA == cphaSecondEdge) PSpi->CR1 |= SPI_CR1_CPHA;   // CPHA
         PSpi->CR1 |= ((uint16_t)Baudrate) << 3;                 // Baudrate
- 8001552:	881a      	ldrh	r2, [r3, #0]
- 8001554:	b292      	uxth	r2, r2
- 8001556:	801a      	strh	r2, [r3, #0]
+ 8001562:	881a      	ldrh	r2, [r3, #0]
+ 8001564:	b292      	uxth	r2, r2
+ 8001566:	801a      	strh	r2, [r3, #0]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:471
         PSpi->CR2 = 0;
- 8001558:	809f      	strh	r7, [r3, #4]
+ 8001568:	809f      	strh	r7, [r3, #4]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:472
         PSpi->I2SCFGR &= ~((uint16_t)SPI_I2SCFGR_I2SMOD);       // Disable I2S
- 800155a:	8b9a      	ldrh	r2, [r3, #28]
- 800155c:	f422 6200 	bic.w	r2, r2, #2048	; 0x800
- 8001560:	0412      	lsls	r2, r2, #16
- 8001562:	0c12      	lsrs	r2, r2, #16
- 8001564:	839a      	strh	r2, [r3, #28]
+ 800156a:	8b9a      	ldrh	r2, [r3, #28]
+ 800156c:	f422 6200 	bic.w	r2, r2, #2048	; 0x800
+ 8001570:	0412      	lsls	r2, r2, #16
+ 8001572:	0c12      	lsrs	r2, r2, #16
+ 8001574:	839a      	strh	r2, [r3, #28]
 _ZN5Spi_t6EnableEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:474
     }
     void Enable () { PSpi->CR1 |=  SPI_CR1_SPE; }
- 8001566:	881a      	ldrh	r2, [r3, #0]
- 8001568:	b292      	uxth	r2, r2
- 800156a:	f042 0240 	orr.w	r2, r2, #64	; 0x40
- 800156e:	801a      	strh	r2, [r3, #0]
+ 8001576:	881a      	ldrh	r2, [r3, #0]
+ 8001578:	b292      	uxth	r2, r2
+ 800157a:	f042 0240 	orr.w	r2, r2, #64	; 0x40
+ 800157e:	801a      	strh	r2, [r3, #0]
 _ZN8cc1101_t6CResetEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:48
- 8001570:	f7ff fe06 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:49
+ 8001580:	f7ff fdfe 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
 _ZN8cc1101_t11FlushRxFIFOEv():
-C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:53
+C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.h:54
     void EnterTX()     { WriteStrobe(CC_STX);  }
     void FlushTxFIFO() { WriteStrobe(CC_SFTX); }
     void GetState()    { WriteStrobe(CC_SNOP); }
     void EnterRX()     { WriteStrobe(CC_SRX);  }
     void FlushRxFIFO() { WriteStrobe(CC_SFRX); }
- 8001574:	4630      	mov	r0, r6
- 8001576:	213a      	movs	r1, #58	; 0x3a
- 8001578:	f7ff fe02 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
+ 8001584:	4630      	mov	r0, r6
+ 8001586:	213a      	movs	r1, #58	; 0x3a
+ 8001588:	f7ff fdfa 	bl	8001180 <cc1101_t::WriteStrobe(unsigned char)>
 _ZN8cc1101_t4InitEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:30
     ISpi.Enable();
@@ -5811,8 +5811,8 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:30
     CReset();
     FlushRxFIFO();
     RfConfig();
- 800157c:	4630      	mov	r0, r6
- 800157e:	f7ff fe5f 	bl	8001240 <cc1101_t::RfConfig()>
+ 800158c:	4630      	mov	r0, r6
+ 800158e:	f7ff fe5f 	bl	8001250 <cc1101_t::RfConfig()>
 _ZN8PinIrq_t5SetupEP12GPIO_TypeDefh14ExtiTrigType_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:303
         } // switch
@@ -5821,22 +5821,22 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:3
     void Setup(GPIO_TypeDef *GPIO, const uint8_t APinNumber, ExtiTrigType_t ATriggerType) {
         IGPIO = GPIO;
         IPinNumber = APinNumber;
- 8001582:	2303      	movs	r3, #3
- 8001584:	7533      	strb	r3, [r6, #20]
+ 8001592:	2303      	movs	r3, #3
+ 8001594:	7533      	strb	r3, [r6, #20]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:304
         rccEnableAPB2(RCC_APB2ENR_SYSCFGEN, FALSE); // Enable sys cfg controller
- 8001586:	6a2b      	ldr	r3, [r5, #32]
+ 8001596:	6a2b      	ldr	r3, [r5, #32]
 _ZN8cc1101_t4InitEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:31
     PWaitingThread = nullptr;
- 8001588:	6077      	str	r7, [r6, #4]
+ 8001598:	6077      	str	r7, [r6, #4]
 _ZN8PinIrq_t5SetupEP12GPIO_TypeDefh14ExtiTrigType_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:304
- 800158a:	f043 0301 	orr.w	r3, r3, #1
+ 800159a:	f043 0301 	orr.w	r3, r3, #1
 _ZN8cc1101_t4InitEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:32
     State = ccIdle;
- 800158e:	7637      	strb	r7, [r6, #24]
+ 800159e:	f886 7024 	strb.w	r7, [r6, #36]	; 0x24
 _ZN8PinIrq_t5SetupEP12GPIO_TypeDefh14ExtiTrigType_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:302
                 break;
@@ -5845,17 +5845,17 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:3
 
     void Setup(GPIO_TypeDef *GPIO, const uint8_t APinNumber, ExtiTrigType_t ATriggerType) {
         IGPIO = GPIO;
- 8001590:	6134      	str	r4, [r6, #16]
+ 80015a2:	6134      	str	r4, [r6, #16]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:304
         IPinNumber = APinNumber;
         rccEnableAPB2(RCC_APB2ENR_SYSCFGEN, FALSE); // Enable sys cfg controller
- 8001592:	622b      	str	r3, [r5, #32]
+ 80015a4:	622b      	str	r3, [r5, #32]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:308
         // Connect EXTI line to the pin of the port
         uint8_t Indx   = APinNumber / 4;            // Indx of EXTICR register
         uint8_t Offset = (APinNumber & 0x03) * 4;   // Offset in EXTICR register
         SYSCFG->EXTICR[Indx] &= ~((uint32_t)0b1111 << Offset);  // Clear port-related bits
- 8001594:	4b17      	ldr	r3, [pc, #92]	; (80015f4 <cc1101_t::Init()+0x244>)
+ 80015a6:	4b18      	ldr	r3, [pc, #96]	; (8001608 <cc1101_t::Init()+0x248>)
 _ZN8PinIrq_t14SetTriggerTypeE14ExtiTrigType_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:284
     uint32_t IIrqChnl;
@@ -5864,7 +5864,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:2
 public:
     void SetTriggerType(ExtiTrigType_t ATriggerType) {
         uint32_t IrqMsk = 1 << IPinNumber;
- 8001596:	2101      	movs	r1, #1
+ 80015a8:	2101      	movs	r1, #1
 _ZN8PinIrq_t5SetupEP12GPIO_TypeDefh14ExtiTrigType_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:308
         IPinNumber = APinNumber;
@@ -5873,7 +5873,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:3
         uint8_t Indx   = APinNumber / 4;            // Indx of EXTICR register
         uint8_t Offset = (APinNumber & 0x03) * 4;   // Offset in EXTICR register
         SYSCFG->EXTICR[Indx] &= ~((uint32_t)0b1111 << Offset);  // Clear port-related bits
- 8001598:	689a      	ldr	r2, [r3, #8]
+ 80015aa:	689a      	ldr	r2, [r3, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:319
         EXTI->IMR  |=  IrqMsk;      // Interrupt mode enabled
         EXTI->EMR  &= ~IrqMsk;      // Event mode disabled
@@ -5881,7 +5881,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:3
         EXTI->PR    =  IrqMsk;      // Clean irq flag
         // Get IRQ channel
         if      ((APinNumber >= 0)  and (APinNumber <= 4))  IIrqChnl = EXTI0_IRQn + APinNumber;
- 800159a:	2009      	movs	r0, #9
+ 80015ac:	2009      	movs	r0, #9
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:308
         IPinNumber = APinNumber;
         rccEnableAPB2(RCC_APB2ENR_SYSCFGEN, FALSE); // Enable sys cfg controller
@@ -5889,8 +5889,8 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:3
         uint8_t Indx   = APinNumber / 4;            // Indx of EXTICR register
         uint8_t Offset = (APinNumber & 0x03) * 4;   // Offset in EXTICR register
         SYSCFG->EXTICR[Indx] &= ~((uint32_t)0b1111 << Offset);  // Clear port-related bits
- 800159c:	f422 4270 	bic.w	r2, r2, #61440	; 0xf000
- 80015a0:	609a      	str	r2, [r3, #8]
+ 80015ae:	f422 4270 	bic.w	r2, r2, #61440	; 0xf000
+ 80015b2:	609a      	str	r2, [r3, #8]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:314
         // GPIOA requires all zeroes => nothing to do in this case
         if     (GPIO == GPIOB) SYSCFG->EXTICR[Indx] |= (uint32_t)0b0001 << Offset;
@@ -5898,14 +5898,14 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:3
         // Configure EXTI line
         uint32_t IrqMsk = 1 << APinNumber;
         EXTI->IMR  |=  IrqMsk;      // Interrupt mode enabled
- 80015a2:	f8d3 2400 	ldr.w	r2, [r3, #1024]	; 0x400
- 80015a6:	f042 0208 	orr.w	r2, r2, #8
- 80015aa:	f8c3 2400 	str.w	r2, [r3, #1024]	; 0x400
+ 80015b4:	f8d3 2400 	ldr.w	r2, [r3, #1024]	; 0x400
+ 80015b8:	f042 0208 	orr.w	r2, r2, #8
+ 80015bc:	f8c3 2400 	str.w	r2, [r3, #1024]	; 0x400
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:315
         EXTI->EMR  &= ~IrqMsk;      // Event mode disabled
- 80015ae:	f8d3 2404 	ldr.w	r2, [r3, #1028]	; 0x404
- 80015b2:	f022 0208 	bic.w	r2, r2, #8
- 80015b6:	f8c3 2404 	str.w	r2, [r3, #1028]	; 0x404
+ 80015c0:	f8d3 2404 	ldr.w	r2, [r3, #1028]	; 0x404
+ 80015c4:	f022 0208 	bic.w	r2, r2, #8
+ 80015c8:	f8c3 2404 	str.w	r2, [r3, #1028]	; 0x404
 _ZN8PinIrq_t14SetTriggerTypeE14ExtiTrigType_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:284
     uint32_t IIrqChnl;
@@ -5914,8 +5914,8 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:2
 public:
     void SetTriggerType(ExtiTrigType_t ATriggerType) {
         uint32_t IrqMsk = 1 << IPinNumber;
- 80015ba:	7d32      	ldrb	r2, [r6, #20]
- 80015bc:	fa01 f202 	lsl.w	r2, r1, r2
+ 80015cc:	7d32      	ldrb	r2, [r6, #20]
+ 80015ce:	fa01 f202 	lsl.w	r2, r1, r2
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:291
             case ttRising:
                 EXTI->RTSR |=  IrqMsk;  // Rising trigger enabled
@@ -5923,14 +5923,14 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:2
                 break;
             case ttFalling:
                 EXTI->RTSR &= ~IrqMsk;  // Rising trigger disabled
- 80015c0:	f8d3 1408 	ldr.w	r1, [r3, #1032]	; 0x408
- 80015c4:	ea21 0102 	bic.w	r1, r1, r2
- 80015c8:	f8c3 1408 	str.w	r1, [r3, #1032]	; 0x408
+ 80015d2:	f8d3 1408 	ldr.w	r1, [r3, #1032]	; 0x408
+ 80015d6:	ea21 0102 	bic.w	r1, r1, r2
+ 80015da:	f8c3 1408 	str.w	r1, [r3, #1032]	; 0x408
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:292
                 EXTI->FTSR |=  IrqMsk;  // Falling trigger enabled
- 80015cc:	f8d3 140c 	ldr.w	r1, [r3, #1036]	; 0x40c
- 80015d0:	430a      	orrs	r2, r1
- 80015d2:	f8c3 240c 	str.w	r2, [r3, #1036]	; 0x40c
+ 80015de:	f8d3 140c 	ldr.w	r1, [r3, #1036]	; 0x40c
+ 80015e2:	430a      	orrs	r2, r1
+ 80015e4:	f8c3 240c 	str.w	r2, [r3, #1036]	; 0x40c
 _ZN8PinIrq_t5SetupEP12GPIO_TypeDefh14ExtiTrigType_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:317
         // Configure EXTI line
@@ -5939,8 +5939,8 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:3
         EXTI->EMR  &= ~IrqMsk;      // Event mode disabled
         SetTriggerType(ATriggerType);
         EXTI->PR    =  IrqMsk;      // Clean irq flag
- 80015d6:	2208      	movs	r2, #8
- 80015d8:	f8c3 2414 	str.w	r2, [r3, #1044]	; 0x414
+ 80015e8:	2208      	movs	r2, #8
+ 80015ea:	f8c3 2414 	str.w	r2, [r3, #1044]	; 0x414
 _ZN8PinIrq_t9EnableIrqEm():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:323
         // Get IRQ channel
@@ -5949,7 +5949,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:3
         else if ((APinNumber >= 10) and (APinNumber <= 15)) IIrqChnl = EXTI15_10_IRQn;
     }
     void EnableIrq(const uint32_t Priority) { nvicEnableVector(IIrqChnl, CORTEX_PRIORITY_MASK(Priority)); }
- 80015dc:	2190      	movs	r1, #144	; 0x90
+ 80015ee:	2190      	movs	r1, #144	; 0x90
 _ZN8PinIrq_t5SetupEP12GPIO_TypeDefh14ExtiTrigType_t():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:319
         EXTI->IMR  |=  IrqMsk;      // Interrupt mode enabled
@@ -5958,7 +5958,7 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:3
         EXTI->PR    =  IrqMsk;      // Clean irq flag
         // Get IRQ channel
         if      ((APinNumber >= 0)  and (APinNumber <= 4))  IIrqChnl = EXTI0_IRQn + APinNumber;
- 80015de:	60f0      	str	r0, [r6, #12]
+ 80015f0:	60f0      	str	r0, [r6, #12]
 _ZN8cc1101_t4InitEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:37
 
@@ -5966,21 +5966,23 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:37
     IGdo0.Setup(CC_GPIO, CC_GDO0, ttFalling);
     IGdo0.EnableIrq(IRQ_PRIO_MEDIUM);
 }
- 80015e0:	e8bd 40f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, lr}
+ 80015f2:	e8bd 40f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, lr}
 _ZN8PinIrq_t9EnableIrqEm():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:323
         else if ((APinNumber >= 5)  and (APinNumber <= 9))  IIrqChnl = EXTI9_5_IRQn;
         else if ((APinNumber >= 10) and (APinNumber <= 15)) IIrqChnl = EXTI15_10_IRQn;
     }
     void EnableIrq(const uint32_t Priority) { nvicEnableVector(IIrqChnl, CORTEX_PRIORITY_MASK(Priority)); }
- 80015e4:	f7ff b9cc 	b.w	8000980 <nvicEnableVector>
- 80015e8:	40023800 	.word	0x40023800
- 80015ec:	40020000 	.word	0x40020000
- 80015f0:	40013000 	.word	0x40013000
- 80015f4:	40010000 	.word	0x40010000
-	...
+ 80015f6:	f7ff b9c3 	b.w	8000980 <nvicEnableVector>
+ 80015fa:	bf00      	nop
+ 80015fc:	40023800 	.word	0x40023800
+ 8001600:	40020000 	.word	0x40020000
+ 8001604:	40013000 	.word	0x40013000
+ 8001608:	40010000 	.word	0x40010000
+$d():
+ 800160c:	00000000 	.word	0x00000000
 
-08001600 <cc1101_t::IHandleAsync()>:
+08001610 <cc1101_t::IHandleAsync()>:
 _ZN8cc1101_t12IHandleAsyncEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:223
 void cc1101_t::IHandleAsync() {
@@ -5989,10 +5991,10 @@ void cc1101_t::IHandleAsync() {
 //        chEvtBroadcastI(&IEvtSrcTx);  // FIXME
     }
     else if(State == ccReceiving) {
- 8001600:	7e03      	ldrb	r3, [r0, #24]
- 8001602:	3b02      	subs	r3, #2
- 8001604:	b2db      	uxtb	r3, r3
- 8001606:	2b01      	cmp	r3, #1
+ 8001610:	f890 3024 	ldrb.w	r3, [r0, #36]	; 0x24
+ 8001614:	3b02      	subs	r3, #2
+ 8001616:	b2db      	uxtb	r3, r3
+ 8001618:	2b01      	cmp	r3, #1
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:220
 }
 
@@ -6000,12 +6002,13 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:220
 void cc1101_t::IHandleAsync() {
     if(State == ccTransmitting) {
         State = ccIdle;
- 8001608:	bf9c      	itt	ls
- 800160a:	2300      	movls	r3, #0
- 800160c:	7603      	strbls	r3, [r0, #24]
- 800160e:	4770      	bx	lr
+ 800161a:	bf9c      	itt	ls
+ 800161c:	2300      	movls	r3, #0
+ 800161e:	f880 3024 	strbls.w	r3, [r0, #36]	; 0x24
+ 8001622:	4770      	bx	lr
+	...
 
-08001610 <cc1101_t::IGdo0IrqHandler()>:
+08001630 <cc1101_t::IGdo0IrqHandler()>:
 _ZN8cc1101_t15IGdo0IrqHandlerEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:229
         State = ccIdle;
@@ -6014,80 +6017,80 @@ C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:229
 }
 
 void cc1101_t::IGdo0IrqHandler() {
- 8001610:	b510      	push	{r4, lr}
+ 8001630:	b510      	push	{r4, lr}
 _ZN8PinIrq_t12CleanIrqFlagEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:325
     void DisableIrq() { nvicDisableVector(IIrqChnl); }
     void CleanIrqFlag() { EXTI->PR = (1 << IPinNumber); }
- 8001612:	7d03      	ldrb	r3, [r0, #20]
- 8001614:	2201      	movs	r2, #1
- 8001616:	409a      	lsls	r2, r3
- 8001618:	4b0c      	ldr	r3, [pc, #48]	; (800164c <cc1101_t::IGdo0IrqHandler()+0x3c>)
+ 8001632:	7d03      	ldrb	r3, [r0, #20]
+ 8001634:	2201      	movs	r2, #1
+ 8001636:	409a      	lsls	r2, r3
+ 8001638:	4b0c      	ldr	r3, [pc, #48]	; (800166c <cc1101_t::IGdo0IrqHandler()+0x3c>)
 _ZN8cc1101_t15IGdo0IrqHandlerEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:229
- 800161a:	4604      	mov	r4, r0
+ 800163a:	4604      	mov	r4, r0
 _ZN8PinIrq_t12CleanIrqFlagEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../kl_lib/kl_lib_L15x.h:325
- 800161c:	615a      	str	r2, [r3, #20]
+ 800163c:	615a      	str	r2, [r3, #20]
 _ZN8cc1101_t15IGdo0IrqHandlerEv():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:232
     IGdo0.CleanIrqFlag();
     // Resume thread if any
     chSysLockFromIsr();
- 800161e:	2320      	movs	r3, #32
- 8001620:	f383 8811 	msr	BASEPRI, r3
+ 800163e:	2320      	movs	r3, #32
+ 8001640:	f383 8811 	msr	BASEPRI, r3
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:233
     if(PWaitingThread != NULL) {
- 8001624:	6843      	ldr	r3, [r0, #4]
- 8001626:	b153      	cbz	r3, 800163e <cc1101_t::IGdo0IrqHandler()+0x2e>
+ 8001644:	6843      	ldr	r3, [r0, #4]
+ 8001646:	b153      	cbz	r3, 800165e <cc1101_t::IGdo0IrqHandler()+0x2e>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:234
         if(PWaitingThread->p_state == THD_STATE_SUSPENDED) {
- 8001628:	7f1a      	ldrb	r2, [r3, #28]
- 800162a:	2a02      	cmp	r2, #2
- 800162c:	d104      	bne.n	8001638 <cc1101_t::IGdo0IrqHandler()+0x28>
+ 8001648:	7f1a      	ldrb	r2, [r3, #28]
+ 800164a:	2a02      	cmp	r2, #2
+ 800164c:	d104      	bne.n	8001658 <cc1101_t::IGdo0IrqHandler()+0x28>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:235
             PWaitingThread->p_u.rdymsg = RDY_OK;    // Signal that IRQ fired
- 800162e:	2200      	movs	r2, #0
- 8001630:	621a      	str	r2, [r3, #32]
+ 800164e:	2200      	movs	r2, #0
+ 8001650:	621a      	str	r2, [r3, #32]
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:236
             chSchReadyI(PWaitingThread);
- 8001632:	6840      	ldr	r0, [r0, #4]
- 8001634:	f7fe fe34 	bl	80002a0 <chSchReadyI>
+ 8001652:	6840      	ldr	r0, [r0, #4]
+ 8001654:	f7fe fe24 	bl	80002a0 <chSchReadyI>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:238 (discriminator 1)
         }
         PWaitingThread = NULL;
- 8001638:	2300      	movs	r3, #0
- 800163a:	6063      	str	r3, [r4, #4]
- 800163c:	e001      	b.n	8001642 <cc1101_t::IGdo0IrqHandler()+0x32>
+ 8001658:	2300      	movs	r3, #0
+ 800165a:	6063      	str	r3, [r4, #4]
+ 800165c:	e001      	b.n	8001662 <cc1101_t::IGdo0IrqHandler()+0x32>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:240
     }
     else IHandleAsync(); // Async task completed
- 800163e:	f7ff ffdf 	bl	8001600 <cc1101_t::IHandleAsync()>
+ 800165e:	f7ff ffd7 	bl	8001610 <cc1101_t::IHandleAsync()>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:241
     chSysUnlockFromIsr();
- 8001642:	2300      	movs	r3, #0
- 8001644:	f383 8811 	msr	BASEPRI, r3
- 8001648:	bd10      	pop	{r4, pc}
- 800164a:	bf00      	nop
- 800164c:	40010400 	.word	0x40010400
+ 8001662:	2300      	movs	r3, #0
+ 8001664:	f383 8811 	msr	BASEPRI, r3
+ 8001668:	bd10      	pop	{r4, pc}
+ 800166a:	bf00      	nop
+ 800166c:	40010400 	.word	0x40010400
 
-08001650 <Vector64>:
+08001670 <Vector64>:
 Vector64():
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:245
 }
 
 extern "C" {
 CH_IRQ_HANDLER(GDO0_IRQ_HANLER) {
- 8001650:	b508      	push	{r3, lr}
+ 8001670:	b508      	push	{r3, lr}
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:247
     CH_IRQ_PROLOGUE();
     CC.IGdo0IrqHandler();
- 8001652:	4803      	ldr	r0, [pc, #12]	; (8001660 <Vector64+0x10>)
- 8001654:	f7ff ffdc 	bl	8001610 <cc1101_t::IGdo0IrqHandler()>
+ 8001672:	4803      	ldr	r0, [pc, #12]	; (8001680 <Vector64+0x10>)
+ 8001674:	f7ff ffdc 	bl	8001630 <cc1101_t::IGdo0IrqHandler()>
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:249
     CH_IRQ_EPILOGUE();
 }
- 8001658:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
+ 8001678:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
 C:\Development\Workspace\ccproject\Firmware\ccrx\Debug/../Radio/cc1101.cpp:248
 
 extern "C" {
@@ -6095,117 +6098,117 @@ CH_IRQ_HANDLER(GDO0_IRQ_HANLER) {
     CH_IRQ_PROLOGUE();
     CC.IGdo0IrqHandler();
     CH_IRQ_EPILOGUE();
- 800165c:	f7ff b880 	b.w	8000760 <_port_irq_epilogue>
- 8001660:	20000f44 	.word	0x20000f44
+ 800167c:	f7ff b870 	b.w	8000760 <_port_irq_epilogue>
+ 8001680:	20000f44 	.word	0x20000f44
 	...
 
-08001670 <memset>:
+08001690 <memset>:
 memset():
- 8001670:	b4f0      	push	{r4, r5, r6, r7}
- 8001672:	0784      	lsls	r4, r0, #30
- 8001674:	d043      	beq.n	80016fe <memset+0x8e>
- 8001676:	1e54      	subs	r4, r2, #1
- 8001678:	2a00      	cmp	r2, #0
- 800167a:	d03e      	beq.n	80016fa <memset+0x8a>
- 800167c:	b2cd      	uxtb	r5, r1
- 800167e:	4603      	mov	r3, r0
- 8001680:	e003      	b.n	800168a <memset+0x1a>
- 8001682:	1e62      	subs	r2, r4, #1
- 8001684:	2c00      	cmp	r4, #0
- 8001686:	d038      	beq.n	80016fa <memset+0x8a>
- 8001688:	4614      	mov	r4, r2
- 800168a:	f803 5b01 	strb.w	r5, [r3], #1
- 800168e:	079a      	lsls	r2, r3, #30
- 8001690:	d1f7      	bne.n	8001682 <memset+0x12>
- 8001692:	2c03      	cmp	r4, #3
- 8001694:	d92a      	bls.n	80016ec <memset+0x7c>
- 8001696:	b2cd      	uxtb	r5, r1
- 8001698:	ea45 2505 	orr.w	r5, r5, r5, lsl #8
- 800169c:	2c0f      	cmp	r4, #15
- 800169e:	ea45 4505 	orr.w	r5, r5, r5, lsl #16
- 80016a2:	d915      	bls.n	80016d0 <memset+0x60>
- 80016a4:	f1a4 0710 	sub.w	r7, r4, #16
- 80016a8:	093f      	lsrs	r7, r7, #4
- 80016aa:	f103 0610 	add.w	r6, r3, #16
- 80016ae:	eb06 1607 	add.w	r6, r6, r7, lsl #4
- 80016b2:	461a      	mov	r2, r3
- 80016b4:	6015      	str	r5, [r2, #0]
- 80016b6:	6055      	str	r5, [r2, #4]
- 80016b8:	6095      	str	r5, [r2, #8]
- 80016ba:	60d5      	str	r5, [r2, #12]
- 80016bc:	3210      	adds	r2, #16
- 80016be:	42b2      	cmp	r2, r6
- 80016c0:	d1f8      	bne.n	80016b4 <memset+0x44>
- 80016c2:	f004 040f 	and.w	r4, r4, #15
- 80016c6:	3701      	adds	r7, #1
- 80016c8:	2c03      	cmp	r4, #3
- 80016ca:	eb03 1307 	add.w	r3, r3, r7, lsl #4
- 80016ce:	d90d      	bls.n	80016ec <memset+0x7c>
- 80016d0:	461e      	mov	r6, r3
- 80016d2:	4622      	mov	r2, r4
- 80016d4:	3a04      	subs	r2, #4
- 80016d6:	2a03      	cmp	r2, #3
- 80016d8:	f846 5b04 	str.w	r5, [r6], #4
- 80016dc:	d8fa      	bhi.n	80016d4 <memset+0x64>
- 80016de:	1f22      	subs	r2, r4, #4
- 80016e0:	f022 0203 	bic.w	r2, r2, #3
- 80016e4:	3204      	adds	r2, #4
- 80016e6:	4413      	add	r3, r2
- 80016e8:	f004 0403 	and.w	r4, r4, #3
- 80016ec:	b12c      	cbz	r4, 80016fa <memset+0x8a>
- 80016ee:	b2c9      	uxtb	r1, r1
- 80016f0:	441c      	add	r4, r3
- 80016f2:	f803 1b01 	strb.w	r1, [r3], #1
- 80016f6:	42a3      	cmp	r3, r4
- 80016f8:	d1fb      	bne.n	80016f2 <memset+0x82>
- 80016fa:	bcf0      	pop	{r4, r5, r6, r7}
- 80016fc:	4770      	bx	lr
- 80016fe:	4614      	mov	r4, r2
- 8001700:	4603      	mov	r3, r0
- 8001702:	e7c6      	b.n	8001692 <memset+0x22>
+ 8001690:	b4f0      	push	{r4, r5, r6, r7}
+ 8001692:	0784      	lsls	r4, r0, #30
+ 8001694:	d043      	beq.n	800171e <memset+0x8e>
+ 8001696:	1e54      	subs	r4, r2, #1
+ 8001698:	2a00      	cmp	r2, #0
+ 800169a:	d03e      	beq.n	800171a <memset+0x8a>
+ 800169c:	b2cd      	uxtb	r5, r1
+ 800169e:	4603      	mov	r3, r0
+ 80016a0:	e003      	b.n	80016aa <memset+0x1a>
+ 80016a2:	1e62      	subs	r2, r4, #1
+ 80016a4:	2c00      	cmp	r4, #0
+ 80016a6:	d038      	beq.n	800171a <memset+0x8a>
+ 80016a8:	4614      	mov	r4, r2
+ 80016aa:	f803 5b01 	strb.w	r5, [r3], #1
+ 80016ae:	079a      	lsls	r2, r3, #30
+ 80016b0:	d1f7      	bne.n	80016a2 <memset+0x12>
+ 80016b2:	2c03      	cmp	r4, #3
+ 80016b4:	d92a      	bls.n	800170c <memset+0x7c>
+ 80016b6:	b2cd      	uxtb	r5, r1
+ 80016b8:	ea45 2505 	orr.w	r5, r5, r5, lsl #8
+ 80016bc:	2c0f      	cmp	r4, #15
+ 80016be:	ea45 4505 	orr.w	r5, r5, r5, lsl #16
+ 80016c2:	d915      	bls.n	80016f0 <memset+0x60>
+ 80016c4:	f1a4 0710 	sub.w	r7, r4, #16
+ 80016c8:	093f      	lsrs	r7, r7, #4
+ 80016ca:	f103 0610 	add.w	r6, r3, #16
+ 80016ce:	eb06 1607 	add.w	r6, r6, r7, lsl #4
+ 80016d2:	461a      	mov	r2, r3
+ 80016d4:	6015      	str	r5, [r2, #0]
+ 80016d6:	6055      	str	r5, [r2, #4]
+ 80016d8:	6095      	str	r5, [r2, #8]
+ 80016da:	60d5      	str	r5, [r2, #12]
+ 80016dc:	3210      	adds	r2, #16
+ 80016de:	42b2      	cmp	r2, r6
+ 80016e0:	d1f8      	bne.n	80016d4 <memset+0x44>
+ 80016e2:	f004 040f 	and.w	r4, r4, #15
+ 80016e6:	3701      	adds	r7, #1
+ 80016e8:	2c03      	cmp	r4, #3
+ 80016ea:	eb03 1307 	add.w	r3, r3, r7, lsl #4
+ 80016ee:	d90d      	bls.n	800170c <memset+0x7c>
+ 80016f0:	461e      	mov	r6, r3
+ 80016f2:	4622      	mov	r2, r4
+ 80016f4:	3a04      	subs	r2, #4
+ 80016f6:	2a03      	cmp	r2, #3
+ 80016f8:	f846 5b04 	str.w	r5, [r6], #4
+ 80016fc:	d8fa      	bhi.n	80016f4 <memset+0x64>
+ 80016fe:	1f22      	subs	r2, r4, #4
+ 8001700:	f022 0203 	bic.w	r2, r2, #3
+ 8001704:	3204      	adds	r2, #4
+ 8001706:	4413      	add	r3, r2
+ 8001708:	f004 0403 	and.w	r4, r4, #3
+ 800170c:	b12c      	cbz	r4, 800171a <memset+0x8a>
+ 800170e:	b2c9      	uxtb	r1, r1
+ 8001710:	441c      	add	r4, r3
+ 8001712:	f803 1b01 	strb.w	r1, [r3], #1
+ 8001716:	42a3      	cmp	r3, r4
+ 8001718:	d1fb      	bne.n	8001712 <memset+0x82>
+ 800171a:	bcf0      	pop	{r4, r5, r6, r7}
+ 800171c:	4770      	bx	lr
+ 800171e:	4614      	mov	r4, r2
+ 8001720:	4603      	mov	r3, r0
+ 8001722:	e7c6      	b.n	80016b2 <memset+0x22>
 	...
 $d():
- 8001710:	08060403 	.word	0x08060403
- 8001714:	2018100c 	.word	0x2018100c
- 8001718:	00000030 	.word	0x00000030
- 800171c:	00000000 	.word	0x00000000
- 8001720:	03020100 	.word	0x03020100
- 8001724:	08070604 	.word	0x08070604
- 8001728:	00000009 	.word	0x00000009
- 800172c:	03020100 	.word	0x03020100
- 8001730:	00000004 	.word	0x00000004
+ 8001730:	08060403 	.word	0x08060403
+ 8001734:	2018100c 	.word	0x2018100c
+ 8001738:	00000030 	.word	0x00000030
+ 800173c:	00000000 	.word	0x00000000
+ 8001740:	03020100 	.word	0x03020100
+ 8001744:	08070604 	.word	0x08070604
+ 8001748:	00000009 	.word	0x00000009
+ 800174c:	03020100 	.word	0x03020100
+ 8001750:	00000004 	.word	0x00000004
 	...
 
-08001740 <ch_debug>:
- 8001740:	6e69616d 11801600 08280404 1814100c     main......(.....
- 8001750:	001d1c00 0000001e 00000000 00000000     ................
- 8001760:	63536863 61655268 28497964 23202c29     chSchReadyI(), #
- 8001770:	00000031 00000000 00000000 00000000     1...............
- 8001780:	656c6469 00000000 00000000 00000000     idle............
- 8001790:	54686322 72436468 65746165 29282249     "chThdCreateI"()
- 80017a0:	68632200 53646854 72507465 69726f69     ."chThdSetPriori
- 80017b0:	28227974 68630029 52646854 6d757365     ty"().chThdResum
- 80017c0:	2c292865 00312320 54686322 6c536468     e(), #1."chThdSl
- 80017d0:	22706565 63002928 64685468 74697845     eep"().chThdExit
- 80017e0:	2c292853 00312320 00000000 00000000     S(), #1.........
- 80017f0:	56686322 74655354 29282249 68632200     "chVTSetI"()."ch
- 8001800:	65525456 49746573 00292822 54566863     VTResetI"().chVT
- 8001810:	65736552 29284974 3123202c 00000000     ResetI(), #1....
- 8001820:	616d6422 65727453 6c416d61 61636f6c     "dmaStreamAlloca
- 8001830:	28226574 64220029 7453616d 6d616572     te"()."dmaStream
- 8001840:	656c6552 22657361 64002928 7453616d     Release"().dmaSt
- 8001850:	6d616572 656c6552 28657361 23202c29     reamRelease(), #
- 8001860:	00000031 00000000 00000000 00000000     1...............
+08001760 <ch_debug>:
+ 8001760:	6e69616d 11801600 08280404 1814100c     main......(.....
+ 8001770:	001d1c00 0000001e 00000000 00000000     ................
+ 8001780:	63536863 61655268 28497964 23202c29     chSchReadyI(), #
+ 8001790:	00000031 00000000 00000000 00000000     1...............
+ 80017a0:	656c6469 00000000 00000000 00000000     idle............
+ 80017b0:	54686322 72436468 65746165 29282249     "chThdCreateI"()
+ 80017c0:	68632200 53646854 72507465 69726f69     ."chThdSetPriori
+ 80017d0:	28227974 68630029 52646854 6d757365     ty"().chThdResum
+ 80017e0:	2c292865 00312320 54686322 6c536468     e(), #1."chThdSl
+ 80017f0:	22706565 63002928 64685468 74697845     eep"().chThdExit
+ 8001800:	2c292853 00312320 00000000 00000000     S(), #1.........
+ 8001810:	56686322 74655354 29282249 68632200     "chVTSetI"()."ch
+ 8001820:	65525456 49746573 00292822 54566863     VTResetI"().chVT
+ 8001830:	65736552 29284974 3123202c 00000000     ResetI(), #1....
+ 8001840:	616d6422 65727453 6c416d61 61636f6c     "dmaStreamAlloca
+ 8001850:	28226574 64220029 7453616d 6d616572     te"()."dmaStream
+ 8001860:	656c6552 22657361 64002928 7453616d     Release"().dmaSt
+ 8001870:	6d616572 656c6552 28657361 23202c29     reamRelease(), #
+ 8001880:	00000031 00000000 00000000 00000000     1...............
 
-08001870 <_stm32_dma_streams>:
- 8001870:	40026008 40026004 000b0000 4002601c     .`.@.`.@.....`.@
- 8001880:	40026004 000c0104 40026030 40026004     .`.@....0`.@.`.@
- 8001890:	000d0208 40026044 40026004 000e030c     ....D`.@.`.@....
- 80018a0:	40026058 40026004 000f0410 4002606c     X`.@.`.@....l`.@
- 80018b0:	40026004 00100514 40026080 40026004     .`.@.....`.@.`.@
- 80018c0:	00110618 00000000 00000000 00000000     ................
- 80018d0:	0d004020 20200d00 30202020 20312020      @....     0  1 
- 80018e0:	20203220 34202033 20352020 20203620      2  3  4  5  6  
- 80018f0:	38202037 20392020 20204120 43202042     7  8  9  A  B  C
- 8001900:	20442020 20204520 250d0046 3a583230       D  E  F..%02X:
- 8001910:	20200020 30250020 00205832 00202d2d      .   .%02X .-- .
+08001890 <_stm32_dma_streams>:
+ 8001890:	40026008 40026004 000b0000 4002601c     .`.@.`.@.....`.@
+ 80018a0:	40026004 000c0104 40026030 40026004     .`.@....0`.@.`.@
+ 80018b0:	000d0208 40026044 40026004 000e030c     ....D`.@.`.@....
+ 80018c0:	40026058 40026004 000f0410 4002606c     X`.@.`.@....l`.@
+ 80018d0:	40026004 00100514 40026080 40026004     .`.@.....`.@.`.@
+ 80018e0:	00110618 00000000 00000000 00000000     ................
+ 80018f0:	0d004020 20200d00 30202020 20312020      @....     0  1 
+ 8001900:	20203220 34202033 20352020 20203620      2  3  4  5  6  
+ 8001910:	38202037 20392020 20204120 43202042     7  8  9  A  B  C
+ 8001920:	20442020 20204520 250d0046 3a583230       D  E  F..%02X:
+ 8001930:	20200020 30250020 00205832 00202d2d      .   .%02X .-- .

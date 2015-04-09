@@ -1,0 +1,1543 @@
+Archive member included because of file (symbol)
+
+c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
+                              ./Common/kl_lib/clocking_L1xx.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+dbg_trace_buffer    0x408             ./Common/os/kernel/src/chdebug.o
+dbg_panic_msg       0x4               ./Common/os/kernel/src/chdebug.o
+dbg_isr_cnt         0x4               ./Common/os/kernel/src/chdebug.o
+vtlist              0x10              ./Common/os/kernel/src/chvt.o
+rlist               0x1c              ./Common/os/kernel/src/chschd.o
+dbg_lock_cnt        0x4               ./Common/os/kernel/src/chdebug.o
+_idle_thread_wa     0xa8              ./Common/os/kernel/src/chsys.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 ./src/application.o
+ .data          0x00000000        0x0 ./src/application.o
+ .bss           0x00000000        0x0 ./src/application.o
+ .text._Z15TmrDoseCallbackPv
+                0x00000000       0x3c ./src/application.o
+ .text._Z19TmrDoseSaveCallbackPv
+                0x00000000       0x3c ./src/application.o
+ .text._init    0x00000000        0x2 ./src/application.o
+ .bss._ZL8ITmrDose
+                0x00000000       0x14 ./src/application.o
+ .bss._ZL12ITmrDoseSave
+                0x00000000       0x14 ./src/application.o
+ .text          0x00000000        0x0 ./src/main.o
+ .data          0x00000000        0x0 ./src/main.o
+ .bss           0x00000000        0x0 ./src/main.o
+ .text._init    0x00000000        0x2 ./src/main.o
+ .text          0x00000000        0x0 ./src/radio.o
+ .data          0x00000000        0x0 ./src/radio.o
+ .bss           0x00000000        0x0 ./src/radio.o
+ .text._init    0x00000000        0x2 ./src/radio.o
+ .group         0x00000000        0x8 ./Radio/cc1101.o
+ .group         0x00000000        0x8 ./Radio/cc1101.o
+ .text          0x00000000        0x0 ./Radio/cc1101.o
+ .data          0x00000000        0x0 ./Radio/cc1101.o
+ .bss           0x00000000        0x0 ./Radio/cc1101.o
+ .text.unlikely._ZL14PinClockEnableP12GPIO_TypeDef.part.0
+                0x00000000       0x10 ./Radio/cc1101.o
+ .text._init    0x00000000        0x2 ./Radio/cc1101.o
+ .text._ZN8cc1101_t8ReadRSSIEv
+                0x00000000       0x16 ./Radio/cc1101.o
+ .text._ZN8cc1101_t12ReceiveAsyncEv
+                0x00000000       0x1a ./Radio/cc1101.o
+ .text._ZN8cc1101_t7WriteTXEPhh
+                0x00000000       0x3c ./Radio/cc1101.o
+ .text._ZN8cc1101_t12TransmitSyncEP6rPkt_t
+                0x00000000       0x48 ./Radio/cc1101.o
+ .text._ZN8cc1101_t13TransmitAsyncEP6rPkt_t
+                0x00000000       0x2e ./Radio/cc1101.o
+ .text          0x00000000        0x0 ./Common/os/ports/common/ARMCMx/nvic.o
+ .data          0x00000000        0x0 ./Common/os/ports/common/ARMCMx/nvic.o
+ .bss           0x00000000        0x0 ./Common/os/ports/common/ARMCMx/nvic.o
+ .text.nvicDisableVector
+                0x00000000       0x3c ./Common/os/ports/common/ARMCMx/nvic.o
+ .text          0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .data          0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .bss           0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .text          0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .data          0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .bss           0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .text.port_halt
+                0x00000000        0x4 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .debug_info    0x00000000       0x92 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .debug_abbrev  0x00000000       0x42 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .debug_aranges
+                0x00000000       0x20 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .debug_ranges  0x00000000       0x10 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .debug_line    0x00000000       0x83 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .debug_str     0x00000000      0x1c7 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .comment       0x00000000       0x71 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .debug_frame   0x00000000       0x20 ./Common/os/ports/GCC/ARMCMx/chcore.o
+ .text          0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .data          0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .bss           0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .text          0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .data          0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .bss           0x00000000        0x0 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chcond.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chcond.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chcond.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chcond.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chcond.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chcond.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chcond.o
+ .debug_str     0x00000000      0x1b7 ./Common/os/kernel/src/chcond.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chcond.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chcond.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chdebug.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chdebug.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chdebug.o
+ .text.dbg_check_disable
+                0x00000000       0x20 ./Common/os/kernel/src/chdebug.o
+ .text.dbg_check_suspend
+                0x00000000       0x20 ./Common/os/kernel/src/chdebug.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chdynamic.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chdynamic.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chdynamic.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chdynamic.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chdynamic.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chdynamic.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chdynamic.o
+ .debug_str     0x00000000      0x1ba ./Common/os/kernel/src/chdynamic.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chdynamic.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chdynamic.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chevents.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chevents.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chevents.o
+ .text.chEvtRegisterMask
+                0x00000000       0x44 ./Common/os/kernel/src/chevents.o
+ .text.chEvtUnregister
+                0x00000000       0x40 ./Common/os/kernel/src/chevents.o
+ .text.chEvtGetAndClearEvents
+                0x00000000       0x30 ./Common/os/kernel/src/chevents.o
+ .text.chEvtAddEvents
+                0x00000000       0x2c ./Common/os/kernel/src/chevents.o
+ .text.chEvtGetAndClearFlags
+                0x00000000       0x22 ./Common/os/kernel/src/chevents.o
+ .text.chEvtBroadcastFlagsI
+                0x00000000       0x30 ./Common/os/kernel/src/chevents.o
+ .text.chEvtSignal
+                0x00000000       0x34 ./Common/os/kernel/src/chevents.o
+ .text.chEvtBroadcastFlags
+                0x00000000       0x28 ./Common/os/kernel/src/chevents.o
+ .text.chEvtGetAndClearFlagsI
+                0x00000000        0xa ./Common/os/kernel/src/chevents.o
+ .text.chEvtDispatch
+                0x00000000       0x48 ./Common/os/kernel/src/chevents.o
+ .text.chEvtWaitOne
+                0x00000000       0x44 ./Common/os/kernel/src/chevents.o
+ .text.chEvtWaitAll
+                0x00000000       0x3c ./Common/os/kernel/src/chevents.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chheap.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chheap.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chheap.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chheap.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chheap.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chheap.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chheap.o
+ .debug_str     0x00000000      0x1b7 ./Common/os/kernel/src/chheap.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chheap.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chheap.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chlists.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chlists.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chlists.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chlists.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chlists.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chlists.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chlists.o
+ .debug_str     0x00000000      0x1b8 ./Common/os/kernel/src/chlists.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chlists.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chlists.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chmboxes.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chmboxes.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chmboxes.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chmboxes.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chmboxes.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chmboxes.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chmboxes.o
+ .debug_str     0x00000000      0x1b9 ./Common/os/kernel/src/chmboxes.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chmboxes.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chmboxes.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chmemcore.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chmemcore.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chmemcore.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chmemcore.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chmemcore.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chmemcore.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chmemcore.o
+ .debug_str     0x00000000      0x1ba ./Common/os/kernel/src/chmemcore.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chmemcore.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chmemcore.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chmempools.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chmempools.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chmempools.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chmempools.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chmempools.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chmempools.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chmempools.o
+ .debug_str     0x00000000      0x1bb ./Common/os/kernel/src/chmempools.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chmempools.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chmempools.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chmsg.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chmsg.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chmsg.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chmsg.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chmsg.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chmsg.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chmsg.o
+ .debug_str     0x00000000      0x1b6 ./Common/os/kernel/src/chmsg.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chmsg.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chmsg.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chmtx.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chmtx.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chmtx.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chmtx.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chmtx.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chmtx.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chmtx.o
+ .debug_str     0x00000000      0x1b6 ./Common/os/kernel/src/chmtx.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chmtx.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chmtx.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chqueues.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chqueues.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chqueues.o
+ .debug_info    0x00000000       0x79 ./Common/os/kernel/src/chqueues.o
+ .debug_abbrev  0x00000000       0x26 ./Common/os/kernel/src/chqueues.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/kernel/src/chqueues.o
+ .debug_line    0x00000000       0x1d ./Common/os/kernel/src/chqueues.o
+ .debug_str     0x00000000      0x1b9 ./Common/os/kernel/src/chqueues.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chqueues.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/kernel/src/chqueues.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chregistry.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chregistry.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chregistry.o
+ .text.chRegFirstThread
+                0x00000000       0x24 ./Common/os/kernel/src/chregistry.o
+ .text.chRegNextThread
+                0x00000000       0x2c ./Common/os/kernel/src/chregistry.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chschd.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chschd.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chschd.o
+ .text.chSchRescheduleS
+                0x00000000       0x24 ./Common/os/kernel/src/chschd.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chsem.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chsem.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chsem.o
+ .text.chSemInit
+                0x00000000       0x20 ./Common/os/kernel/src/chsem.o
+ .text.chSemResetI
+                0x00000000       0x58 ./Common/os/kernel/src/chsem.o
+ .text.chSemReset
+                0x00000000       0x28 ./Common/os/kernel/src/chsem.o
+ .text.chSemWaitTimeoutS
+                0x00000000       0x6c ./Common/os/kernel/src/chsem.o
+ .text.chSemWaitTimeout
+                0x00000000       0x28 ./Common/os/kernel/src/chsem.o
+ .text.chSemSignalI
+                0x00000000       0x50 ./Common/os/kernel/src/chsem.o
+ .text.chSemAddCounterI
+                0x00000000       0x5c ./Common/os/kernel/src/chsem.o
+ .text.chSemSignalWait
+                0x00000000       0xac ./Common/os/kernel/src/chsem.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chsys.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chsys.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chsys.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chthreads.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chthreads.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chthreads.o
+ .text._thread_memfill
+                0x00000000        0xc ./Common/os/kernel/src/chthreads.o
+ .text.chThdSetPriority
+                0x00000000       0x3c ./Common/os/kernel/src/chthreads.o
+ .text.chThdResume
+                0x00000000       0x38 ./Common/os/kernel/src/chthreads.o
+ .text.chThdTerminate
+                0x00000000       0x26 ./Common/os/kernel/src/chthreads.o
+ .text.chThdSleepUntil
+                0x00000000       0x2c ./Common/os/kernel/src/chthreads.o
+ .text.chThdYield
+                0x00000000       0x30 ./Common/os/kernel/src/chthreads.o
+ .text.chThdWait
+                0x00000000       0x58 ./Common/os/kernel/src/chthreads.o
+ .text          0x00000000        0x0 ./Common/os/kernel/src/chvt.o
+ .data          0x00000000        0x0 ./Common/os/kernel/src/chvt.o
+ .bss           0x00000000        0x0 ./Common/os/kernel/src/chvt.o
+ .text.chTimeIsWithin
+                0x00000000       0x28 ./Common/os/kernel/src/chvt.o
+ .text          0x00000000        0x0 ./Common/os/hal/src/ext.o
+ .data          0x00000000        0x0 ./Common/os/hal/src/ext.o
+ .bss           0x00000000        0x0 ./Common/os/hal/src/ext.o
+ .debug_info    0x00000000       0x95 ./Common/os/hal/src/ext.o
+ .debug_abbrev  0x00000000       0x4b ./Common/os/hal/src/ext.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/hal/src/ext.o
+ .debug_line    0x00000000       0x9b ./Common/os/hal/src/ext.o
+ .debug_str     0x00000000      0x1c6 ./Common/os/hal/src/ext.o
+ .comment       0x00000000       0x71 ./Common/os/hal/src/ext.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/hal/src/ext.o
+ .text          0x00000000        0x0 ./Common/os/hal/src/hal.o
+ .data          0x00000000        0x0 ./Common/os/hal/src/hal.o
+ .bss           0x00000000        0x0 ./Common/os/hal/src/hal.o
+ .text          0x00000000        0x0 ./Common/os/hal/src/rtc.o
+ .data          0x00000000        0x0 ./Common/os/hal/src/rtc.o
+ .bss           0x00000000        0x0 ./Common/os/hal/src/rtc.o
+ .debug_info    0x00000000       0x95 ./Common/os/hal/src/rtc.o
+ .debug_abbrev  0x00000000       0x4b ./Common/os/hal/src/rtc.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/hal/src/rtc.o
+ .debug_line    0x00000000       0x9b ./Common/os/hal/src/rtc.o
+ .debug_str     0x00000000      0x1c6 ./Common/os/hal/src/rtc.o
+ .comment       0x00000000       0x71 ./Common/os/hal/src/rtc.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/hal/src/rtc.o
+ .text          0x00000000        0x0 ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .data          0x00000000        0x0 ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .bss           0x00000000        0x0 ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .debug_info    0x00000000       0x95 ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .debug_abbrev  0x00000000       0x4b ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .debug_aranges
+                0x00000000       0x18 ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .debug_line    0x00000000       0x9b ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .debug_str     0x00000000      0x1de ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .comment       0x00000000       0x71 ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+ .text          0x00000000        0x0 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .data          0x00000000        0x0 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .bss           0x00000000        0x0 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .text          0x00000000        0x0 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .data          0x00000000        0x0 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .bss           0x00000000        0x0 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .text.dmaStreamRelease
+                0x00000000       0x58 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .text          0x00000000        0x0 ./Common/kl_lib/clocking_L1xx.o
+ .data          0x00000000        0x0 ./Common/kl_lib/clocking_L1xx.o
+ .bss           0x00000000        0x0 ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t9EnableHSEEv
+                0x00000000       0x28 ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t9EnableHSIEv
+                0x00000000       0x28 ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t9EnablePLLEv
+                0x00000000       0x28 ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t9EnableMSIEv
+                0x00000000       0x28 ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t16SetupBusDividersE8AHBDiv_t8APBDiv_tS1_
+                0x00000000       0x24 ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t11SwitchToHSIEv
+                0x00000000       0x2c ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t11SwitchToHSEEv
+                0x00000000       0x2c ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t11SwitchToPLLEv
+                0x00000000       0x34 ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t11SwitchToMSIEv
+                0x00000000       0x24 ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t14SetupPLLMulDivE8PllMul_t8PllDiv_t
+                0x00000000       0x2c ./Common/kl_lib/clocking_L1xx.o
+ .text._ZN5Clk_t17SetupFlashLatencyEh
+                0x00000000       0x48 ./Common/kl_lib/clocking_L1xx.o
+ .text          0x00000000        0x0 ./Common/kl_lib/cmd_uart.o
+ .data          0x00000000        0x0 ./Common/kl_lib/cmd_uart.o
+ .bss           0x00000000        0x0 ./Common/kl_lib/cmd_uart.o
+ .text._init    0x00000000        0x2 ./Common/kl_lib/cmd_uart.o
+ .group         0x00000000        0x8 ./Common/kl_lib/kl_lib_L15x.o
+ .text          0x00000000        0x0 ./Common/kl_lib/kl_lib_L15x.o
+ .data          0x00000000        0x0 ./Common/kl_lib/kl_lib_L15x.o
+ .bss           0x00000000        0x0 ./Common/kl_lib/kl_lib_L15x.o
+ .text._Z16i2cDmaIrqHandlerPvm
+                0x00000000       0x26 ./Common/kl_lib/kl_lib_L15x.o
+ .text._init    0x00000000        0x2 ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN7Flash_t20WaitForLastOperationEv
+                0x00000000       0x30 ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN7Timer_t4InitEP11TIM_TypeDef
+                0x00000000       0xd0 ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN7Timer_t7InitPwmEP12GPIO_TypeDefth10Inverted_t10PinSpeed_t
+                0x00000000       0xec ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN8PwmPin_t4InitEP12GPIO_TypeDeftP11TIM_TypeDefhtb
+                0x00000000      0x168 ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN5i2c_t4InitEP11I2C_TypeDefP12GPIO_TypeDefttmPK18stm32_dma_stream_tS6_
+                0x00000000       0x5c ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN5i2c_t5ResetEv
+                0x00000000       0x12 ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN5i2c_t6WaitRxEv
+                0x00000000       0x18 ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN5i2c_t8WaitStopEv
+                0x00000000       0x18 ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN8Eeprom_t7Write32Emm
+                0x00000000       0x1c ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN8Eeprom_t7ReadBufEPvmm
+                0x00000000        0x2 ./Common/kl_lib/kl_lib_L15x.o
+ .text          0x00000000        0x0 ./Common/kl_lib/kl_sprintf.o
+ .data          0x00000000        0x0 ./Common/kl_lib/kl_sprintf.o
+ .bss           0x00000000        0x0 ./Common/kl_lib/kl_sprintf.o
+ .group         0x00000000        0x8 ./Common/eestore.o
+ .group         0x00000000        0x8 ./Common/eestore.o
+ .text          0x00000000        0x0 ./Common/eestore.o
+ .data          0x00000000        0x0 ./Common/eestore.o
+ .bss           0x00000000        0x0 ./Common/eestore.o
+ .text._init    0x00000000        0x2 ./Common/eestore.o
+ .text._ZN7Flash_t20WaitForLastOperationEv
+                0x00000000       0x30 ./Common/eestore.o
+ .text._ZN7Flash_t8UnlockEEEv
+                0x00000000       0x44 ./Common/eestore.o
+ .text._ZN9EEStore_t16GetLastValuedPtrEPP11EEChunk32_t
+                0x00000000       0x48 ./Common/eestore.o
+ .text._ZN9EEStore_t3PutEPm
+                0x00000000       0x88 ./Common/eestore.o
+ .text._ZN9EEStore_t3GetEPm
+                0x00000000       0x1a ./Common/eestore.o
+ .text._ZN9EEStore_t6RemoveEv
+                0x00000000       0x28 ./Common/eestore.o
+ .debug_info    0x00000000      0x752 ./Common/eestore.o
+ .debug_abbrev  0x00000000      0x3b5 ./Common/eestore.o
+ .debug_loc     0x00000000      0x1e9 ./Common/eestore.o
+ .debug_aranges
+                0x00000000       0x50 ./Common/eestore.o
+ .debug_ranges  0x00000000       0x90 ./Common/eestore.o
+ .debug_line    0x00000000      0x28d ./Common/eestore.o
+ .debug_str     0x00000000      0x492 ./Common/eestore.o
+ .comment       0x00000000       0x71 ./Common/eestore.o
+ .ARM.attributes
+                0x00000000       0x33 ./Common/eestore.o
+ .debug_frame   0x00000000       0xb8 ./Common/eestore.o
+ .text          0x00000000        0x0 ./Common/peripheral.o
+ .data          0x00000000        0x0 ./Common/peripheral.o
+ .bss           0x00000000        0x0 ./Common/peripheral.o
+ .text.unlikely._ZL14PinClockEnableP12GPIO_TypeDef.part.0
+                0x00000000       0x10 ./Common/peripheral.o
+ .text._init    0x00000000        0x2 ./Common/peripheral.o
+ .text._ZN8Beeper_t4InitEv
+                0x00000000       0x24 ./Common/peripheral.o
+ .text._ZN8Beeper_t8ShutdownEv
+                0x00000000       0x24 ./Common/peripheral.o
+ .text._ZN8LedRGB_t4InitEv
+                0x00000000      0x144 ./Common/peripheral.o
+ .text._ZN8LedRGB_t12IStartBlinkIEPK10LedChunk_t
+                0x00000000       0x54 ./Common/peripheral.o
+ .text._ZL14LedTmrCallbackPv
+                0x00000000       0x28 ./Common/peripheral.o
+ .text._ZN7Vibro_t4InitEv
+                0x00000000       0x54 ./Common/peripheral.o
+ .text._ZN7Vibro_t8IFlinchIEPK12VibroChunk_t
+                0x00000000       0x50 ./Common/peripheral.o
+ .text._Z16VibroTmrCallbackPv
+                0x00000000       0x28 ./Common/peripheral.o
+ .bss.Vibro     0x00000000       0x18 ./Common/peripheral.o
+ .bss.Led       0x00000000       0x18 ./Common/peripheral.o
+ .text          0x00000000        0x0 ./Common/pill_mgr.o
+ .data          0x00000000        0x0 ./Common/pill_mgr.o
+ .bss           0x00000000        0x0 ./Common/pill_mgr.o
+ .text._init    0x00000000        0x2 ./Common/pill_mgr.o
+ .text._ZN9PillMgr_t4InitEv
+                0x00000000       0xa4 ./Common/pill_mgr.o
+ .text._ZN9PillMgr_t5WriteEhPhm
+                0x00000000       0x6c ./Common/pill_mgr.o
+ .text          0x00000000        0x0 c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x08000000         0x00008000
+ram              0x20000000         0x00002800
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./src/application.o
+LOAD ./src/main.o
+LOAD ./src/radio.o
+LOAD ./Radio/cc1101.o
+LOAD ./Common/os/ports/common/ARMCMx/nvic.o
+LOAD ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+LOAD ./Common/os/ports/GCC/ARMCMx/chcore.o
+LOAD ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+LOAD ./Common/os/ports/GCC/ARMCMx/crt0.o
+LOAD ./Common/os/kernel/src/chcond.o
+LOAD ./Common/os/kernel/src/chdebug.o
+LOAD ./Common/os/kernel/src/chdynamic.o
+LOAD ./Common/os/kernel/src/chevents.o
+LOAD ./Common/os/kernel/src/chheap.o
+LOAD ./Common/os/kernel/src/chlists.o
+LOAD ./Common/os/kernel/src/chmboxes.o
+LOAD ./Common/os/kernel/src/chmemcore.o
+LOAD ./Common/os/kernel/src/chmempools.o
+LOAD ./Common/os/kernel/src/chmsg.o
+LOAD ./Common/os/kernel/src/chmtx.o
+LOAD ./Common/os/kernel/src/chqueues.o
+LOAD ./Common/os/kernel/src/chregistry.o
+LOAD ./Common/os/kernel/src/chschd.o
+LOAD ./Common/os/kernel/src/chsem.o
+LOAD ./Common/os/kernel/src/chsys.o
+LOAD ./Common/os/kernel/src/chthreads.o
+LOAD ./Common/os/kernel/src/chvt.o
+LOAD ./Common/os/hal/src/ext.o
+LOAD ./Common/os/hal/src/hal.o
+LOAD ./Common/os/hal/src/rtc.o
+LOAD ./Common/os/hal/platforms/STM32L1xx/ext_lld_isr.o
+LOAD ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+LOAD ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+LOAD ./Common/kl_lib/clocking_L1xx.o
+LOAD ./Common/kl_lib/cmd_uart.o
+LOAD ./Common/kl_lib/kl_lib_L15x.o
+LOAD ./Common/kl_lib/kl_sprintf.o
+LOAD ./Common/eestore.o
+LOAD ./Common/peripheral.o
+LOAD ./Common/pill_mgr.o
+LOAD c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libstdc++.a
+LOAD c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libm.a
+START GROUP
+LOAD c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a
+LOAD c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a
+LOAD c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc.a
+END GROUP
+                0x00000400                __main_stack_size__ = 0x400
+                0x00000400                __process_stack_size__ = 0x400
+                0x20000000                __ram_start__ = ORIGIN (ram)
+                0x00002800                __ram_size__ = 0x2800
+                0x20002800                __ram_end__ = (__ram_start__ + __ram_size__)
+                0x00000000                . = 0x0
+                0x00000000                _text = .
+
+startup         0x08000000       0xf4
+ *(vectors)
+ vectors        0x08000000       0xf4 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+                0x08000000                _vectors
+
+constructors    0x080000f4        0x0
+                0x080000f4                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x080000f4                PROVIDE (__init_array_end, .)
+
+destructors     0x080000f4        0x0
+                0x080000f4                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0x080000f4                PROVIDE (__fini_array_end, .)
+
+.text           0x08000100     0x2a14
+ *(.text.startup.*)
+ .text.startup.main
+                0x08000100       0x54 ./src/main.o
+                0x08000100                main
+ *(.text)
+ *(.text.*)
+ *fill*         0x08000154        0xc 
+ .text._Z20TmrPillCheckCallbackPv
+                0x08000160       0x3c ./src/application.o
+                0x08000160                TmrPillCheckCallback(void*)
+ *fill*         0x0800019c        0x4 
+ .text._ZN5App_t12IPillHandlerEv
+                0x080001a0       0x50 ./src/application.o
+                0x080001a0                App_t::IPillHandler()
+ .text._ZL9AppThreadPv
+                0x080001f0       0x44 ./src/application.o
+ *fill*         0x08000234        0xc 
+ .text._ZN5App_t4InitEv
+                0x08000240       0x50 ./src/application.o
+                0x08000240                App_t::Init()
+ .text._ZN7radio_t5ITaskEv
+                0x08000290       0x54 ./src/radio.o
+                0x08000290                radio_t::ITask()
+ *fill*         0x080002e4        0xc 
+ .text._ZL11radioThreadPv
+                0x080002f0       0x1c ./src/radio.o
+ *fill*         0x0800030c        0x4 
+ .text._ZN7radio_t4InitEt
+                0x08000310       0x94 ./src/radio.o
+                0x08000310                radio_t::Init(unsigned short)
+ *fill*         0x080003a4        0xc 
+ .text._ZN8cc1101_t8BusyWaitEv.isra.6
+                0x080003b0       0x10 ./Radio/cc1101.o
+ .text._ZN5Spi_t13ReadWriteByteEh
+                0x080003c0       0x10 ./Radio/cc1101.o
+                0x080003c0                Spi_t::ReadWriteByte(unsigned char)
+ .text._ZN8cc1101_t8RSSI_dBmEh
+                0x080003d0       0x18 ./Radio/cc1101.o
+                0x080003d0                cc1101_t::RSSI_dBm(unsigned char)
+ *fill*         0x080003e8        0x8 
+ .text._ZN8cc1101_t12ReadRegisterEh
+                0x080003f0       0x2c ./Radio/cc1101.o
+                0x080003f0                cc1101_t::ReadRegister(unsigned char)
+ *fill*         0x0800041c        0x4 
+ .text._ZN8cc1101_t8ReadFIFOEP6rPkt_t
+                0x08000420       0x68 ./Radio/cc1101.o
+                0x08000420                cc1101_t::ReadFIFO(rPkt_t*)
+ *fill*         0x08000488        0x8 
+ .text._ZN8cc1101_t13WriteRegisterEhh
+                0x08000490       0x30 ./Radio/cc1101.o
+                0x08000490                cc1101_t::WriteRegister(unsigned char, unsigned char)
+ .text._ZN8cc1101_t11WriteStrobeEh
+                0x080004c0       0x2c ./Radio/cc1101.o
+                0x080004c0                cc1101_t::WriteStrobe(unsigned char)
+ *fill*         0x080004ec        0x4 
+ .text._ZN8cc1101_t9EnterIdleEv
+                0x080004f0       0x10 ./Radio/cc1101.o
+                0x080004f0                cc1101_t::EnterIdle()
+ .text._ZN8cc1101_t10SetChannelEh
+                0x08000500       0x1e ./Radio/cc1101.o
+                0x08000500                cc1101_t::SetChannel(unsigned char)
+ *fill*         0x0800051e        0x2 
+ .text._ZN8cc1101_t11ReceiveSyncEmP6rPkt_t
+                0x08000520       0x64 ./Radio/cc1101.o
+                0x08000520                cc1101_t::ReceiveSync(unsigned long, rPkt_t*)
+ *fill*         0x08000584        0xc 
+ .text._ZN8cc1101_t8RfConfigEv
+                0x08000590      0x16e ./Radio/cc1101.o
+                0x08000590                cc1101_t::RfConfig()
+ *fill*         0x080006fe        0x2 
+ .text._ZN8cc1101_t4InitEv
+                0x08000700      0x248 ./Radio/cc1101.o
+                0x08000700                cc1101_t::Init()
+ *fill*         0x08000948        0x8 
+ .text._ZN8cc1101_t12IHandleAsyncEv
+                0x08000950       0x10 ./Radio/cc1101.o
+                0x08000950                cc1101_t::IHandleAsync()
+ .text._ZN8cc1101_t15IGdo0IrqHandlerEv
+                0x08000960       0x4c ./Radio/cc1101.o
+                0x08000960                cc1101_t::IGdo0IrqHandler()
+ *fill*         0x080009ac        0x4 
+ .text.Vector64
+                0x080009b0       0x1c ./Radio/cc1101.o
+                0x080009b0                Vector64
+ *fill*         0x080009cc        0x4 
+ .text.nvicEnableVector
+                0x080009d0       0x46 ./Common/os/ports/common/ARMCMx/nvic.o
+                0x080009d0                nvicEnableVector
+ *fill*         0x08000a16        0xa 
+ .text.nvicSetSystemHandlerPriority
+                0x08000a20       0x26 ./Common/os/ports/common/ARMCMx/nvic.o
+                0x08000a20                nvicSetSystemHandlerPriority
+ *fill*         0x08000a46        0xa 
+ .text._unhandled_exception
+                0x08000a50        0x2 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+                0x08000a50                Vector58
+                0x08000a50                VectorE8
+                0x08000a50                Vector9C
+                0x08000a50                VectorAC
+                0x08000a50                Vector5C
+                0x08000a50                NMIVector
+                0x08000a50                Vector8C
+                0x08000a50                VectorDC
+                0x08000a50                VectorC8
+                0x08000a50                Vector94
+                0x08000a50                VectorA8
+                0x08000a50                VectorB4
+                0x08000a50                VectorEC
+                0x08000a50                UsageFaultVector
+                0x08000a50                DebugMonitorVector
+                0x08000a50                Vector40
+                0x08000a50                VectorBC
+                0x08000a50                PendSVVector
+                0x08000a50                VectorCC
+                0x08000a50                Vector54
+                0x08000a50                Vector98
+                0x08000a50                VectorD8
+                0x08000a50                Vector24
+                0x08000a50                BusFaultVector
+                0x08000a50                VectorD0
+                0x08000a50                VectorE4
+                0x08000a50                VectorC0
+                0x08000a50                HardFaultVector
+                0x08000a50                VectorF0
+                0x08000a50                VectorE0
+                0x08000a50                MemManageVector
+                0x08000a50                VectorA0
+                0x08000a50                VectorC4
+                0x08000a50                VectorB0
+                0x08000a50                Vector90
+                0x08000a50                Vector60
+                0x08000a50                Vector1C
+                0x08000a50                Vector48
+                0x08000a50                VectorD4
+                0x08000a50                Vector4C
+                0x08000a50                Vector68
+                0x08000a50                _unhandled_exception
+                0x08000a50                Vector88
+                0x08000a50                Vector50
+                0x08000a50                Vector44
+                0x08000a50                Vector28
+                0x08000a50                VectorB8
+                0x08000a50                Vector34
+                0x08000a50                VectorA4
+                0x08000a50                Vector20
+ *fill*         0x08000a52        0xe 
+ .text._port_switch_from_isr
+                0x08000a60        0xe ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+                0x08000a60                _port_switch_from_isr
+ *fill*         0x08000a6e        0x2 
+ .text.SVCallVector
+                0x08000a70       0x12 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+                0x08000a70                SVCallVector
+ *fill*         0x08000a82        0xe 
+ .text._port_init
+                0x08000a90       0x34 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+                0x08000a90                _port_init
+ *fill*         0x08000ac4        0xc 
+ .text._port_irq_epilogue
+                0x08000ad0       0x6c ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+                0x08000ad0                _port_irq_epilogue
+ *fill*         0x08000b3c        0x4 
+ .text.SysTickVector
+                0x08000b40       0x2a ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+                0x08000b40                SysTickVector
+ *fill*         0x08000b6a        0x6 
+ .text._port_switch
+                0x08000b70       0x10 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+                0x08000b70                _port_switch
+ .text._port_thread_start
+                0x08000b80       0x16 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+                0x08000b80                _port_thread_start
+ *fill*         0x08000b96        0xa 
+ .text.__early_init
+                0x08000ba0        0x2 ./Common/os/ports/GCC/ARMCMx/crt0.o
+                0x08000ba0                __early_init
+ *fill*         0x08000ba2        0xe 
+ .text.__late_init
+                0x08000bb0        0x2 ./Common/os/ports/GCC/ARMCMx/crt0.o
+                0x08000bb0                __late_init
+ *fill*         0x08000bb2        0xe 
+ .text._default_exit
+                0x08000bc0        0x2 ./Common/os/ports/GCC/ARMCMx/crt0.o
+                0x08000bc0                _default_exit
+ *fill*         0x08000bc2        0xe 
+ .text.ResetHandler
+                0x08000bd0       0xc0 ./Common/os/ports/GCC/ARMCMx/crt0.o
+                0x08000bd0                ResetHandler
+ .text.dbg_check_enable
+                0x08000c90       0x20 ./Common/os/kernel/src/chdebug.o
+                0x08000c90                dbg_check_enable
+ .text.dbg_check_lock
+                0x08000cb0       0x28 ./Common/os/kernel/src/chdebug.o
+                0x08000cb0                dbg_check_lock
+ *fill*         0x08000cd8        0x8 
+ .text.dbg_check_unlock
+                0x08000ce0       0x28 ./Common/os/kernel/src/chdebug.o
+                0x08000ce0                dbg_check_unlock
+ *fill*         0x08000d08        0x8 
+ .text.dbg_check_lock_from_isr
+                0x08000d10       0x28 ./Common/os/kernel/src/chdebug.o
+                0x08000d10                dbg_check_lock_from_isr
+ *fill*         0x08000d38        0x8 
+ .text.dbg_check_unlock_from_isr
+                0x08000d40       0x2c ./Common/os/kernel/src/chdebug.o
+                0x08000d40                dbg_check_unlock_from_isr
+ *fill*         0x08000d6c        0x4 
+ .text.dbg_check_enter_isr
+                0x08000d70       0x38 ./Common/os/kernel/src/chdebug.o
+                0x08000d70                dbg_check_enter_isr
+ *fill*         0x08000da8        0x8 
+ .text.dbg_check_leave_isr
+                0x08000db0       0x38 ./Common/os/kernel/src/chdebug.o
+                0x08000db0                dbg_check_leave_isr
+ *fill*         0x08000de8        0x8 
+ .text.chDbgCheckClassI
+                0x08000df0       0x24 ./Common/os/kernel/src/chdebug.o
+                0x08000df0                chDbgCheckClassI
+ *fill*         0x08000e14        0xc 
+ .text.chDbgCheckClassS
+                0x08000e20       0x24 ./Common/os/kernel/src/chdebug.o
+                0x08000e20                chDbgCheckClassS
+ *fill*         0x08000e44        0xc 
+ .text._trace_init
+                0x08000e50       0x14 ./Common/os/kernel/src/chdebug.o
+                0x08000e50                _trace_init
+ *fill*         0x08000e64        0xc 
+ .text.dbg_trace
+                0x08000e70       0x40 ./Common/os/kernel/src/chdebug.o
+                0x08000e70                dbg_trace
+ .text.chEvtSignalI
+                0x08000eb0       0x48 ./Common/os/kernel/src/chevents.o
+                0x08000eb0                chEvtSignalI
+ *fill*         0x08000ef8        0x8 
+ .text.chEvtWaitAny
+                0x08000f00       0x40 ./Common/os/kernel/src/chevents.o
+                0x08000f00                chEvtWaitAny
+ .text._scheduler_init
+                0x08000f40       0x14 ./Common/os/kernel/src/chschd.o
+                0x08000f40                _scheduler_init
+ *fill*         0x08000f54        0xc 
+ .text.chSchReadyI
+                0x08000f60       0x40 ./Common/os/kernel/src/chschd.o
+                0x08000f60                chSchReadyI
+ .text.wakeup   0x08000fa0       0x4c ./Common/os/kernel/src/chschd.o
+ *fill*         0x08000fec        0x4 
+ .text.chSchGoSleepS
+                0x08000ff0       0x50 ./Common/os/kernel/src/chschd.o
+                0x08000ff0                chSchGoSleepS
+ .text.chSchGoSleepTimeoutS
+                0x08001040       0x48 ./Common/os/kernel/src/chschd.o
+                0x08001040                chSchGoSleepTimeoutS
+ *fill*         0x08001088        0x8 
+ .text.chSchWakeupS
+                0x08001090       0x58 ./Common/os/kernel/src/chschd.o
+                0x08001090                chSchWakeupS
+ *fill*         0x080010e8        0x8 
+ .text.chSchDoRescheduleBehind
+                0x080010f0       0x4c ./Common/os/kernel/src/chschd.o
+                0x080010f0                chSchDoRescheduleBehind
+ *fill*         0x0800113c        0x4 
+ .text.chSchDoRescheduleAhead
+                0x08001140       0x5c ./Common/os/kernel/src/chschd.o
+                0x08001140                chSchDoRescheduleAhead
+ *fill*         0x0800119c        0x4 
+ .text.chSchDoReschedule
+                0x080011a0       0x18 ./Common/os/kernel/src/chschd.o
+                0x080011a0                chSchDoReschedule
+ *fill*         0x080011b8        0x8 
+ .text.chSemWaitS
+                0x080011c0       0x60 ./Common/os/kernel/src/chsem.o
+                0x080011c0                chSemWaitS
+ .text.chSemWait
+                0x08001220       0x24 ./Common/os/kernel/src/chsem.o
+                0x08001220                chSemWait
+ *fill*         0x08001244        0xc 
+ .text.chSemSignal
+                0x08001250       0x5c ./Common/os/kernel/src/chsem.o
+                0x08001250                chSemSignal
+ *fill*         0x080012ac        0x4 
+ .text._idle_thread
+                0x080012b0       0x14 ./Common/os/kernel/src/chsys.o
+                0x080012b0                _idle_thread
+ *fill*         0x080012c4        0xc 
+ .text.chSysInit
+                0x080012d0       0x6c ./Common/os/kernel/src/chsys.o
+                0x080012d0                chSysInit
+ *fill*         0x0800133c        0x4 
+ .text.chSysTimerHandlerI
+                0x08001340       0x68 ./Common/os/kernel/src/chsys.o
+                0x08001340                chSysTimerHandlerI
+ *fill*         0x080013a8        0x8 
+ .text._thread_init
+                0x080013b0       0x38 ./Common/os/kernel/src/chthreads.o
+                0x080013b0                _thread_init
+ *fill*         0x080013e8        0x8 
+ .text.chThdCreateI
+                0x080013f0       0x4c ./Common/os/kernel/src/chthreads.o
+                0x080013f0                chThdCreateI
+ *fill*         0x0800143c        0x4 
+ .text.chThdCreateStatic
+                0x08001440       0x5e ./Common/os/kernel/src/chthreads.o
+                0x08001440                chThdCreateStatic
+ *fill*         0x0800149e        0x2 
+ .text.chThdSleep
+                0x080014a0       0x30 ./Common/os/kernel/src/chthreads.o
+                0x080014a0                chThdSleep
+ .text.chThdExitS
+                0x080014d0       0x48 ./Common/os/kernel/src/chthreads.o
+                0x080014d0                chThdExitS
+ *fill*         0x08001518        0x8 
+ .text.chThdExit
+                0x08001520       0x18 ./Common/os/kernel/src/chthreads.o
+                0x08001520                chThdExit
+ *fill*         0x08001538        0x8 
+ .text._vt_init
+                0x08001540       0x18 ./Common/os/kernel/src/chvt.o
+                0x08001540                _vt_init
+ *fill*         0x08001558        0x8 
+ .text.chVTSetI
+                0x08001560       0x50 ./Common/os/kernel/src/chvt.o
+                0x08001560                chVTSetI
+ .text.chVTResetI
+                0x080015b0       0x44 ./Common/os/kernel/src/chvt.o
+                0x080015b0                chVTResetI
+ *fill*         0x080015f4        0xc 
+ .text.halInit  0x08001600        0x4 ./Common/os/hal/src/hal.o
+                0x08001600                halInit
+ *fill*         0x08001604        0xc 
+ .text.hal_lld_init
+                0x08001610       0x64 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+                0x08001610                hal_lld_init
+ *fill*         0x08001674        0xc 
+ .text.Vector6C
+                0x08001680       0x30 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x08001680                Vector6C
+ .text.Vector70
+                0x080016b0       0x30 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x080016b0                Vector70
+ .text.Vector74
+                0x080016e0       0x34 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x080016e0                Vector74
+ *fill*         0x08001714        0xc 
+ .text.Vector78
+                0x08001720       0x34 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x08001720                Vector78
+ *fill*         0x08001754        0xc 
+ .text.Vector7C
+                0x08001760       0x34 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x08001760                Vector7C
+ *fill*         0x08001794        0xc 
+ .text.Vector80
+                0x080017a0       0x34 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x080017a0                Vector80
+ *fill*         0x080017d4        0xc 
+ .text.Vector84
+                0x080017e0       0x34 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x080017e0                Vector84
+ *fill*         0x08001814        0xc 
+ .text.dmaInit  0x08001820       0x38 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x08001820                dmaInit
+ *fill*         0x08001858        0x8 
+ .text.dmaStreamAllocate
+                0x08001860       0x88 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x08001860                dmaStreamAllocate
+ *fill*         0x080018e8        0x8 
+ .text._ZN5Clk_t16UpdateFreqValuesEv
+                0x080018f0      0x114 ./Common/kl_lib/clocking_L1xx.o
+                0x080018f0                Clk_t::UpdateFreqValues()
+ *fill*         0x08001a04        0xc 
+ .text._Z10SetupVCore7VCore_t
+                0x08001a10       0x34 ./Common/kl_lib/clocking_L1xx.o
+                0x08001a10                SetupVCore(VCore_t)
+ *fill*         0x08001a44        0xc 
+ .text._ZN9CmdUart_t8IPutCharEc
+                0x08001a50       0x1e ./Common/kl_lib/cmd_uart.o
+                0x08001a50                CmdUart_t::IPutChar(char)
+ *fill*         0x08001a6e        0x2 
+ .text._ZL8FPutCharc
+                0x08001a70        0xc ./Common/kl_lib/cmd_uart.o
+ *fill*         0x08001a7c        0x4 
+ .text._ZN9CmdUart_t6PrintfEPKcz
+                0x08001a80       0x74 ./Common/kl_lib/cmd_uart.o
+                0x08001a80                CmdUart_t::Printf(char const*, ...)
+ *fill*         0x08001af4        0xc 
+ .text._ZN9CmdUart_t4InitEm
+                0x08001b00       0xd4 ./Common/kl_lib/cmd_uart.o
+                0x08001b00                CmdUart_t::Init(unsigned long)
+ *fill*         0x08001bd4        0xc 
+ .text._ZN9CmdUart_t15IRQDmaTxHandlerEv
+                0x08001be0       0x6c ./Common/kl_lib/cmd_uart.o
+                0x08001be0                CmdUart_t::IRQDmaTxHandler()
+ *fill*         0x08001c4c        0x4 
+ .text.CmdUartTxIrq
+                0x08001c50        0xc ./Common/kl_lib/cmd_uart.o
+                0x08001c50                CmdUartTxIrq
+ *fill*         0x08001c5c        0x4 
+ .text._ZL14PinClockEnableP12GPIO_TypeDef
+                0x08001c60       0x5c ./Common/kl_lib/kl_lib_L15x.o
+ *fill*         0x08001cbc        0x4 
+ .text._ZL17PinSetupAlterFuncP12GPIO_TypeDeft12PinOutMode_t15PinPullUpDown_t7PinAF_t10PinSpeed_t.constprop.11
+                0x08001cc0       0x90 ./Common/kl_lib/kl_lib_L15x.o
+ .text._ZN8PwmPin_t9SetFreqHzEm
+                0x08001d50       0x1a ./Common/kl_lib/kl_lib_L15x.o
+                0x08001d50                PwmPin_t::SetFreqHz(unsigned long)
+ *fill*         0x08001d6a        0x6 
+ .text.chDbgPanic
+                0x08001d70       0x1c ./Common/kl_lib/kl_lib_L15x.o
+                0x08001d70                chDbgPanic
+ *fill*         0x08001d8c        0x4 
+ .text._ZN5i2c_t7StandbyEv
+                0x08001d90       0x7c ./Common/kl_lib/kl_lib_L15x.o
+                0x08001d90                i2c_t::Standby()
+ *fill*         0x08001e0c        0x4 
+ .text._ZN5i2c_t6ResumeEv
+                0x08001e10       0xd8 ./Common/kl_lib/kl_lib_L15x.o
+                0x08001e10                i2c_t::Resume()
+ *fill*         0x08001ee8        0x8 
+ .text._ZN5i2c_t9IBusyWaitEv
+                0x08001ef0       0x2a ./Common/kl_lib/kl_lib_L15x.o
+                0x08001ef0                i2c_t::IBusyWait()
+ *fill*         0x08001f1a        0x6 
+ .text._ZN5i2c_t7WaitEv5Ev
+                0x08001f20       0x24 ./Common/kl_lib/kl_lib_L15x.o
+                0x08001f20                i2c_t::WaitEv5()
+ *fill*         0x08001f44        0xc 
+ .text._ZN5i2c_t7WaitEv6Ev
+                0x08001f50       0x1e ./Common/kl_lib/kl_lib_L15x.o
+                0x08001f50                i2c_t::WaitEv6()
+ *fill*         0x08001f6e        0x2 
+ .text._ZN5i2c_t7WaitEv8Ev
+                0x08001f70       0x1a ./Common/kl_lib/kl_lib_L15x.o
+                0x08001f70                i2c_t::WaitEv8()
+ *fill*         0x08001f8a        0x6 
+ .text._ZN5i2c_t7WaitBTFEv
+                0x08001f90       0x18 ./Common/kl_lib/kl_lib_L15x.o
+                0x08001f90                i2c_t::WaitBTF()
+ *fill*         0x08001fa8        0x8 
+ .text._ZN5i2c_t12CmdWriteReadEhPhhS0_h
+                0x08001fb0      0x198 ./Common/kl_lib/kl_lib_L15x.o
+                0x08001fb0                i2c_t::CmdWriteRead(unsigned char, unsigned char*, unsigned char, unsigned char*, unsigned char)
+ *fill*         0x08002148        0x8 
+ .text._ZN5i2c_t13CmdWriteWriteEhPhhS0_h
+                0x08002150      0x144 ./Common/kl_lib/kl_lib_L15x.o
+                0x08002150                i2c_t::CmdWriteWrite(unsigned char, unsigned char*, unsigned char, unsigned char*, unsigned char)
+ *fill*         0x08002294        0xc 
+ .text.IPutUint.4105
+                0x080022a0       0x72 ./Common/kl_lib/kl_sprintf.o
+ *fill*         0x08002312        0xe 
+ .text.kl_vsprintf
+                0x08002320      0x160 ./Common/kl_lib/kl_sprintf.o
+                0x08002320                kl_vsprintf
+ .text._ZN8Beeper_t5BeepIEPK11BeepChunk_t
+                0x08002480       0x4c ./Common/peripheral.o
+                0x08002480                Beeper_t::BeepI(BeepChunk_t const*)
+ *fill*         0x080024cc        0x4 
+ .text._Z17BeeperTmrCallbackPv
+                0x080024d0       0x28 ./Common/peripheral.o
+                0x080024d0                BeeperTmrCallback(void*)
+ *fill*         0x080024f8        0x8 
+ .text._ZN9PillMgr_t6DeinitEv
+                0x08002500       0x40 ./Common/pill_mgr.o
+                0x08002500                PillMgr_t::Deinit()
+ .text._ZN9PillMgr_t8ResetBusEv
+                0x08002540       0x70 ./Common/pill_mgr.o
+                0x08002540                PillMgr_t::ResetBus()
+ .text._ZN9PillMgr_t16CheckIfConnectedEh
+                0x080025b0       0x34 ./Common/pill_mgr.o
+                0x080025b0                PillMgr_t::CheckIfConnected(unsigned char)
+ *fill*         0x080025e4        0xc 
+ .text._ZN9PillMgr_t4ReadEhPhm
+                0x080025f0       0x42 ./Common/pill_mgr.o
+                0x080025f0                PillMgr_t::Read(unsigned char, unsigned char*, unsigned long)
+ *fill*         0x08002632        0xe 
+ .text.memset   0x08002640       0x94 c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
+                0x08002640                memset
+ *(.rodata)
+ *fill*         0x080026d4        0xc 
+ .rodata        0x080026e0       0x21 ./Common/kl_lib/clocking_L1xx.o
+ *(.rodata.*)
+ *fill*         0x08002701        0xf 
+ .rodata._ZL11BeepPillBad
+                0x08002710       0x18 ./src/application.o
+ *fill*         0x08002728        0x8 
+ .rodata.str1.1
+                0x08002730        0x4 ./src/application.o
+ *fill*         0x08002734        0xc 
+ .rodata.str1.1
+                0x08002740        0xc ./src/main.o
+ *fill*         0x0800274c        0x4 
+ .rodata.str1.1
+                0x08002750        0xa ./src/radio.o
+ *fill*         0x0800275a        0x6 
+ .rodata.str1.1
+                0x08002760       0x39 ./Common/os/kernel/src/chdebug.o
+ *fill*         0x08002799        0x7 
+ .rodata.str1.1
+                0x080027a0       0x89 ./Common/os/kernel/src/chevents.o
+ *fill*         0x08002829        0x7 
+ .rodata.ch_debug
+                0x08002830       0x16 ./Common/os/kernel/src/chregistry.o
+                0x08002830                ch_debug
+ *fill*         0x08002846        0xa 
+ .rodata.str1.1
+                0x08002850       0x21 ./Common/os/kernel/src/chschd.o
+ *fill*         0x08002871        0xf 
+ .rodata.str1.1
+                0x08002880      0x130 ./Common/os/kernel/src/chsem.o
+ .rodata.str1.1
+                0x080029b0        0x5 ./Common/os/kernel/src/chsys.o
+ *fill*         0x080029b5        0xb 
+ .rodata.str1.1
+                0x080029c0       0x76 ./Common/os/kernel/src/chthreads.o
+ *fill*         0x08002a36        0xa 
+ .rodata.str1.1
+                0x08002a40       0x2d ./Common/os/kernel/src/chvt.o
+ *fill*         0x08002a6d        0x3 
+ .rodata.str1.1
+                0x08002a70       0x42 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ *fill*         0x08002ab2        0xe 
+ .rodata._stm32_dma_streams
+                0x08002ac0       0x54 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                0x08002ac0                _stm32_dma_streams
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.gcc*)
+
+.vfp11_veneer   0x08002b14        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x08002b14        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x08002b14        0x0
+ .iplt          0x00000000        0x0 ./src/application.o
+
+.rel.dyn        0x08002b14        0x0
+ .rel.iplt      0x00000000        0x0 ./src/application.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM.exidx      0x08002b14        0x0
+                0x08002b14                PROVIDE (__exidx_start, .)
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x08002b14                PROVIDE (__exidx_end, .)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.textalign      0x08002b14        0x4
+                0x08002b18                . = ALIGN (0x8)
+ *fill*         0x08002b14        0x4 
+                0x08002b18                _etext = .
+                0x08002b18                _textdata = _etext
+
+.stacks         0x20000000      0x800
+                0x20000000                . = ALIGN (0x8)
+                0x20000000                __main_stack_base__ = .
+                0x20000400                . = (. + __main_stack_size__)
+ *fill*         0x20000000      0x400 
+                0x20000400                . = ALIGN (0x8)
+                0x20000400                __main_stack_end__ = .
+                0x20000400                __process_stack_base__ = .
+                0x20000400                __main_thread_stack_base__ = .
+                0x20000800                . = (. + __process_stack_size__)
+ *fill*         0x20000400      0x400 
+                0x20000800                . = ALIGN (0x8)
+                0x20000800                __process_stack_end__ = .
+                0x20000800                __main_thread_stack_end__ = .
+
+.data           0x20000800        0x0 load address 0x08002b18
+                0x20000800                . = ALIGN (0x4)
+                0x20000800                PROVIDE (_data, .)
+ *(.data)
+                0x20000800                . = ALIGN (0x4)
+ *(.data.*)
+                0x20000800                . = ALIGN (0x4)
+ *(.ramtext)
+                0x20000800                . = ALIGN (0x4)
+                0x20000800                PROVIDE (_edata, .)
+
+.igot.plt       0x20000800        0x0 load address 0x08002b18
+ .igot.plt      0x00000000        0x0 ./src/application.o
+
+.bss            0x20000800      0xb40 load address 0x08002b18
+                0x20000800                . = ALIGN (0x4)
+                0x20000800                PROVIDE (_bss_start, .)
+ *(.bss)
+                0x20000800                . = ALIGN (0x4)
+ *(.bss.*)
+ .bss._ZL4Pill  0x20000800        0x8 ./src/application.o
+ .bss._ZL13ITmrPillCheck
+                0x20000808       0x14 ./src/application.o
+ *fill*         0x2000081c        0x4 
+ .bss._ZL11waAppThread
+                0x20000820      0x198 ./src/application.o
+ .bss.App       0x200009b8        0x4 ./src/application.o
+                0x200009b8                App
+ .bss.Radio     0x200009bc        0x8 ./src/radio.o
+                0x200009bc                Radio
+ *fill*         0x200009c4        0x4 
+ .bss._ZL14warradioThread
+                0x200009c8      0x198 ./src/radio.o
+ .bss.CC        0x20000b60       0x1c ./Radio/cc1101.o
+                0x20000b60                CC
+ .bss.mainthread.4585
+                0x20000b7c       0x34 ./Common/os/kernel/src/chsys.o
+ .bss.dma_isr_redir
+                0x20000bb0       0x38 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .bss.dma_streams_mask
+                0x20000be8        0x4 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .bss.VCore     0x20000bec        0x1 ./Common/kl_lib/clocking_L1xx.o
+                0x20000bec                VCore
+ *fill*         0x20000bed        0x3 
+ .bss.Clk       0x20000bf0        0xc ./Common/kl_lib/clocking_L1xx.o
+                0x20000bf0                Clk
+ .bss.Uart      0x20000bfc      0x20c ./Common/kl_lib/cmd_uart.o
+                0x20000bfc                Uart
+ .bss.Beeper    0x20000e08       0x24 ./Common/peripheral.o
+                0x20000e08                Beeper
+ .bss.PillMgr   0x20000e2c       0x2c ./Common/pill_mgr.o
+                0x20000e2c                PillMgr
+                0x20000e58                . = ALIGN (0x4)
+ *(COMMON)
+ COMMON         0x20000e58      0x414 ./Common/os/kernel/src/chdebug.o
+                0x20000e58                dbg_trace_buffer
+                0x20001260                dbg_panic_msg
+                0x20001264                dbg_isr_cnt
+                0x20001268                dbg_lock_cnt
+ COMMON         0x2000126c       0x1c ./Common/os/kernel/src/chschd.o
+                0x2000126c                rlist
+ COMMON         0x20001288       0xa8 ./Common/os/kernel/src/chsys.o
+                0x20001288                _idle_thread_wa
+ COMMON         0x20001330       0x10 ./Common/os/kernel/src/chvt.o
+                0x20001330                vtlist
+                0x20001340                . = ALIGN (0x4)
+                0x20001340                PROVIDE (_bss_end, .)
+                0x20001340                PROVIDE (end, .)
+                0x20001340                _end = .
+                0x20001340                __heap_base__ = _end
+                0x20002800                __heap_end__ = __ram_end__
+OUTPUT(ccBasic.elf elf32-littlearm)
+
+.debug_info     0x00000000    0x13f63
+ .debug_info    0x00000000     0x1891 ./src/application.o
+ .debug_info    0x00001891      0xd79 ./src/main.o
+ .debug_info    0x0000260a     0x14d5 ./src/radio.o
+ .debug_info    0x00003adf     0x2a4b ./Radio/cc1101.o
+ .debug_info    0x0000652a      0x3fb ./Common/os/ports/common/ARMCMx/nvic.o
+ .debug_info    0x00006925      0x1c1 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .debug_info    0x00006ae6      0x7d2 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .debug_info    0x000072b8      0x2a5 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .debug_info    0x0000755d      0x797 ./Common/os/kernel/src/chdebug.o
+ .debug_info    0x00007cf4      0xc21 ./Common/os/kernel/src/chevents.o
+ .debug_info    0x00008915      0x5a0 ./Common/os/kernel/src/chregistry.o
+ .debug_info    0x00008eb5      0xa5f ./Common/os/kernel/src/chschd.o
+ .debug_info    0x00009914      0xc5e ./Common/os/kernel/src/chsem.o
+ .debug_info    0x0000a572      0x7b9 ./Common/os/kernel/src/chsys.o
+ .debug_info    0x0000ad2b      0xce6 ./Common/os/kernel/src/chthreads.o
+ .debug_info    0x0000ba11      0x2ba ./Common/os/kernel/src/chvt.o
+ .debug_info    0x0000bccb       0xc4 ./Common/os/hal/src/hal.o
+ .debug_info    0x0000bd8f      0x598 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .debug_info    0x0000c327      0x788 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .debug_info    0x0000caaf      0xb70 ./Common/kl_lib/clocking_L1xx.o
+ .debug_info    0x0000d61f      0xf4e ./Common/kl_lib/cmd_uart.o
+ .debug_info    0x0000e56d     0x2bdf ./Common/kl_lib/kl_lib_L15x.o
+ .debug_info    0x0001114c      0x33d ./Common/kl_lib/kl_sprintf.o
+ .debug_info    0x00011489     0x1652 ./Common/peripheral.o
+ .debug_info    0x00012adb     0x1488 ./Common/pill_mgr.o
+
+.debug_abbrev   0x00000000     0x4337
+ .debug_abbrev  0x00000000      0x4a8 ./src/application.o
+ .debug_abbrev  0x000004a8      0x2e0 ./src/main.o
+ .debug_abbrev  0x00000788      0x478 ./src/radio.o
+ .debug_abbrev  0x00000c00      0x55f ./Radio/cc1101.o
+ .debug_abbrev  0x0000115f      0x10e ./Common/os/ports/common/ARMCMx/nvic.o
+ .debug_abbrev  0x0000126d       0xaf ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .debug_abbrev  0x0000131c      0x1d9 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .debug_abbrev  0x000014f5       0xf2 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .debug_abbrev  0x000015e7      0x1ba ./Common/os/kernel/src/chdebug.o
+ .debug_abbrev  0x000017a1      0x2c8 ./Common/os/kernel/src/chevents.o
+ .debug_abbrev  0x00001a69      0x174 ./Common/os/kernel/src/chregistry.o
+ .debug_abbrev  0x00001bdd      0x31b ./Common/os/kernel/src/chschd.o
+ .debug_abbrev  0x00001ef8      0x2f0 ./Common/os/kernel/src/chsem.o
+ .debug_abbrev  0x000021e8      0x1f2 ./Common/os/kernel/src/chsys.o
+ .debug_abbrev  0x000023da      0x344 ./Common/os/kernel/src/chthreads.o
+ .debug_abbrev  0x0000271e      0x18b ./Common/os/kernel/src/chvt.o
+ .debug_abbrev  0x000028a9       0x88 ./Common/os/hal/src/hal.o
+ .debug_abbrev  0x00002931      0x183 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .debug_abbrev  0x00002ab4      0x241 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .debug_abbrev  0x00002cf5      0x26c ./Common/kl_lib/clocking_L1xx.o
+ .debug_abbrev  0x00002f61      0x3ee ./Common/kl_lib/cmd_uart.o
+ .debug_abbrev  0x0000334f      0x666 ./Common/kl_lib/kl_lib_L15x.o
+ .debug_abbrev  0x000039b5      0x157 ./Common/kl_lib/kl_sprintf.o
+ .debug_abbrev  0x00003b0c      0x426 ./Common/peripheral.o
+ .debug_abbrev  0x00003f32      0x405 ./Common/pill_mgr.o
+
+.debug_loc      0x00000000     0x4a0c
+ .debug_loc     0x00000000      0x110 ./src/application.o
+ .debug_loc     0x00000110       0x9f ./src/radio.o
+ .debug_loc     0x000001af      0xb7b ./Radio/cc1101.o
+ .debug_loc     0x00000d2a      0x16a ./Common/os/ports/common/ARMCMx/nvic.o
+ .debug_loc     0x00000e94       0x4d ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .debug_loc     0x00000ee1      0x14b ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .debug_loc     0x0000102c      0x4de ./Common/os/kernel/src/chevents.o
+ .debug_loc     0x0000150a       0x68 ./Common/os/kernel/src/chregistry.o
+ .debug_loc     0x00001572      0x297 ./Common/os/kernel/src/chschd.o
+ .debug_loc     0x00001809      0x595 ./Common/os/kernel/src/chsem.o
+ .debug_loc     0x00001d9e       0x26 ./Common/os/kernel/src/chsys.o
+ .debug_loc     0x00001dc4      0x50a ./Common/os/kernel/src/chthreads.o
+ .debug_loc     0x000022ce      0x142 ./Common/os/kernel/src/chvt.o
+ .debug_loc     0x00002410      0x174 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .debug_loc     0x00002584      0x5c5 ./Common/kl_lib/clocking_L1xx.o
+ .debug_loc     0x00002b49      0x157 ./Common/kl_lib/cmd_uart.o
+ .debug_loc     0x00002ca0     0x11e7 ./Common/kl_lib/kl_lib_L15x.o
+ .debug_loc     0x00003e87      0x322 ./Common/kl_lib/kl_sprintf.o
+ .debug_loc     0x000041a9      0x5fd ./Common/peripheral.o
+ .debug_loc     0x000047a6      0x266 ./Common/pill_mgr.o
+
+.debug_aranges  0x00000000      0x888
+ .debug_aranges
+                0x00000000       0x50 ./src/application.o
+ .debug_aranges
+                0x00000050       0x28 ./src/main.o
+ .debug_aranges
+                0x00000078       0x38 ./src/radio.o
+ .debug_aranges
+                0x000000b0       0xc8 ./Radio/cc1101.o
+ .debug_aranges
+                0x00000178       0x30 ./Common/os/ports/common/ARMCMx/nvic.o
+ .debug_aranges
+                0x000001a8       0x20 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .debug_aranges
+                0x000001c8       0x50 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .debug_aranges
+                0x00000218       0x38 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .debug_aranges
+                0x00000250       0x80 ./Common/os/kernel/src/chdebug.o
+ .debug_aranges
+                0x000002d0       0x88 ./Common/os/kernel/src/chevents.o
+ .debug_aranges
+                0x00000358       0x28 ./Common/os/kernel/src/chregistry.o
+ .debug_aranges
+                0x00000380       0x68 ./Common/os/kernel/src/chschd.o
+ .debug_aranges
+                0x000003e8       0x70 ./Common/os/kernel/src/chsem.o
+ .debug_aranges
+                0x00000458       0x30 ./Common/os/kernel/src/chsys.o
+ .debug_aranges
+                0x00000488       0x80 ./Common/os/kernel/src/chthreads.o
+ .debug_aranges
+                0x00000508       0x38 ./Common/os/kernel/src/chvt.o
+ .debug_aranges
+                0x00000540       0x20 ./Common/os/hal/src/hal.o
+ .debug_aranges
+                0x00000560       0x20 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .debug_aranges
+                0x00000580       0x68 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .debug_aranges
+                0x000005e8       0x80 ./Common/kl_lib/clocking_L1xx.o
+ .debug_aranges
+                0x00000668       0x50 ./Common/kl_lib/cmd_uart.o
+ .debug_aranges
+                0x000006b8       0xe0 ./Common/kl_lib/kl_lib_L15x.o
+ .debug_aranges
+                0x00000798       0x28 ./Common/kl_lib/kl_sprintf.o
+ .debug_aranges
+                0x000007c0       0x78 ./Common/peripheral.o
+ .debug_aranges
+                0x00000838       0x50 ./Common/pill_mgr.o
+
+.debug_ranges   0x00000000      0xfe8
+ .debug_ranges  0x00000000       0x58 ./src/application.o
+ .debug_ranges  0x00000058       0x18 ./src/main.o
+ .debug_ranges  0x00000070       0x90 ./src/radio.o
+ .debug_ranges  0x00000100      0x358 ./Radio/cc1101.o
+ .debug_ranges  0x00000458       0x20 ./Common/os/ports/common/ARMCMx/nvic.o
+ .debug_ranges  0x00000478       0x10 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .debug_ranges  0x00000488       0x40 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .debug_ranges  0x000004c8       0x28 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .debug_ranges  0x000004f0       0x70 ./Common/os/kernel/src/chdebug.o
+ .debug_ranges  0x00000560       0xa8 ./Common/os/kernel/src/chevents.o
+ .debug_ranges  0x00000608       0x30 ./Common/os/kernel/src/chregistry.o
+ .debug_ranges  0x00000638      0x128 ./Common/os/kernel/src/chschd.o
+ .debug_ranges  0x00000760       0xa8 ./Common/os/kernel/src/chsem.o
+ .debug_ranges  0x00000808       0x20 ./Common/os/kernel/src/chsys.o
+ .debug_ranges  0x00000828       0xe8 ./Common/os/kernel/src/chthreads.o
+ .debug_ranges  0x00000910       0x28 ./Common/os/kernel/src/chvt.o
+ .debug_ranges  0x00000938       0x10 ./Common/os/hal/src/hal.o
+ .debug_ranges  0x00000948       0x10 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .debug_ranges  0x00000958       0x58 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .debug_ranges  0x000009b0      0x100 ./Common/kl_lib/clocking_L1xx.o
+ .debug_ranges  0x00000ab0       0xb0 ./Common/kl_lib/cmd_uart.o
+ .debug_ranges  0x00000b60      0x248 ./Common/kl_lib/kl_lib_L15x.o
+ .debug_ranges  0x00000da8       0x30 ./Common/kl_lib/kl_sprintf.o
+ .debug_ranges  0x00000dd8      0x120 ./Common/peripheral.o
+ .debug_ranges  0x00000ef8       0xf0 ./Common/pill_mgr.o
+
+.debug_line     0x00000000     0x43a5
+ .debug_line    0x00000000      0x315 ./src/application.o
+ .debug_line    0x00000315      0x23f ./src/main.o
+ .debug_line    0x00000554      0x2d4 ./src/radio.o
+ .debug_line    0x00000828      0x648 ./Radio/cc1101.o
+ .debug_line    0x00000e70      0x11f ./Common/os/ports/common/ARMCMx/nvic.o
+ .debug_line    0x00000f8f       0xcc ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .debug_line    0x0000105b      0x230 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .debug_line    0x0000128b      0x139 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .debug_line    0x000013c4      0x297 ./Common/os/kernel/src/chdebug.o
+ .debug_line    0x0000165b      0x302 ./Common/os/kernel/src/chevents.o
+ .debug_line    0x0000195d      0x1c9 ./Common/os/kernel/src/chregistry.o
+ .debug_line    0x00001b26      0x339 ./Common/os/kernel/src/chschd.o
+ .debug_line    0x00001e5f      0x38d ./Common/os/kernel/src/chsem.o
+ .debug_line    0x000021ec      0x1f1 ./Common/os/kernel/src/chsys.o
+ .debug_line    0x000023dd      0x34a ./Common/os/kernel/src/chthreads.o
+ .debug_line    0x00002727      0x19f ./Common/os/kernel/src/chvt.o
+ .debug_line    0x000028c6      0x12b ./Common/os/hal/src/hal.o
+ .debug_line    0x000029f1      0x181 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .debug_line    0x00002b72      0x30d ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .debug_line    0x00002e7f      0x2bc ./Common/kl_lib/clocking_L1xx.o
+ .debug_line    0x0000313b      0x30e ./Common/kl_lib/cmd_uart.o
+ .debug_line    0x00003449      0x711 ./Common/kl_lib/kl_lib_L15x.o
+ .debug_line    0x00003b5a      0x1c1 ./Common/kl_lib/kl_sprintf.o
+ .debug_line    0x00003d1b      0x35d ./Common/peripheral.o
+ .debug_line    0x00004078      0x32d ./Common/pill_mgr.o
+
+.debug_str      0x00000000     0x3f5c
+ .debug_str     0x00000000      0xd9f ./src/application.o
+                                0xf09 (size before relaxing)
+ .debug_str     0x00000d9f      0x646 ./src/main.o
+                                0xb67 (size before relaxing)
+ .debug_str     0x000013e5      0x9aa ./src/radio.o
+                               0x107c (size before relaxing)
+ .debug_str     0x00001d8f      0x535 ./Radio/cc1101.o
+                               0x1473 (size before relaxing)
+ .debug_str     0x000022c4      0x215 ./Common/os/ports/common/ARMCMx/nvic.o
+                                0x2c6 (size before relaxing)
+ .debug_str     0x000024d9      0x179 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+                                0x2f4 (size before relaxing)
+ .debug_str     0x00002652       0xf0 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+                                0x4db (size before relaxing)
+ .debug_str     0x00002742      0x14a ./Common/os/ports/GCC/ARMCMx/crt0.o
+                                0x28e (size before relaxing)
+ .debug_str     0x0000288c      0x159 ./Common/os/kernel/src/chdebug.o
+                                0x50d (size before relaxing)
+ .debug_str     0x000029e5      0x1a4 ./Common/os/kernel/src/chevents.o
+                                0x4fd (size before relaxing)
+ .debug_str     0x00002b89      0x161 ./Common/os/kernel/src/chregistry.o
+                                0x46f (size before relaxing)
+ .debug_str     0x00002cea       0xc8 ./Common/os/kernel/src/chschd.o
+                                0x4d7 (size before relaxing)
+ .debug_str     0x00002db2       0xf8 ./Common/os/kernel/src/chsem.o
+                                0x49f (size before relaxing)
+ .debug_str     0x00002eaa       0xa5 ./Common/os/kernel/src/chsys.o
+                                0x58a (size before relaxing)
+ .debug_str     0x00002f4f      0x107 ./Common/os/kernel/src/chthreads.o
+                                0x524 (size before relaxing)
+ .debug_str     0x00003056       0x68 ./Common/os/kernel/src/chvt.o
+                                0x27f (size before relaxing)
+ .debug_str     0x000030be       0x54 ./Common/os/hal/src/hal.o
+                                0x1db (size before relaxing)
+ .debug_str     0x00003112       0x84 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+                                0x75c (size before relaxing)
+ .debug_str     0x00003196      0x144 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+                                0x6e3 (size before relaxing)
+ .debug_str     0x000032da      0x12f ./Common/kl_lib/clocking_L1xx.o
+                                0x8b4 (size before relaxing)
+ .debug_str     0x00003409       0xd1 ./Common/kl_lib/cmd_uart.o
+                                0xc7c (size before relaxing)
+ .debug_str     0x000034da      0x702 ./Common/kl_lib/kl_lib_L15x.o
+                               0x1a53 (size before relaxing)
+ .debug_str     0x00003bdc       0x92 ./Common/kl_lib/kl_sprintf.o
+                                0x268 (size before relaxing)
+ .debug_str     0x00003c6e      0x28c ./Common/peripheral.o
+                                0xaf4 (size before relaxing)
+ .debug_str     0x00003efa       0x62 ./Common/pill_mgr.o
+                                0xc80 (size before relaxing)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 ./src/application.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 ./src/main.o
+ .comment       0x00000000       0x71 ./src/radio.o
+ .comment       0x00000000       0x71 ./Radio/cc1101.o
+ .comment       0x00000000       0x71 ./Common/os/ports/common/ARMCMx/nvic.o
+ .comment       0x00000000       0x71 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .comment       0x00000000       0x71 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .comment       0x00000000       0x71 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chdebug.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chevents.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chregistry.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chschd.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chsem.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chsys.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chthreads.o
+ .comment       0x00000000       0x71 ./Common/os/kernel/src/chvt.o
+ .comment       0x00000000       0x71 ./Common/os/hal/src/hal.o
+ .comment       0x00000000       0x71 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .comment       0x00000000       0x71 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .comment       0x00000000       0x71 ./Common/kl_lib/clocking_L1xx.o
+ .comment       0x00000000       0x71 ./Common/kl_lib/cmd_uart.o
+ .comment       0x00000000       0x71 ./Common/kl_lib/kl_lib_L15x.o
+ .comment       0x00000000       0x71 ./Common/kl_lib/kl_sprintf.o
+ .comment       0x00000000       0x71 ./Common/peripheral.o
+ .comment       0x00000000       0x71 ./Common/pill_mgr.o
+
+.ARM.attributes
+                0x00000000       0x33
+ .ARM.attributes
+                0x00000000       0x33 ./src/application.o
+ .ARM.attributes
+                0x00000033       0x33 ./src/main.o
+ .ARM.attributes
+                0x00000066       0x33 ./src/radio.o
+ .ARM.attributes
+                0x00000099       0x33 ./Radio/cc1101.o
+ .ARM.attributes
+                0x000000cc       0x33 ./Common/os/ports/common/ARMCMx/nvic.o
+ .ARM.attributes
+                0x000000ff       0x33 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .ARM.attributes
+                0x00000132       0x33 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .ARM.attributes
+                0x00000165       0x33 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .ARM.attributes
+                0x00000198       0x33 ./Common/os/kernel/src/chdebug.o
+ .ARM.attributes
+                0x000001cb       0x33 ./Common/os/kernel/src/chevents.o
+ .ARM.attributes
+                0x000001fe       0x33 ./Common/os/kernel/src/chregistry.o
+ .ARM.attributes
+                0x00000231       0x33 ./Common/os/kernel/src/chschd.o
+ .ARM.attributes
+                0x00000264       0x33 ./Common/os/kernel/src/chsem.o
+ .ARM.attributes
+                0x00000297       0x33 ./Common/os/kernel/src/chsys.o
+ .ARM.attributes
+                0x000002ca       0x33 ./Common/os/kernel/src/chthreads.o
+ .ARM.attributes
+                0x000002fd       0x33 ./Common/os/kernel/src/chvt.o
+ .ARM.attributes
+                0x00000330       0x33 ./Common/os/hal/src/hal.o
+ .ARM.attributes
+                0x00000363       0x33 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .ARM.attributes
+                0x00000396       0x33 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .ARM.attributes
+                0x000003c9       0x33 ./Common/kl_lib/clocking_L1xx.o
+ .ARM.attributes
+                0x000003fc       0x33 ./Common/kl_lib/cmd_uart.o
+ .ARM.attributes
+                0x0000042f       0x33 ./Common/kl_lib/kl_lib_L15x.o
+ .ARM.attributes
+                0x00000462       0x33 ./Common/kl_lib/kl_sprintf.o
+ .ARM.attributes
+                0x00000495       0x33 ./Common/peripheral.o
+ .ARM.attributes
+                0x000004c8       0x33 ./Common/pill_mgr.o
+ .ARM.attributes
+                0x000004fb       0x2d c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
+
+.debug_frame    0x00000000     0x13f8
+ .debug_frame   0x00000000       0xb4 ./src/application.o
+ .debug_frame   0x000000b4       0x38 ./src/main.o
+ .debug_frame   0x000000ec       0x74 ./src/radio.o
+ .debug_frame   0x00000160      0x234 ./Radio/cc1101.o
+ .debug_frame   0x00000394       0x54 ./Common/os/ports/common/ARMCMx/nvic.o
+ .debug_frame   0x000003e8       0x20 ./Common/os/ports/GCC/ARMCMx/STM32L1xx/vectors.o
+ .debug_frame   0x00000408       0x98 ./Common/os/ports/GCC/ARMCMx/chcore_v7m.o
+ .debug_frame   0x000004a0       0x50 ./Common/os/ports/GCC/ARMCMx/crt0.o
+ .debug_frame   0x000004f0      0x110 ./Common/os/kernel/src/chdebug.o
+ .debug_frame   0x00000600      0x18c ./Common/os/kernel/src/chevents.o
+ .debug_frame   0x0000078c       0x40 ./Common/os/kernel/src/chregistry.o
+ .debug_frame   0x000007cc      0x10c ./Common/os/kernel/src/chschd.o
+ .debug_frame   0x000008d8      0x138 ./Common/os/kernel/src/chsem.o
+ .debug_frame   0x00000a10       0x5c ./Common/os/kernel/src/chsys.o
+ .debug_frame   0x00000a6c      0x154 ./Common/os/kernel/src/chthreads.o
+ .debug_frame   0x00000bc0       0x68 ./Common/os/kernel/src/chvt.o
+ .debug_frame   0x00000c28       0x20 ./Common/os/hal/src/hal.o
+ .debug_frame   0x00000c48       0x20 ./Common/os/hal/platforms/STM32L1xx/hal_lld.o
+ .debug_frame   0x00000c68      0x104 ./Common/os/hal/platforms/STM32L1xx/stm32_dma.o
+ .debug_frame   0x00000d6c      0x120 ./Common/kl_lib/clocking_L1xx.o
+ .debug_frame   0x00000e8c       0xac ./Common/kl_lib/cmd_uart.o
+ .debug_frame   0x00000f38      0x248 ./Common/kl_lib/kl_lib_L15x.o
+ .debug_frame   0x00001180       0x54 ./Common/kl_lib/kl_sprintf.o
+ .debug_frame   0x000011d4      0x11c ./Common/peripheral.o
+ .debug_frame   0x000012f0       0xdc ./Common/pill_mgr.o
+ .debug_frame   0x000013cc       0x2c c:/ostrannastudio/tools/gcc/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)

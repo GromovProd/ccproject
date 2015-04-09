@@ -8,11 +8,16 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include os/kernel/src/subdir.mk
--include os/hal/ARMCMx/subdir.mk
--include os/hal/subdir.mk
--include kl_lib/subdir.mk
+-include src/subdir.mk
 -include Radio/subdir.mk
+-include Common/os/ports/common/ARMCMx/subdir.mk
+-include Common/os/ports/GCC/ARMCMx/STM32L1xx/subdir.mk
+-include Common/os/ports/GCC/ARMCMx/subdir.mk
+-include Common/os/kernel/src/subdir.mk
+-include Common/os/hal/src/subdir.mk
+-include Common/os/hal/platforms/STM32L1xx/subdir.mk
+-include Common/kl_lib/subdir.mk
+-include Common/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -49,9 +54,6 @@ endif
 SECONDARY_FLASH += \
 ccRx.hex \
 
-SECONDARY_LIST += \
-ccRx.lst \
-
 SECONDARY_SIZE += \
 ccRx.siz \
 
@@ -63,19 +65,13 @@ all: ccRx.elf secondary-outputs
 ccRx.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m3 -mthumb -Os -ffunction-sections -fdata-sections -Wall  -g -T ../STM32L152xB.ld -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ccRx.map" -o "ccRx.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m3 -mthumb -Os -ffunction-sections -fdata-sections -funsigned-bitfields -Wall  -g -T ../../Common/os/ports/GCC/ARMCMx/STM32L1xx/ld/STM32L151C6.ld -nostartfiles -Xlinker --gc-sections -Wl,-Map,"ccRx.map" -o "ccRx.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 ccRx.hex: ccRx.elf
 	@echo 'Invoking: Cross ARM GNU Create Flash Image'
 	arm-none-eabi-objcopy -O ihex "ccRx.elf"  "ccRx.hex"
-	@echo 'Finished building: $@'
-	@echo ' '
-
-ccRx.lst: ccRx.elf
-	@echo 'Invoking: Cross ARM GNU Create Listing'
-	arm-none-eabi-objdump --source --all-headers --demangle --line-numbers --wide "ccRx.elf" > "ccRx.lst"
 	@echo 'Finished building: $@'
 	@echo ' '
 
@@ -87,10 +83,10 @@ ccRx.siz: ccRx.elf
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS) ccRx.elf
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(SECONDARY_FLASH)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS) ccRx.elf
 	-@echo ' '
 
-secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_LIST) $(SECONDARY_SIZE)
+secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_SIZE)
 
 .PHONY: all clean dependents
 .SECONDARY:

@@ -19,7 +19,6 @@ OBJS :=
 C_UPPER_DEPS := 
 CXX_DEPS := 
 SECONDARY_FLASH := 
-SECONDARY_LIST := 
 SECONDARY_SIZE := 
 ASM_DEPS := 
 S_UPPER_DEPS := 
@@ -28,11 +27,14 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-os/kernel/src \
-os/hal \
-os/hal/ARMCMx \
-. \
-kl_lib \
-inc \
+src \
 Radio \
+Common \
+Common/os/ports/common/ARMCMx \
+Common/os/ports/GCC/ARMCMx \
+Common/os/ports/GCC/ARMCMx/STM32L1xx \
+Common/os/kernel/src \
+Common/os/hal/src \
+Common/os/hal/platforms/STM32L1xx \
+Common/kl_lib \
 
